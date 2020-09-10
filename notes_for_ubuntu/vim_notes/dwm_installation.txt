@@ -1,0 +1,36 @@
+1. install dependent package:
+	sudo apt install xorg stterm suckless-tools build-essential libx11-dev
+	libxinerama-dev libxft-dev libwebkit2gtk-4.0-dev
+
+2. download dwm package:
+	download from official web, through git
+	https://dwm.suckless.org/
+	click source on the top right, then, click dwm
+	on the top, copy the git address: 	git clone git://git.suckless.org/dwm
+		or you can click down load on home page, and download a tar.gz.
+
+3. change config
+	cd the dwm, open config.mk, find X11INC and X11LIB in line 7
+	change to this:
+		/usr/include/X11R6/
+		/usr/lib/X11R6/
+
+4. compile
+	go back to dwm folder, and sudo make clean install.
+
+	you should be ok to install now!
+
+Notice, every time you make change, or add plugin, you should recompile follow step 4.
+
+
+5. 
+	go back to home dir    cd ~
+	vim .xinitrc
+	
+	type this in the file: exec dwm
+
+	go back to home dir
+
+	create another file:
+	vim .bash_profile
+		write down this in the file: startx
