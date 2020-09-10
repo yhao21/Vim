@@ -1,0 +1,228 @@
+
+#================
+# document layout
+
+
+snippet art
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\setlength{\parindent}{0em}
+\usepackage{graphicx}
+\usepackage{setspace}
+
+\title{$1}
+\author{$2}
+\date{$3}
+
+
+\begin{document}
+\begin{spacing}{1.5}
+	\maketitle
+	$0
+
+\end{spacing}
+\end{document}
+
+endsnippet
+
+
+#=====================
+snippet begin
+
+\begin{$1}
+	$2
+\end{$1}
+$0
+endsnippet
+
+#====================
+snippet doc
+
+\begin{document}
+	$1
+\end{document}
+$0
+endsnippet
+
+#====================
+#Modules!!!
+
+
+
+#====================
+snippet al
+\begin{align}
+	$1
+\end{align}
+$0
+endsnippet
+
+#====================
+snippet al*
+\begin{align*}
+	$1
+\end{align*}
+$0
+endsnippet
+
+#====================
+snippet center
+\begin{center}
+	$1
+\end{center}
+$0
+endsnippet
+
+#====================
+snippet pic
+\includegraphics[$1]{$0}
+endsnippet
+
+#====================
+snippet item
+\begin{itemize}
+	\item $1
+\end{itemize}
+$0
+endsnippet
+
+#====================
+snippet qq
+
+\begin{equation}
+	$1
+\end{equation}
+$0
+
+endsnippet
+
+
+#====================
+snippet qq*
+
+\begin{equation*}
+	$1
+\end{equation*}
+$0
+
+endsnippet
+
+#====================
+#Text Layout
+
+
+
+#====================
+snippet bb
+{\textbf {$1} } $0
+
+endsnippet
+
+
+#====================
+snippet uu
+{\underline {$1} } $0
+
+endsnippet
+
+#====================
+snippet inf
+\infty 
+
+endsnippet
+
+#====================
+snippet fp
+\frac{\partial {$1}}{\partial {$2}} $0
+
+endsnippet
+
+#====================
+snippet addup
+\sum\limits_{$1 = $2} ^$3 {$4} $0
+
+endsnippet
+
+#====================
+snippet pai
+\prod_{$1 = $2} ^$3 {$4} $0
+
+endsnippet
+
+#====================
+snippet lim
+\lim_{$1 \to $2} {$3} $0
+
+endsnippet
+
+#====================
+snippet bkt
+\left( {$1} \right) $0
+
+endsnippet
+
+#====================
+snippet int
+\int_{$1}^{$2}{$3} $0
+
+endsnippet
+  
+#====================
+snippet e
+$ {$1} $ $0
+
+endsnippet
+
+#====================
+snippet ee
+$$ {$1} $$
+
+endsnippet
+
+#====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

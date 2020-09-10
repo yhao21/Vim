@@ -1,0 +1,148 @@
+
+1. vim-plug插件管理器以及airline状态栏安装
+
+	github下载完vim plug 后，到C:\Users\YAN\vimfiles\    将autoload文件夹复制到C:\Users\YAN\.vim中，
+	并在.vim文件夹中新建一个文件夹 mkdir plugged
+	而后在vimrc中复制：
+	call plug#begin('~/.vim/plugged')
+
+	Plug ' 你想要下载的插件地址 '    例如，下载vim-airline的话： Plug 'vim-airline/vim-airline' 这个是airline在git网址的后半部分
+
+	call plug#end()
+
+	而后保存并刷新vimrc
+
+	normal下执行这个指令     :PlugInstall    就可以开始安装了
+
+	退出 Q 后就发现vim中有一个状态栏了。NICE！！
+
+
+2. vim-snazzy配色插件安装
+	
+	
+3. vimrc配置：
+	set scrolloff=7	光标移动的最上限永远是屏幕上、下方各留7行。这样不用盯着屏幕最上面或者最下面。
+
+
+4. NERDTree配置：
+	NERDTree键位优先于vim键位，所以，我们需要将nerdtree中的i（用语水平分屏）改为h，
+	不然我们无法使用i在目录中向上移动。
+	键位对应的具体命令到C:\Users\YAN\.vim\plugged\nerdtree\doc查找
+
+5. YouCompleteMe 配置：
+	windows下需要先安装CMake   https://cmake.org/download/
+	
+
+6 ubuntu下载配置coc nvim代码补全插件：
+	git up下载后，https://blog.csdn.net/weixin_44600422/article/details/89346176
+	按照这个网址安装，
+	然后去这里配置：https://github.com/neoclide/coc.nvim/wiki/Language-servers
+	cocConfig后，去下面的网址下载language server：
+	https://github.com/palantir/python-language-server
+	注意，要先下载Jedi：   https://jedi.readthedocs.io/en/latest/docs/installation.html
+	ubuntu中因为安装的是3.8，所以应该使用sudo pip3.8 install jedi命令
+	完成后返回language server，继续安装。
+	sudo pip3.8 python-language-server
+
+
+	git up下载后，https://blog.csdn.net/weixin_44600422/article/details/89346176
+	按照这个网址安装，
+	去下面的网址下载language server：
+	https://github.com/palantir/python-language-server
+	注意，要先下载Jedi：   https://jedi.readthedocs.io/en/latest/docs/installation.html
+	ubuntu中因为安装的是3.8，所以应该使用sudo pip3.8 install jedi命令
+	完成后返回language server，继续安装coc-python: https://github.com/neoclide/coc-python
+
+	补充下载：https://blog.csdn.net/weixin_45248543/article/details/107599112
+	括号补全命令   :CocInstall coc-pairs
+
+	终极配置：
+	将https://github.com/neoclide/coc.nvim中example config的内容甄选后复制到vimrc中即可。！！！
+
+
+7. 设置如何跳出括号等：
+	https://blog.csdn.net/qq_31433709/article/details/101777678
+	
+8. 一键运行python脚本
+
+	https://blog.csdn.net/sunshineacm/article/details/102870477
+
+9. latex代码补全：
+	到coc.nvim，找到latex配置方法他会让你跳转到下面的页面
+	下载coc-texlab：https://github.com/fannheyward/coc-texlab
+	下载命令只需要 ：CocInstall coc-texlab
+	下载完成后，用vim打开一个latex文件，他会自动下载texlab server，下载完成后，关闭vim重新进入，就可以代码补全了
+
+10. YouCompleteMe代码补全
+
+	按照官网先安装Vundle，然后在vimrc中通过PluginInstall安装YCM
+	当cd到YCM文件夹准备执行python3 install.py --all时候，如果报错说python header are missing
+	使用如下指令：   sudo apt-get install python3-dev cmake.
+
+
+11. 代码语法错误检查：
+	syntastic， 直接到github上，复制后半段url，然后通过PlugInstall安装。
+	切忌不要按照官方的安装，会导致cocnvim的代码补全失效
+
+
+12. 取消latex 编辑下自动隐藏 $ 和数学公式
+	默认latex会把美元符号隐藏，还会把\alpha这种转换成数学的小a，，这时我不需要的。
+	可以通过在 vimrc 中用如下设置取消。
+	 
+	autocmd Filetype tex setlocal conceallevel = 0
+
+13. 映射大写锁定到ESC
+	在home/synferlo 创建文件： .xmodmap 并复制如下内容：
+		remove Lock = Caps_Lock
+		keycode 9 = Caps_Lock NoSymbol Caps_Lock
+		keycode 66 = Escape NoSymbol Escape
+		add Lock = Caps_Lock
+	
+	go back to terminal and type:
+		xmodmap $HOME/.xmodmap
+
+		$ touch .mystartup.sh
+       		$ echo "#!/bin/bash" >> .mystartup.sh
+       		$ echo "xmodmap .xmodmap" >> .mystartup.sh
+       		$ echo "bash .mystartup.sh" >> .bashrc
+
+
+14 configure zathura
+
+		go to /home/synferlo 
+
+		cd .config/zathura
+
+		vim zathurarc
+
+		config as below:
+		set window-height 1080
+		set window-width 800
+
+		map <C-i> zoom in
+		map <C-o> zoom out
+
+		"recolor allow you to have a black background!"
+		map <C-r> recolor
+
+
+
+15 通用剪贴板，允许终端,vim 和平时打开的应用使用同一个剪贴板
+		将如下配置写入vimrc
+		set clipboard=unnamedplus
+		
+		粘贴时候药用ctrl shift v
+
+
+
+
+
+
+
+
+
+
+
+
+
+

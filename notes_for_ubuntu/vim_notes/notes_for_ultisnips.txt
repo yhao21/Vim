@@ -1,0 +1,118 @@
+预先配置ultisnaps：
+
+	在.vim路径下新建一个  UltiSnips   的文件夹，用于存放所有自定义 snips
+	
+
+命名规则：
+
+	文件后缀为   .snippets   
+	每一门语言单独创建一个 .snippets 文件即可，，可以选择用语言的名字命名。
+	比如： 对latex的命名就可以是   tex.snippets    
+
+
+
+关于新tex文件无法使用snippet：
+
+	新文件的snippet需要自己设定，，，命令：   :UltiSnipsEdit
+	如果不想设定，可以打开心文件后，第一行写好document类型然后退出，再重新打开，就可以了。
+
+
+取消代码折叠，让你看到自己的数学公式：
+	
+	autocmd Filetype tex setlocal conceallevel=0
+	autocmd Filetype plaintex setlocal conceallevel=0
+	
+	let g:tex_conceal = "0"
+
+如何把tex编译成pdf
+	命令行使用：pdflatex <filename.tex>
+
+
+snippets书写格式
+	不要随意在endsnippet的上一行留空行，他会让你的片段自带回车功能。尤其是在数学公式里面，很乱。！！！
+===================================================================================================
+Snippets
+
+art		create article layout
+
+begin		setup \begin layout
+
+doc		setup begin with document
+
+al		align
+
+al*		align*
+
+center		setup \begin center
+
+pic		includegraphics
+
+item		itemize
+
+qq		equation
+
+qq*		equation*
+
+bb		boldface text auto
+
+uu		underline auto
+
+bkt		big adjustable bracket auto
+
+ee		$ $ auto
+
+iee		$$ $$ auto
+
+up		^{}
+
+space =		:UltiSnipsEdit
+
+space - 	:LLPStartPreview  start live compile and view mode for pdf.
+
+kk		^{} automatically
+
+dd		_{} automatically.
+
+//		\frac automatically
+
+ss		addup auto
+
+pp		prod_ big Pai auto
+
+mm		Max_  auto
+
+ify		infinity auto
+
+fp		frac partial auto
+
+ll		lim auto
+
+iig		integral auto
+
+hh		\hat auto
+
+tt		tilde auto
+
+duiq		& auto
+
+rr		+ auto
+
+gg		- auto minus
+
+vv		\times multiply auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

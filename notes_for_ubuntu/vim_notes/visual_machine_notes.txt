@@ -1,0 +1,6 @@
+
+
+
+
+
+ctrl shift enter		exit full screen mode

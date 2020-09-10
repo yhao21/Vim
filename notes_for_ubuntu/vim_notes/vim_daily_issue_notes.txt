@@ -1,0 +1,8 @@
+1. coc-nvim for python:
+	When this error pop up:
+		Jedi error: Cannot call write after a stream was destroyed
+
+	Solution:
+		:CocCommand python.setInterpreter
+
+		重新选择interpreter即可。

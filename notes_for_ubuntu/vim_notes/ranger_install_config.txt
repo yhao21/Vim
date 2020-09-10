@@ -1,0 +1,145 @@
+setup after installation:
+
+1. check your range config file
+	type		range --copy-config=all
+
+	if there exist a rc file, you are good. 
+	if not you have to create such a file 
+	in this location:
+	vim ~/.config/ranger/rc.conf
+
+2. set vim as default text editor in ranger:
+	(1)按文件类型设置
+	打开~/.config/ranger/rifle.conf, 找到以下代码段:
+	将下面这段话添加到文档最上方
+	ext c|cpp|txt|md = vim "$@"
+
+	将想要vim编辑的文件类型都写进取
+	ext c|cpp|txt|md|xml|json|csv|tex|py|pl|rb|js|sh|php|conf|swp|sh = vim "$@"
+
+	(2)设置系统默认编辑器为vim:
+	在家目录下/home/synferlo，修改 .bashrc
+	vim .bashrc
+	复制这条命令到文件：   export EDITOR=vim
+	
+
+3. configuration:
+	输入第一部中的命令后，会在家目录ranger的配置文件中出现五个文件：
+	commands.py	可以自己通过python编写属于自己的ranger命令
+	rc.conf		ranger的主要配置文件
+	rifle.conf	设置ranger打开各种类型文件的默认软件
+	scrope.sh	设置ranger预览各种文件时选择的默认软件
+
+4. ranger插件：
+	到ranger github网站的wiki下，找到plugin，可以下载插件
+	https://github.com/ranger/ranger/wiki/Plugins
+
+	安装图标插件：
+		1.install nerdfonts first:
+		https://github.com/ryanoasis/nerd-fonts
+		2.clone
+		https://github.com/alexanderjeurissen/ranger_devicons
+		3.set echo
+		echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
+	
+	压缩与解压缩插件ranger-archives：
+		1. 下载依赖软件   sudo apt install atool
+		2. 安装
+
+5. 自定义command：
+	可以在commands.py中复制下面地址中的command，也可以自己写
+	https://github.com/ranger/ranger/wiki/Custom-Commands
+
+
+6. some app you needs
+	https://zhuanlan.zhihu.com/p/105731111
+
+
+
+============================================
+ranger_rc.config file
+
+	set preview_images True
+	
+	go to scope.sh 找到handle extension，把pdf以text形式预览注释
+	在handle image中取消对pdf预览的注释
+
+============================================
+keymap
+
+1. g is a useful key to jump around in ranger (g for go)
+
+	you can combine a <file address> with  g plus anyother key,
+	i.e.   define gp as go to 'phd' file. 
+
+
+2. create file with vim
+
+	write this into config file:
+	map V console shell vim%space
+
+
+
+
+===========================================
+my keymap
+
+	=====================
+	jump around - g family
+	
+	gp		~/Yan/phd
+	gn		~/Yan/notes_for_ubuntu
+	gv		~/.vim
+	gh		home ~/
+	
+	=====================
+	basic file management
+	
+	V		create file using vim
+	cw		rename a file.
+	mk		mkdir create a folder with console cmd
+	yy		copy file
+	yp		copy file path
+	y.		copy filename without extension
+	yn		copy/yank filename
+	yd		copy dir
+	dd		cut file
+	pp		paste
+	po		粘贴并覆盖相同名字的文件
+	rm		delete file or folder
+	
+	space		toggle select 选中文件
+	v		toggle select all files in dir
+	CW		bulk-rename 跳转到vim中，对选中的文档集体改名字 
+
+	X		unzip解压缩文件
+	
+
+	=====================
+	dir browser
+	
+	zh		显示隐藏文件
+	gg		跳转到当前文件夹的第一个文件
+	G		跳到当前文件夹的最后一个文件
+
+	[		进入上一个上层文件夹
+	]		进入下一个上层文件夹
+
+	S		回到终端，并使用ranger当前的地址(终端
+			显示当前地址为退出ranger时的地址。)
+
+	o		order your files文件排序
+	=====================
+	Tabs
+	
+	c-n		create new tab(新建标签页，可以在右上角看到)
+	c-w or q	close tab
+	tab		next tab page
+	s-tab		previous tab
+	
+
+
+
+
+
+
