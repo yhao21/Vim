@@ -36,8 +36,8 @@ Configuration
 		exec_always compton
 
 					
-5. install terminator
-	sudo apt install terminator
+5. use default terminal:
+	remove menubar in <general> tab in terminal's preference.
 
 6. install chinese input method
 	sudo apt install fcitx
