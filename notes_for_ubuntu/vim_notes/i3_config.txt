@@ -1,0 +1,162 @@
+Configuration
+
+
+1. set up wallpaper:
+	sudo apt-get install feh
+	cd ~/.config/i3
+	vim config
+	
+	at the end of the <config file> add this:
+	exec always feh --bg-fill /home/synferlo/Picture/ubuntu_bg.jpg
+	NOTICE: you have to use an absolute path. No relative!
+
+	Note: use bg-fill, it can best fit your screen by zooming, while preserving ratio.
+
+2. set system font(this is the bar font, not workspace font!)
+	download Yosemite font https://github.com/supermarin/YosemiteSanFranciscoFont
+	use command to unzip:
+		unzip <file name>
+	create a <.font> dir in home directory
+		cd ~
+		mkdir .font
+	move fonts to <.font> dir
+		cd Yosemite.....
+		mv *.ttf ~/.fonts/
+	open config file, find the <font pango>, change to Yosemite font.
+		System San Francisco Display 20
+		20 is size.
+
+3. change terminal font and size.
+	right click the terminal and customize your terminal like in
+	ubuntu desktop.
+
+4. set opacity:
+	sudo apt install compton
+	add this to config
+		exec_always compton
+
+					
+5. install terminator
+	sudo apt install terminator
+
+6. install chinese input method
+	sudo apt install fcitx
+	sudo apt install fcitx-libpinyin
+
+7. make your i3 borderless
+	go to config file
+		new_window none
+		new_float normal
+		hide_edge_borders both
+
+8. i3-gaps
+	https://github.com/Airblader/i3
+	set up i3-gaps, make it beautiful
+
+
+==========================================================
+shortcuts:
+
+alt enter		open a new terminal
+alt q		close a window
+alt d			open app menu on top, type what app you want to open, i.e. google-chrome
+			Any time you want to run an app. Do not need to start terminal.
+alt v			trans to window-open vertical
+			after alt v, press <alt enter> to open a new window in vertical
+alt h			trans back to horizonal mode.
+
+alt jkli		move cursor other window.
+
+alt f			trans to FULL SCREEN mode
+alt s			trans windows to stack mode
+alt e			trans back to multi window.
+
+alt r			into window resize mode.
+			after <alt r> you can press arrow keys to adjust window size
+			press <alt r> again to quit mode.
+			down arrow make it bigger, up arrow smaller
+
+alt shift jkli		switch windows side.
+			
+
+alt shift number	move window to workspace #n
+			i.e. alt shift 2   move window to workspace 2
+
+alt number		switch to workspace n
+
+alt shift r		refresh i3 config. Whenever you've done a modification
+			to config file, Refresh i3 to apply it!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+#===================================================
+# My keybinding
+
+
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+i focus up
+bindsym $mod+l focus right
+
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+i move up
+bindsym $mod+Shift+l move right
+
+
+#open dmenu for software
+
+bindsym $mod+m exec dmenu_run
+
+
+# kill focused window
+bindsym $mod+q kill
+
+
+
+#hide_edge_borders none|vertical|horizontal|both|smart
+# set borderless
+hide_edge_borders both
+
+new_window none
+new_float normal
+
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym i resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+
+
+
+
+
+
+
+
+
+
+
