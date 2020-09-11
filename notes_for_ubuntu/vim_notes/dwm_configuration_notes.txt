@@ -1,0 +1,46 @@
+1. setup background
+		install nitrogen
+			sudo apt install nitrogen
+
+		进入打开nitrogen
+			nitrogen
+
+		点击左下角的auto，切换为zoom
+
+		点击preference，选择图片所在文件夹，点击add
+
+		然后选中图片，点击apply
+
+
+2. 网页浏览
+		命令行输入： google-chrome
+		即可使用chrome
+
+
+3. 修改字体大小
+		通过git或者tar.gz下载st的源码：https://st.suckless.org/
+		解压缩后进入到 config.def.h 或者 config.h
+		第七行找到font，把size修改为24或者更大，，
+		保存退出。
+		sudo make clean install
+		注意，每次更改完配置都需要重新compile！
+
+4. 下载补丁插件
+		wget <补丁网址.diff>
+		安装：
+		patch < 补丁名字.diff
+		sudo cp config.def.h config.h
+		这里需要将config.def复制到.h，才可以配置好。
+
+5. 窗口间隙：
+		config.h中字体下面borderpx调大，间隙变大
+		调整后注意make clean install
+6. 下载st终端窗口透明度插件：
+		https://st.suckless.org/patches/
+		这个网址是st终端的插件，注意，st的插件和dwm的是分开的，在网站最上方目录有分dwm和st
+		这里，需要下载st的alpha插件
+
+		这里需要下载compton
+		sudo apt install compton
+
+		
