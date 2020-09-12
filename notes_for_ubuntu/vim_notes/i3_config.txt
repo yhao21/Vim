@@ -66,7 +66,20 @@ Installation:
 8. i3-gaps
 	https://github.com/Airblader/i3
 	set up i3-gaps, make it beautiful
+	
+	https://launchpad.net/~kgilmer/+archive/ubuntu/speed-ricer
+	add this ppa to your software source.
+		sudo add-apt-repository ppa:kgilmer/speed-ricer
+		sudo apt-get update
 
+	install software in the following format:
+		sudo apt install <filename in ppa>
+		sudo apt install i3-gaps-wm
+
+	go to i3 config file, and add this:
+		gaps inner 15
+		gaps outer 10
+	gaps (number) can be customized.
 
 9. install Chinese input (sogouinput)
 	sudo apt install ibus-rime
