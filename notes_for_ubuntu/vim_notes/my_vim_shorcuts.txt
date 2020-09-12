@@ -213,8 +213,8 @@ Insert模式下快捷键
 
 4. coc.nvim插件
 	
-	Ctrl n 		向下选择并补全代码
-	Ctrl p 		向上选择并补全代码
+	alt u 		向下选择并补全代码Ctrl n
+	alt o		向上选择并补全代码Ctrl p
 	[g		上一个语法错误地方
 	]g		下一个语法错误的地方
 
