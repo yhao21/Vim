@@ -55,8 +55,22 @@ Configuration
 
 
 9. install Chinese input (sogouinput)
+	sudo apt install ibus-rime
+	
 	download sogou input, go back to ubuntu desktop, install sogou. then back to i3....
 	exec --no-startup-id fcitx
+	
+	go to ~/ ,
+	vim .profile
+	write dowm these.
+	export XMODIFIERS=@im=fcitx
+	export QT_IM_MODULE=fcitx
+	export QT_IM_MODULE=fcitx
+	export GTK_IM_MODULE=fcitx
+	
+	下载安装搜狗输入法。linux版本。
+	logout后，重新进入，右下角的小键盘，右键，configure current input method
+	左下角点击加号，搜索：sogoupinyin 添加，即可。ctrl space切换输入法
 ==========================================================
 shortcuts:
 
