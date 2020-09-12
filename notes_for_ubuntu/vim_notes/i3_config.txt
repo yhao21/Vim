@@ -1,5 +1,19 @@
 Configuration
 
+install htop  (a task manager)
+
+
+
+
+======================================
+Installation: 
+	sudo apt install i3
+	sudo apt install dmenu
+
+
+======================================
+
+
 
 1. set up wallpaper:
 	sudo apt-get install feh
