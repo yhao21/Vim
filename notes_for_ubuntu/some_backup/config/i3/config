@@ -271,7 +271,7 @@ exec_always feh --bg-fill /home/synferlo/Pictures/ubuntu_logo_bg.png
 
 exec_always compton
 
-exec_always fcitx -d
+#exec_always fcitx -d
 
 exec --no-startup-id fcitx
 
