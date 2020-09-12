@@ -57,6 +57,7 @@ Installation:
 	sudo apt install fcitx
 	sudo apt install fcitx-libpinyin
 
+	
 7. make your i3 borderless
 	go to config file
 		new_window none
@@ -67,14 +68,13 @@ Installation:
 	https://github.com/Airblader/i3
 	set up i3-gaps, make it beautiful
 	
-	https://launchpad.net/~kgilmer/+archive/ubuntu/speed-ricer
+	https://launchpad.net/~simon-monette/+archive/ubuntu/i3-gaps
 	add this ppa to your software source.
-		sudo add-apt-repository ppa:kgilmer/speed-ricer
+		sudo add-apt-repository ppa:simon-monette/i3-gaps
 		sudo apt-get update
-
 	install software in the following format:
 		sudo apt install <filename in ppa>
-		sudo apt install i3-gaps-wm
+		sudo apt install i3-gaps
 
 	go to i3 config file, and add this:
 		gaps inner 15
@@ -98,6 +98,31 @@ Installation:
 	下载安装搜狗输入法。linux版本。
 	logout后，重新进入，右下角的小键盘，右键，configure current input method
 	左下角点击加号，搜索：sogoupinyin 添加，即可。ctrl space切换输入法
+
+
+10. polybar
+	与i3使用相同的ppa，
+	sudo apt install polybar
+
+	安装后，在~/.config目录下创建polybar文件夹，
+	将系统目录下：/usr/share/doc/polybar/
+	这个文件夹复制到家目录的config下的polybar，即可进行配置
+	注意，复制后要先解压缩
+
+	配置:
+	第30行有个【bar/example】,在终端中： polybar example可以看到测试样，
+	可以讲example改成别的名字，如bar1，bar2,,,,,barx
+
+	想要开机就运行，需要在i3 config文件中写下：
+	exec_always --no-startup-id ~/.config/i3/polybar.sh &
+
+	此外，需要在i3中创建一个polybar.sh脚本，写入如下内容：
+	killall -q polybar
+	while pgrep -x >/dev/null; do sleep 1; done
+	polybar <bar/example> 
+	通过在polybar配置文件中修改自己bar的名字，把他替换到<>的位置
+	i.e. 
+	polybar bar1
 ==========================================================
 shortcuts:
 
