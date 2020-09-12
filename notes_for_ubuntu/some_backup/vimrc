@@ -35,6 +35,11 @@ noremap A I
 noremap h a
 noremap H A
 
+"J jump to begining of the line
+nnoremap J 0
+"L jump to the end
+nnoremap L $
+
 
 " select to the end of the line in normal mode.
 noremap te <c-v>$
@@ -106,6 +111,13 @@ noremap <LEADER>- :LLPStartPreview<cr>
 nnoremap rr :! clear ; python3.8 %<CR>
 
 
+"==============================================
+" vim surround
+
+nnoremap ys g@iw
+
+
+
 
 
 
@@ -137,6 +149,9 @@ Plug 'vim-syntastic/syntastic'
 "Plug 'fannheyward/coc-texlab'
 
 "Plug 'terryma/vim-multiple-cursors'
+
+
+Plug 'tpope/vim-surround'
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
@@ -276,11 +291,10 @@ func SkipPair()
     endif
 endfunc
 " 将tab键绑定为跳出括号
-execute "set <M-h>=h"
-inoremap <M-h> <c-r>=SkipPair()<CR>
+"execute "set <M-h>=h"
+"inoremap <M-h> <c-r>=SkipPair()<CR>
 
-
-
+inoremap <space>j <c-r>=SkipPair()<CR>
 
 
 "=========
@@ -341,4 +355,14 @@ autocmd Filetype tex setlocal conceallevel=0
 autocmd Filetype plaintex setlocal conceallevel=0
 
 let g:tex_conceal = "0"
+
+
+
+
+
+
+
+
+
+
 
