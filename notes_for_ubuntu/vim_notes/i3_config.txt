@@ -54,6 +54,9 @@ Configuration
 	set up i3-gaps, make it beautiful
 
 
+9. install Chinese input (sogouinput)
+	download sogou input, go back to ubuntu desktop, install sogou. then back to i3....
+	exec --no-startup-id fcitx
 ==========================================================
 shortcuts:
 
