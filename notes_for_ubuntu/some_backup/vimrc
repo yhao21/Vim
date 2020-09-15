@@ -35,6 +35,11 @@ noremap A I
 noremap h a
 noremap H A
 
+"J jump to begining of the line
+nnoremap J 0
+"L jump to the end
+nnoremap L $
+
 
 " select to the end of the line in normal mode.
 noremap te <c-v>$
@@ -106,6 +111,13 @@ noremap <LEADER>- :LLPStartPreview<cr>
 nnoremap rr :! clear ; python3.8 %<CR>
 
 
+"==============================================
+" vim surround
+
+nnoremap ys g@iw
+
+
+
 
 
 
@@ -138,11 +150,14 @@ Plug 'vim-syntastic/syntastic'
 
 "Plug 'terryma/vim-multiple-cursors'
 
+
+Plug 'tpope/vim-surround'
+
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
-"Plug 'liuchengxu/space-vim-theme'
-"Plug 'yuttie/hydrangea-vim'
-Plug 'connorholyday/vim-snazzy'
+Plug 'liuchengxu/space-vim-theme'
+Plug 'yuttie/hydrangea-vim'
+"Plug 'connorholyday/vim-snazzy'
 "Plug 'lervag/vimtex'
 
 call plug#end()
@@ -157,13 +172,13 @@ call plug#end()
 "==========================
 ""color for hydrangea
 
-"color hydrangea
+color hydrangea
 
 "==============================
 " color snazzy
 
-color snazzy
-let g:SnazzyTransparent = 1
+"color snazzy
+"let g:SnazzyTransparent = 1
 
 
 
@@ -218,17 +233,23 @@ endif
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-"inoremap <silent><expr> <TAB>
-"      \ pumvisible() ? "\<C-n>" :
-"      \ <SID>check_back_space() ? "\<TAB>" :
-"      \ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-"
-"function! s:check_back_space() abort
-"  let col = col('.') - 1
-"  return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
-"
+
+
+execute "set <M-u>=u"
+execute "set <M-o>=o"
+
+
+inoremap <silent><expr> <M-u>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><M-o> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 " Use <c-space> to trigger completion.
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
@@ -276,11 +297,10 @@ func SkipPair()
     endif
 endfunc
 " 将tab键绑定为跳出括号
-execute "set <M-h>=h"
-inoremap <M-h> <c-r>=SkipPair()<CR>
+"execute "set <M-h>=h"
+"inoremap <M-h> <c-r>=SkipPair()<CR>
 
-
-
+inoremap <space>j <c-r>=SkipPair()<CR>
 
 
 "=========
@@ -341,4 +361,13 @@ autocmd Filetype tex setlocal conceallevel=0
 autocmd Filetype plaintex setlocal conceallevel=0
 
 let g:tex_conceal = "0"
+
+
+
+
+
+
+
+
+
 

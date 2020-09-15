@@ -4,7 +4,9 @@
 
 更改键位：noremap 要使用的键位  需要顶替的键位
 
-
+==============
+!!!!! NOTICE: 在i3下，alt是mode，跳出括号快捷键替换为 space j!!!!
+==============
 
 
 
@@ -91,6 +93,9 @@
 		l			光标向右
 		i			光标向上
 		k			光标向下
+	
+		J			normal模式下，移动到行首
+		L			normal模式下，移动到行尾
 	
 		2i			向上移动两行
 		3k			向下移动3行
@@ -208,8 +213,8 @@ Insert模式下快捷键
 
 4. coc.nvim插件
 	
-	Ctrl n 		向下选择并补全代码
-	Ctrl p 		向上选择并补全代码
+	alt u 		向下选择并补全代码Ctrl n
+	alt o		向上选择并补全代码Ctrl p
 	[g		上一个语法错误地方
 	]g		下一个语法错误的地方
 
@@ -241,3 +246,45 @@ Insert模式下快捷键
 	
 	如果想要跳过下一个匹配到的字符  按下 n
 	然后再  按 . 就会隔一个匹配的到的字符串进而进行跳过一个或多个进行修改。
+
+
+
+=========================================
+6. vim.surround
+
+	my shortcuts(customized)
+	
+	ys)	bkt surround a word without space  < default: ysiw) >
+	ys}	bkt surround a word without space  < defualt: ysiw} >
+	yss(	bkt surround whole line  <default: yss)>	keep
+	S)	after v select, bkt witout space  <default: S bkt>
+
+	ds"(..	remove surrounds, i.e. "([	keep
+	dst	remove entire pair like <dir> 	keep
+	
+	cs)"	change ()to ""
+	
+	
+	改键位注意，插入模式后输入原指令，观察右下角反馈的实际键位
+	remap时需要将新键位赋值给真实键位：
+	例如  默认输入ysiw）即可添加bkt，
+	若想用ys替代ysiw，需要nnoremap ys g@iw, 
+	改键之前先使用原键位，观察右下角反馈的真实键位。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

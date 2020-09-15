@@ -1,11 +1,15 @@
 
 
 
+
+
 #================
 # document layout
 
 
 snippet art
+
+
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{indentfirst}
@@ -20,8 +24,8 @@ snippet art
 
 \begin{document}
 \begin{spacing}{1.5}
-	\maketitle
-	$0
+\maketitle
+$0
 
 \end{spacing}
 \end{document}
@@ -49,8 +53,6 @@ endsnippet
 
 #====================
 #Modules!!!
-
-
 
 #====================
 snippet al
@@ -434,6 +436,25 @@ snippet rrccc
 	$4&$5&$6
 $0
 endsnippet
+#====================
+snippet rr "plus - sign" wA
++$0
+endsnippet
+#====================
+snippet gg "- minus sign" wA
+-$0
+endsnippet
+
+#====================
+snippet vv "times" wA
+\\times$0
+endsnippet
+
+#====================
+snippet duiq "duiqi-align" wA
+&$0
+endsnippet
+
 #======================================
 #======================================
 #======================================
@@ -451,35 +472,6 @@ endsnippet
 #======================================
 #======================================
 #======================================
-
-
-#
-#snippet '([A-Za-z])(\d)' "auto subscript" wrA
-#`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
-#endsnippet
-#
-
-#
-#snippet '(.*)(/)(.*)' "fraction" wrA
-#`!p \frac{snip.rv = match.group(1)}{snip.rv = match.group(3)}`
-#endsnippet
-#
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

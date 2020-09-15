@@ -1,5 +1,19 @@
 Configuration
 
+install htop  (a task manager)
+
+
+
+
+======================================
+Installation: 
+	sudo apt install i3
+	sudo apt install dmenu
+
+
+======================================
+
+
 
 1. set up wallpaper:
 	sudo apt-get install feh
@@ -36,21 +50,98 @@ Configuration
 		exec_always compton
 
 					
-5. install terminator
-	sudo apt install terminator
+5. use default terminal:
+	remove menubar in <general> tab in terminal's preference.
 
 6. install chinese input method
 	sudo apt install fcitx
 	sudo apt install fcitx-libpinyin
 
+	
 7. make your i3 borderless
 	go to config file
 		new_window none
 		new_float normal
 		hide_edge_borders both
 
+8. i3-gaps
+	https://github.com/Airblader/i3
+	set up i3-gaps, make it beautiful
+	
+	https://launchpad.net/~simon-monette/+archive/ubuntu/i3-gaps
+	add this ppa to your software source.
+		sudo add-apt-repository ppa:simon-monette/i3-gaps
+		sudo apt-get update
+	install software in the following format:
+		sudo apt install <filename in ppa>
+		sudo apt install i3-gaps
+
+	go to i3 config file, and add this:
+		gaps inner 15
+		gaps outer 10
+	gaps (number) can be customized.
+	===========================================================
+	IF YOU DO NOT WANT TO INSTALL THROUGH PPA, USE THIS WAY! MORE STABLE!
+	sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool libxcb-shape0-dev
+
+	reboot your computer after package installation!
+
+	!!Notice, you must have this package, otherwise, cannot compile!
+		sudo apt-get install libxcb-xrm-dev
+	
+	git clone https://www.github.com/Airblader/i3 i3-gaps
+	cd i3-gaps
+	git checkout gaps && git pull
+	autoreconf --force --install
+	rm -rf build
+	mkdir build
+	cd build
+	../configure --prefix=/usr --sysconfdir=/etc
+	make
+	sudo make install
+
+9. install Chinese input (sogouinput)
+	sudo apt install ibus-rime
+	
+	download sogou input, go back to ubuntu desktop, install sogou. then back to i3....
+	exec --no-startup-id fcitx
+	
+	go to ~/ ,
+	vim .profile
+	write dowm these.
+	export XMODIFIERS=@im=fcitx
+	export QT_IM_MODULE=fcitx
+	export QT_IM_MODULE=fcitx
+	export GTK_IM_MODULE=fcitx
+	
+	下载安装搜狗输入法。linux版本。
+	logout后，重新进入，右下角的小键盘，右键，configure current input method
+	左下角点击加号，搜索：sogoupinyin 添加，即可。ctrl space切换输入法
 
 
+10. polybar
+	与i3使用相同的ppa，
+	sudo apt install polybar
+
+	安装后，在~/.config目录下创建polybar文件夹，
+	将系统目录下：/usr/share/doc/polybar/
+	这个文件夹复制到家目录的config下的polybar，即可进行配置
+	注意，复制后要先解压缩
+
+	配置:
+	第30行有个【bar/example】,在终端中： polybar example可以看到测试样，
+	可以讲example改成别的名字，如bar1，bar2,,,,,barx
+
+	想要开机就运行，需要在i3 config文件中写下：
+	exec_always --no-startup-id ~/.config/i3/polybar.sh &
+
+	此外，需要在i3中创建一个polybar.sh脚本，写入如下内容：
+	killall -q polybar
+	while pgrep -x >/dev/null; do sleep 1; done
+	polybar <bar/example> 
+	通过在polybar配置文件中修改自己bar的名字，把他替换到<>的位置
+	i.e. 
+	polybar bar1
 ==========================================================
 shortcuts:
 

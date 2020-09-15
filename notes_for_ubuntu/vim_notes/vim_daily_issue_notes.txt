@@ -6,3 +6,15 @@
 		:CocCommand python.setInterpreter
 
 		重新选择interpreter即可。
+
+
+2. coc-nvim does not have nodejs:
+	you probably have reinstall your ubuntu.
+	you should:
+		sudo apt install nodejs
+		sodu apt install npm
+
+	Now, you should be ok with CocInstall coc-python
+
+
+
