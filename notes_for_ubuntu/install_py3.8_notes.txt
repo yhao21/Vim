@@ -6,8 +6,8 @@ sudo apt update
 sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
 
 
-#### notice, you have to intall this libbz2, otherwise you cannot use pandas!!
-sudo apt install libbz2-dev
+#### notice, you have to intall this libbz2, otherwise you cannot use pandas!! likewise, if you do not have lzma, error when using numpy.
+sudo apt install libbz2-dev liblzma-dev
 
 
 wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz
