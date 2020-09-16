@@ -47,7 +47,7 @@ noremap te <c-v>$
 noremap ts <c-v>0
 
 " python comment your code
-vnoremap <c-/> A#<Esc><Esc>
+vnoremap <c-/> :normal A#<Esc><Esc>
 
 
 
@@ -155,6 +155,7 @@ Plug 'tpope/vim-surround'
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
+Plug 'dracula/vim'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'yuttie/hydrangea-vim'
 "Plug 'connorholyday/vim-snazzy'
@@ -172,7 +173,7 @@ call plug#end()
 "==========================
 ""color for hydrangea
 
-color hydrangea
+"color hydrangea
 
 "==============================
 " color snazzy
@@ -181,8 +182,10 @@ color hydrangea
 "let g:SnazzyTransparent = 1
 
 
-
-
+"==============================
+packadd! dracula
+syntax enable
+colorscheme dracula
 
 "==========================================================
 map ff :NERDTreeToggle<CR>
@@ -297,17 +300,18 @@ func SkipPair()
     endif
 endfunc
 " 将tab键绑定为跳出括号
-"execute "set <M-h>=h"
-"inoremap <M-h> <c-r>=SkipPair()<CR>
+execute "set <M-n>=n"
+inoremap <M-n> <c-r>=SkipPair()<CR>
 
-inoremap <space>j <c-r>=SkipPair()<CR>
-
+"inoremap <space>j <c-r>=SkipPair()<CR>
+"inoremap <c-j> <c-r>=SkipPair()<CR>
 
 "=========
 "indentline
 "=========
 let g:indentLine_char=':'
 let g:indentLine_enabled = 1
+
 
 
 
