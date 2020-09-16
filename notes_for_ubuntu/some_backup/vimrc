@@ -49,9 +49,9 @@ noremap ts <c-v>0
 " python comment your code
 vnoremap <c-/> :normal A#<Esc><Esc>
 
-
-
-
+map h <nop>
+map u <nop>
+map o <nop>
 map s <nop>
 map S :w<CR>
 map Q :q<CR>
@@ -87,9 +87,16 @@ noremap <LEADER>e <c-w>10+
 noremap <LEADER>d <c-w>10-
 "
 
+"===============================
+" text editing:
+
 "binding <ESC>
-execute "set <M-u>=u"
-noremap <M-u> <ESC>
+"execute "set <M-u>=u"
+"noremap <M-u> <ESC>
+
+"add a new line below in insert mode
+execute "set <M-p>=p"
+inoremap <M-p> <Esc>
 
 
 
@@ -241,14 +248,13 @@ endif
 
 
 execute "set <M-u>=u"
-execute "set <M-o>=o"
-
+execute "set <M-p>=p"
 
 inoremap <silent><expr> <M-u>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><M-o> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><M-p> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
