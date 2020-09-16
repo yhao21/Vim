@@ -87,7 +87,9 @@ noremap <LEADER>e <c-w>10+
 noremap <LEADER>d <c-w>10-
 "
 
-
+"binding <ESC>
+execute "set <M-u>=u"
+noremap <M-u> <ESC>
 
 
 
