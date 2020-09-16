@@ -12,7 +12,7 @@
 1. Normal 模式下快捷键
 
 	1.1 基本写入与编辑
-		alt u			Esc
+		alt p			Esc
 		rr			normal下 直接运行python代码
 		a			光标前插入文字
 		A			行首添加文字
@@ -213,7 +213,7 @@ Insert模式下快捷键
 4. coc.nvim插件
 	
 	alt u 		向下选择并补全代码Ctrl n
-	alt o		向上选择并补全代码Ctrl p
+	alt p		向上选择并补全代码Ctrl p
 	[g		上一个语法错误地方
 	]g		下一个语法错误的地方
 
