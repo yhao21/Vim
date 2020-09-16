@@ -12,7 +12,7 @@
 1. Normal 模式下快捷键
 
 	1.1 基本写入与编辑
-
+		alt u			Esc
 		rr			normal下 直接运行python代码
 		a			光标前插入文字
 		A			行首添加文字
