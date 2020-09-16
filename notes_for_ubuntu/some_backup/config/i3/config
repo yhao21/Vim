@@ -209,6 +209,7 @@ bindsym $mod+Shift+i move up
 bindsym $mod+Shift+l move right
 
 
+
 #open dmenu for software
 
 bindsym $mod+m exec dmenu_run
@@ -267,13 +268,15 @@ for_window [class=".*"] border pixel 0
 #==========================================
 # software you want to run everytime when reboot
 
-exec_always feh --bg-fill /home/synferlo/Pictures/ubuntu_logo_bg.png
+#exec_always feh --bg-fill /home/synferlo/Pictures/ubuntu_logo_bg.png
+exec_always feh --bg-fill /home/synferlo/Pictures/island.jpeg
+
+
 
 exec_always compton
 
 #exec_always fcitx -d
 
 exec --no-startup-id fcitx
-
 
 
