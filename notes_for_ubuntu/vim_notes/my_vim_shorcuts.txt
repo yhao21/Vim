@@ -102,6 +102,9 @@
 		4j			向左移动4个光标位
 		shift e			normal下移动到行尾
 		shift b			normal下移动到行首
+		m [a-z]			标记，ma表示将这一行标记为a
+		' [a-z]			将光标移动到标记
+					如：移动标记a为, 'a
 	
 		d c y 配合数字加方向键
 	
