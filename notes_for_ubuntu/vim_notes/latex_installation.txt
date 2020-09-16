@@ -1,0 +1,17 @@
+after you have install texlive,
+	cd ~
+	vim .bashrc
+	
+write down these:
+	PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH;export PATH
+	MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH;export MANPATH
+	INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH;export INFOPATH
+
+refresh your bashrc
+	source ~/.bashrc
+
+done!
+
+
+If you encounter with a no setspace pkg problem, you probably did not write path into 
+.bashrc. (do not type those three line in terminal!!)
