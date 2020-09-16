@@ -29,6 +29,26 @@ snippet art
 
 endsnippet
 
+	
+
+#====================
+snippet s
+\section{$0}
+$0
+endsnippet
+
+
+#====================
+snippet ss
+\subsection{$0}
+$0
+endsnippet
+
+#====================
+snippet sss
+\subsubsection{$0}
+$0
+endsnippet
 
 #=====================
 snippet begin
@@ -136,7 +156,7 @@ endsnippet
 
 #====================
 snippet ss "addup" wA
-\sum\limits_{$1 = $2} ^$3{$4}$0
+\sum\limits_{$1} ^$2{$3}$0
 endsnippet
 
 #====================
@@ -146,7 +166,7 @@ endsnippet
 
 #====================
 snippet pp "Pai Product" wA
-\prod_{$1 = $2} ^$3 {$4}$0
+\prod_{$1} ^$2 {$3}$0
 endsnippet
 
 #====================
@@ -453,6 +473,9 @@ snippet duiqi "duiqi-align" wA
 endsnippet
 
 #======================================
+snippet blk "blank \quad" wA
+\\quad$0
+endsnippet
 #======================================
 #======================================
 #======================================
