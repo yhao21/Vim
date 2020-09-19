@@ -172,6 +172,8 @@
 	
 	1.4 Keys for python:
 		ctrl p			:CocCommand python.setInterpreter
+		? (shift /)		after visual block, this command will comment your code
+					same as "ctrl /" in pycharm
 
 --------------------------------------------------------------
 
