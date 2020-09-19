@@ -99,6 +99,13 @@ execute "set <M-p>=p"
 inoremap <M-p> <Esc>
 
 
+"===============================
+" python commenting
+vnoremap ? I#<Esc><Esc>
+
+
+
+
 
 
 map ti :tabe<CR>
