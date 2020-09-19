@@ -123,9 +123,12 @@ noremap <LEADER>- :LLPStartPreview<cr>
 
 
 
+"==============================================
+" Python
 " run you python code with shortcuts
 nnoremap rr :! clear ; python3.8 %<CR>
 
+nnoremap <c-p> :CocCommand python.setInterpreter<CR>
 
 "==============================================
 " vim surround
