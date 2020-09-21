@@ -10,8 +10,10 @@ snippet art
 \usepackage{bm}
 \usepackage{indentfirst}
 \setlength{\parindent}{0em}
+\usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{setspace}
+\doublespacing
 
 \title{$1}
 \author{$2}
@@ -19,16 +21,12 @@ snippet art
 
 
 \begin{document}
-\begin{spacing}{1.5}
-	\maketitle
-	$0
+\maketitle
+$0
 
-\end{spacing}
 \end{document}
 
 endsnippet
-
-	
 
 #====================
 snippet s
