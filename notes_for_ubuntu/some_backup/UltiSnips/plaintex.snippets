@@ -8,11 +8,13 @@
 snippet art
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\usepackage{bm}
 \usepackage{indentfirst}
 \setlength{\parindent}{0em}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{setspace}
+\doublespacing
 
 \title{$1}
 \author{$2}
@@ -20,11 +22,9 @@ snippet art
 
 
 \begin{document}
-\begin{spacing}{2}
 \maketitle
 $0
 
-\end{spacing}
 \end{document}
 
 endsnippet
@@ -107,7 +107,6 @@ endsnippet
 
 #====================
 snippet qq
-
 \begin{equation}
 	$1
 \end{equation}
@@ -118,7 +117,6 @@ endsnippet
 
 #====================
 snippet qq*
-
 \begin{equation*}
 	$1
 \end{equation*}
@@ -154,7 +152,7 @@ endsnippet
 
 #====================
 snippet ss "addup" wA
-\sum\limits_{$1 = $2} ^$3{$4}$0
+\sum\limits_{$1} ^$2{$3}$0
 endsnippet
 
 #====================
@@ -164,7 +162,7 @@ endsnippet
 
 #====================
 snippet pp "Pai Product" wA
-\prod_{$1 = $2} ^$3 {$4}$0
+\prod_{$1} ^$2 {$3}$0
 endsnippet
 
 #====================
@@ -306,7 +304,7 @@ snippet kappa "k" wA
 endsnippet
 
 #======================================
-snippet lambda "ru" wA
+snippet ru "" w
 \lambda$0
 endsnippet
 
@@ -343,8 +341,13 @@ snippet Phi
 endsnippet
 
 #======================================
-snippet phi
+snippet phi "" w
 \varphi$0
+endsnippet
+
+#======================================
+snippet fi "phi" w
+\phi$0
 endsnippet
 
 #======================================
@@ -358,12 +361,12 @@ snippet O
 endsnippet
 
 #======================================
-snippet <<
+snippet << "" wA
 \le$0
 endsnippet
 
 #======================================
-snippet >>
+snippet >> "" wA
 \ge$0
 endsnippet
 #======================================
@@ -471,6 +474,21 @@ snippet duiqi "duiqi-align" wA
 endsnippet
 
 #======================================
+snippet blk "blank \quad" wA
+\\quad$0
+endsnippet
+#======================================
+snippet bm "bold in equation" w
+\bm{$1}$0
+endsnippet
+#======================================
+snippet cd "\cdot used in density fn"
+\cdot$0
+endsnippet
+#======================================
+snippet ln "" w
+\ln$0
+endsnippet
 #======================================
 #======================================
 #======================================
@@ -484,22 +502,6 @@ endsnippet
 #======================================
 #======================================
 #======================================
-#======================================
-#======================================
-#======================================
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
