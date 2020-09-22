@@ -1,0 +1,23 @@
+If your touchpad does not work after install i3wm
+
+go to config file:
+	/usr/share/X11/xorg.conf.d/40-libinput.conf
+
+add the following code into conf file
+
+	Section "InputClass"
+		Identifier "libinput touchpad catchall"
+		MatchIsTouchpad "on"
+		MatchDevicePath "/dev/input/event*"
+		Driver "libinput"
+		Option "Tapping" "True"
+	EndSection
+
+
+
+
+
+write this in your vimrc:
+
+noremap <c-j> :! xinput --disable 15<CR>
+noremap <c-k> :! xinput --enable 15<CR>
