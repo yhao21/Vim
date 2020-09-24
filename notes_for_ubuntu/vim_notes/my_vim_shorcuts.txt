@@ -12,8 +12,8 @@
 1. Normal 模式下快捷键
 
 	1.1 基本写入与编辑
-		alt p			Esc
 		rr			normal下 直接运行python代码
+		alt p			pretty json format
 		a			光标前插入文字
 		A			行首添加文字
 		h			光标后后插入文字

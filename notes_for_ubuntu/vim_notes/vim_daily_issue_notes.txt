@@ -17,4 +17,8 @@
 	Now, you should be ok with CocInstall coc-python
 
 
+3. pretty json
+	:%!python3.8 -m json.tool
 
+	NOTICE: you have to use python3.8 or the command you use to
+	call python in terminal. 
