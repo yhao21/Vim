@@ -49,6 +49,13 @@ noremap ts <c-v>0
 " python comment your code
 vnoremap <c-/> :normal A#<Esc><Esc>
 
+" pretty json"
+execute "set <M-p>=p"
+nnoremap <M-p> :%!python3.8 -m json.tool<CR>
+
+
+
+
 map h <nop>
 map u <nop>
 map o <nop>
