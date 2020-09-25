@@ -137,6 +137,15 @@
 16 install vimspector
 				reinstall you python by using :   sudo make install rather altinstall
 				notice, with altinstall, sys cannot find site-package
+
+				add github address to your plug in
+
+				go to vimspector dir and 
+								./install_gadget.py --enable-python
+
+				open nvim or vim
+								:VimspectorInstall vscode-python
+								:VimspectorInstall --all --force-all
 				
 
 
