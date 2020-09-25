@@ -149,6 +149,10 @@ map sh <C-w>t<C-w>K
 map sh <C-w>t<C-w>H
 
 
+"===============
+"=============== ALE
+"===============
+let g:ale_disable_lsp = 1
 
 
 "===============
@@ -170,11 +174,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'yggdroot/indentline'
 
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
+"
+Plug 'dense-analysis/ale'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-Plug 'vim-scripts/taglist.vim'
+"Plug 'vim-scripts/taglist.vim'
 
 "Plug 'fannheyward/coc-texlab'
 
@@ -229,14 +235,14 @@ colorscheme dracula
 "=============== Airline
 "===============
 let g:airline_theme='dracula'
-let g:airline#extension#coc#enabled = 0
-let g:airline#extension#branch#enabled = 0
-let g:airline#extension#tabline#enabled = 0
-let g:airline#extension#tabline#formatter = 'unique_tail'
-let g:airline_powerline_fonts = 1
-let g:airline#extension#tabline#show_buffers = 0
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+"let g:airline#extension#coc#enabled = 0
+"let g:airline#extension#branch#enabled = 0
+"let g:airline#extension#tabline#enabled = 0
+"let g:airline#extension#tabline#formatter = 'unique_tail'
+"let g:airline_powerline_fonts = 1
+"let g:airline#extension#tabline#show_buffers = 0
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
 
 "===============
 "=============== NERDTree
@@ -442,7 +448,7 @@ let g:tex_conceal = "0"
 "=============== Taglist
 "===============
 
-map <silent> T :TagbarOpenAutoClose<CR>
+"map <silent> T :TagbarOpenAutoClose<CR>
 
 
 
@@ -451,7 +457,6 @@ map <silent> T :TagbarOpenAutoClose<CR>
 "===============
 
 map <C-f> :FZF<CR>
-
 
 
 
