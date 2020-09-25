@@ -12,6 +12,8 @@
 1. Normal 模式下快捷键
 
 	1.1 基本写入与编辑
+		ctrl f	fuzzyfile finder
+		gd			跳转到光标所在的函数
 		rr			normal下 直接运行python代码
 		alt p			pretty json format
 		a			光标前插入文字
@@ -270,6 +272,7 @@ Insert模式下快捷键
 	ys}	bkt surround a word without space  < defualt: ysiw} >
 	yss(	bkt surround whole line  <default: yss)>	keep
 	S)	after v select, bkt witout space  <default: S bkt>
+		配合 te ts 然后 S)可以快速对选中的文本添加括号
 
 	ds"(..	remove surrounds, i.e. "([	keep
 	dst	remove entire pair like <dir> 	keep
