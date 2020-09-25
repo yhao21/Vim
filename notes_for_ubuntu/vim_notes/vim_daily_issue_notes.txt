@@ -22,3 +22,7 @@
 
 	NOTICE: you have to use python3.8 or the command you use to
 	call python in terminal. 
+
+
+4. Save file too slow:
+				do not plug in Syntastic. It will slow down your saving speed A LOT!
