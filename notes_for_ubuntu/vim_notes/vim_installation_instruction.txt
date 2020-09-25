@@ -134,7 +134,10 @@
 		粘贴时候药用ctrl shift v
 
 
-
+16 install vimspector
+				reinstall you python by using :   sudo make install rather altinstall
+				notice, with altinstall, sys cannot find site-package
+				
 
 
 

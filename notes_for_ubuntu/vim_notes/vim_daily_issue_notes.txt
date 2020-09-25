@@ -32,7 +32,7 @@
 				1. Open your coc.nvim configuration file with :CocConfig and add "diagnostic.displayByAle": true to your settings.
 				2. Add let g:ale_disable_lsp = 1 to your vimrc file, before plugins are loaded.
 
-
+6.loadedjSQ
 
 
 

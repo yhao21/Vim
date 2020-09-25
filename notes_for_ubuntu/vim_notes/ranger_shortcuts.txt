@@ -1,4 +1,0 @@
-1. rename
-	cw		rename fully
-	shift i		rename, but insert from the beginning
-	shift a		renmae, but append
