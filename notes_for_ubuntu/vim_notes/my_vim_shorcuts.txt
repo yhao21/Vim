@@ -12,7 +12,8 @@
 1. Normal 模式下快捷键
 
 	1.1 基本写入与编辑
-		ctrl f	fuzzyfile finder
+		ss			(chromebook vim)save and compile .tex file
+		ctrl f			fuzzyfile finder
 		gd			跳转到光标所在的函数
 		rr			normal下 直接运行python代码
 		alt p			pretty json format
