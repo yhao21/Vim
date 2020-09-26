@@ -60,6 +60,15 @@
 	将https://github.com/neoclide/coc.nvim中example config的内容甄选后复制到vimrc中即可。！！！
 
 
+	===================================
+	Install coc on chrombook
+		sudo apt install nodejs npm	jedi
+		:CocInstall coc-python
+		sudo pip3.8 install python-language-server
+
+	===================================
+
+
 7. 设置如何跳出括号等：
 	https://blog.csdn.net/qq_31433709/article/details/101777678
 	
