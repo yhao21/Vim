@@ -128,7 +128,23 @@ vnoremap ? I#<Esc><Esc>
 
 " run you python code with shortcuts
 nnoremap rr :! clear ; python3.8 %<CR>
+" open terminal in vim
+"nnoremap <leader>r :term bash<CR> <C-w>t<C-w>H
+"nnoremap <leader>r :set splitright<CR>:vsplit<CR>:! clear ; python3.8 %<CR>
 
+" Compile function
+noremap <leader>r :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+	exec "w"
+	if &filetype == 'sh'
+		:!time bash %
+	elseif &filetype == 'python'
+		:term python3 %
+	elseif &filetype == 'tex'
+		silent! exec "VimtexStop"
+		silent! exec "VimtexCompile"
+	endif
+endfunc
 
 " select coc interpreter
 nnoremap <c-p> :CocCommand python.setInterpreter<CR>
@@ -146,7 +162,7 @@ map tl :+tabnext<CR>
 map tj :-tabnext<CR>
 
 map sh <C-w>t<C-w>K
-map sh <C-w>t<C-w>H
+map sv <C-w>t<C-w>H
 
 
 "===============
@@ -189,13 +205,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'tpope/vim-surround'
 
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+"Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 "Plug 'dracula/vim'
 "Plug 'liuchengxu/space-vim-theme'
 "Plug 'yuttie/hydrangea-vim'
 "Plug 'connorholyday/vim-snazzy'
-"Plug 'lervag/vimtex'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -482,7 +498,7 @@ let g:tex_conceal = "0"
 let g:coc_disable_startup_warning = 1
 
 
-
+let g:tex_flavor = "pdflatex"
 
 
 
