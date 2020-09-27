@@ -1,0 +1,4 @@
+1. split screen
+	alt [	to the left
+	alt ]	to the right
+	
