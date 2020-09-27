@@ -1,4 +1,7 @@
 1. split screen
 	alt [	to the left
 	alt ]	to the right
+
+2. maximize window(exit split screen)
+	alt =
 	
