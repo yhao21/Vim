@@ -128,7 +128,18 @@ vnoremap ? I#<Esc><Esc>
 
 " run you python code with shortcuts
 nnoremap rr :! clear ; python3.8 %<CR>
-
+noremap <leader>r :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+	exec "w"
+	if &filetype == 'c'
+		exec "!g++ % -o %<"
+		exec "!time ./%<"
+	elseif &filetype == 'python'
+		set splitright
+		:sp
+		:term python3.8 %
+	endif
+endfunc
 
 " select coc interpreter
 nnoremap <c-p> :CocCommand python.setInterpreter<CR>
@@ -136,6 +147,29 @@ nnoremap <c-p> :CocCommand python.setInterpreter<CR>
 
 " vim surround
 nnoremap ys g@iw
+
+
+
+
+
+"===============
+"=============== Vimspector
+"===============
+let g:vimspector_enable_mappings = "HUMAN"
+nmap <leader>dd :call vimspector#Launch()<CR>
+nmap <leader>dx :VimspectorReset<CR>
+nmap <leader>de :VimspectorEval
+nmap <leader>dw :VimspectorWatch
+nmap <leader>do :VimspectorShowOutput
+
+
+
+
+
+
+
+
+
 "===============
 "=============== Tab
 "===============
@@ -161,36 +195,19 @@ let g:ale_disable_lsp = 1
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
-
 Plug 'preservim/nerdtree'
-
-" Track the engine. (Ultisnips)
 Plug 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:(Ultisnips)
 Plug 'honza/vim-snippets'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'yggdroot/indentline'
-
+Plug 'puremourning/vimspector'
 "Plug 'vim-syntastic/syntastic'
-"
 Plug 'dense-analysis/ale'
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
 "Plug 'vim-scripts/taglist.vim'
-
-"Plug 'fannheyward/coc-texlab'
-
 "Plug 'terryma/vim-multiple-cursors'
-
-
 Plug 'tpope/vim-surround'
-
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-
 Plug 'dracula/vim'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'yuttie/hydrangea-vim'
