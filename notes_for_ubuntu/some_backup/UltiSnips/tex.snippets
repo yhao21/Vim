@@ -281,9 +281,9 @@ _{$1}$0
 endsnippet
 
 #======================================
-snippet // "\frac{}{}" wA
-\\frac{$1}{$2}$0
-endsnippet
+#snippet // "\frac{}{}" wA
+#\\frac{$1}{$2}$0
+#endsnippet
 #======================================
 snippet up
  ^{$1}$0
@@ -557,7 +557,7 @@ snippet rt
 \sqrt$0
 endsnippet
 #======================================
-snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)//' "Fraction" wrA
 \\frac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
 #======================================
@@ -577,7 +577,7 @@ snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
 endsnippet
 #======================================
 priority 10
-snippet "bar" "bar" riA
+snippet "bar" "bar" ri
 \overline{$1}$0
 endsnippet
 
@@ -587,12 +587,12 @@ snippet "((\\\w+)|[a-zA-Z])bar" "bar" riA
 endsnippet
 #======================================
 priority 10
-snippet "hat" "hat" riA
+snippet "hat" "hat" ri
 \hat{$1}$0
 endsnippet
 
 priority 100
-snippet "((\\\w+)|([a-zA-Z]))hat" "hat" riA
+snippet "((\\\w+)|([a-zA-Z]))hatt" "hat" riA
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
