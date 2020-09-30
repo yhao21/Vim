@@ -15,6 +15,17 @@ snippet art
 \usepackage{setspace}
 \doublespacing
 
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{%
+\def\svgwidth{\columnwidth}
+\import{./figures/}{#1.pdf_tex}
+}
+
+
 \title{$1}
 \author{$2}
 \date{$3}
@@ -314,22 +325,22 @@ snippet bar
 endsnippet
 
 #======================================
-snippet alpha "a" wA
+snippet a "a" w
 \alpha$0
 endsnippet
 
 #======================================
-snippet beta "b" wA
+snippet b "b" w
 \beta$0
 endsnippet
 
 #======================================
-snippet gamma "g" wA
+snippet g "g" w
 \gamma$0
 endsnippet
 
 #======================================
-snippet delta "d" wA
+snippet d "d" w
 \delta$0
 endsnippet
 
@@ -354,11 +365,11 @@ snippet T
 endsnippet
 
 #======================================
-snippet theta "t" wA
+snippet t "t" w
 \theta$0
 endsnippet
 #======================================
-snippet kappa "k" wA
+snippet k "k" w
 \kappa$0
 endsnippet
 
@@ -382,12 +393,12 @@ snippet p
 \pi$0
 endsnippet
 #======================================
-snippet rho "rho" wA
+snippet r "rho" w
 \rho$0
 endsnippet
 
 #======================================
-snippet sigma "sigma" wA
+snippet s "sigma" w
 \sigma$0
 endsnippet
 #======================================
@@ -395,7 +406,7 @@ snippet tao "tao" wA
 \tau$0
 endsnippet
 #======================================
-snippet Phi
+snippet Phi	"" w
 \Phi$0
 endsnippet
 
@@ -596,6 +607,9 @@ snippet "((\\\w+)|([a-zA-Z]))hatt" "hat" riA
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
+snippet bm "" wA
+\bm{$1}$0
+endsnippet
 #======================================
 #======================================
 #======================================
