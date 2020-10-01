@@ -181,7 +181,6 @@ snippet qq
 	$1
 \end{equation}
 $0
-
 endsnippet
 
 
@@ -191,9 +190,22 @@ snippet qq*
 	$1
 \end{equation*}
 $0
-
 endsnippet
 
+#====================
+snippet cases "cases" w
+\begin{cases}
+$1
+\end{cases}
+$0
+endsnippet
+#====================
+snippet enumerate "" w
+\begin{enumerate}
+        \item $1
+\end{enumerate}
+$0
+endsnippet
 #====================
 #Text Layout
 
@@ -256,8 +268,12 @@ $ $1 $$0
 endsnippet
 
 #====================
-snippet iee "math eq" wA
-$$ $1 $$$0
+#snippet iee "math eq" wA
+#$$ $1 $$$0
+#endsnippet
+
+snippet iee "math qq" wA
+\[ $1 \]$0
 endsnippet
 
 #====================
@@ -611,7 +627,13 @@ snippet bm "" wA
 \bm{$1}$0
 endsnippet
 #======================================
+snippet LLF "log likelihood fn" w
+\\ln L(\\theta|\\bm{Y})$0
+endsnippet
 #======================================
+snippet LF "likelihood fn" w
+L(\\theta|\\bm{Y})$0
+endsnippet
 #======================================
 #======================================
 #======================================
