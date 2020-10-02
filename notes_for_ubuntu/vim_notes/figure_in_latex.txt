@@ -1,0 +1,76 @@
+Use: whenever you start coding latex, run this in terminal:
+				inkscape-figures watch
+
+then go to shortcuts manger folder,
+				python3 main.py
+
+
+
+
+
+
+
+
+
+
+download inkscape
+				sudo apt install inkscape
+
+install ink figure manager
+				https://github.com/gillescastel/inkscape-figures
+				pip3 install inkscape-figures
+
+add command below to your latex document:
+				
+				\usepackage{import}
+				\usepackage{xifthen}
+				\usepackage{pdfpages}
+				\usepackage{transparent}
+				
+				\newcommand{\incfig}[1]{%
+								\def\svgwidth{\columnwidth}
+								\import{./figures/}{#1.pdf_tex}
+								}
+
+insert figure by type the name of the figure then press Ctrl f
+
+after editing your figure, press Ctrl s in inkscape, and quit alt q
+
+your figure is shown in the latex file.
+
+	
+
+
+
+add shortcuts manager:
+				sudo pip3.8 install Xlib
+				sudo apt install pdflatex pdf2svg xclip
+
+
+				sudo apt install rxvt-unicode
+
+
+
+config your urxvt: create .Xdefaults in your home dir
+    !!$HOME/.Xdefaults
+     
+    URxvt.depth:32
+    URxvt.background:[90]#000000
+    URxvt.foreground:#ffffff
+    URxvt.colorBD:Gray95
+    URxvt.colorUL:Green
+    URxvt.color1:Red2
+    URxvt.color4:RoyalBlue
+    URxvt.color5:Magenta2
+    URxvt.color8:Gray50
+    URxvt.color10:Green2
+    URxvt.color12:DodgerBlue
+    URxvt.color14:Cyan2
+    URxvt.color15:Gray95
+    URxvt.cursorBlink:True
+    URxvt.saveLines:3000
+    Xft.dpi:96
+    URxvt.font: xft:Ubuntu Mono:size=15, style=regular
+    URxvt.font: xft:Ubuntu Mono:size=15, style=bold
+    !URxvt.font: xft:monaco:bold:size=15
+

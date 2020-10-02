@@ -630,6 +630,20 @@ snippet bm "" wA
 \bm{$1}$0
 endsnippet
 #======================================
+
+
+
+
+
+
+
+
+
+#======================================
+#          Econometrics
+#======================================
+
+
 snippet LLF "log likelihood fn" w
 \\ln L(\\theta|\\bm{Y})$0
 endsnippet
@@ -646,18 +660,40 @@ snippet lf "likelihood fn" w
 L(\\bm{Y}|\\theta)$0
 endsnippet
 #======================================
+snippet 1info "info matrix square" wA
+\left( {\frac{\partial {\ln L(\theta|\bm{Y})}}
+{\partial {\theta}}} \right)^{2}$0
+endsnippet
+#======================================
+snippet 2info "info 2nd derivative" wA
+\frac{\partial^{2} {\ln L(\theta|\bm{Y})}}
+{\partial {\theta} \partial \theta'}$0
+endsnippet
 #======================================
 #======================================
+
+
+
+
+
+
+
+
+#======================================
+#        Macroeconomics
 #======================================
 
 
-
-
-
-
-
-
-
+#======================================
+snippet lifeu "lifetime utility" wA
+\max_{\substack{\\\\}}\sum\limits_{t = 0} ^\infty{
+\beta^{t}u(c_{t})}$0
+endsnippet
+#======================================
+snippet adbc "AD B.C" wA
+\sum\limits_{t=0} ^\infty \left(p_{t}(c_{t}+i_{t})\right)
+\le \sum\limits_{t=0} ^\infty \left(w_{t}h_{t} + r_{t}k_{t}\right)$0
+endsnippet
 
 
 
