@@ -100,11 +100,6 @@ endsnippet
 
 
 #====================
-snippet s
-\section{$0}
-$0
-endsnippet
-
 
 #====================
 snippet ss
@@ -248,7 +243,7 @@ snippet pp "Pai Product" wA
 endsnippet
 
 #====================
-snippet ll "Limitation" wA
+snippet lim "Limitation" w
 \lim_{$1 \to $2} {$3}$0
 endsnippet
 
@@ -257,6 +252,14 @@ snippet bkt "big bracket" wA
 \left( {$1} \right)$0
 endsnippet
 
+#====================
+snippet b] "[big bkt]" w
+\left[ $1 \right]$0
+endsnippet
+#====================
+snippet b} "{big bkt}" w
+\left{ $1 \right}$0
+endsnippet
 #====================
 snippet iig "integral" wA
 \int_{$1}^{$2}{$3}$0
@@ -631,8 +634,16 @@ snippet LLF "log likelihood fn" w
 \\ln L(\\theta|\\bm{Y})$0
 endsnippet
 #======================================
+snippet llf "log likelihood fn" w
+\\ln L(\bm{Y}|\\theta)$0
+endsnippet
+#======================================
 snippet LF "likelihood fn" w
 L(\\theta|\\bm{Y})$0
+endsnippet
+#======================================
+snippet lf "likelihood fn" w
+L(\\bm{Y}|\\theta)$0
 endsnippet
 #======================================
 #======================================
