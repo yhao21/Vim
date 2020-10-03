@@ -7,6 +7,9 @@
 snippet art
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
 \usepackage{bm}
 \usepackage{indentfirst}
 \setlength{\parindent}{0em}
@@ -339,27 +342,31 @@ snippet tt "tilde" wA
 \tilde{$1}$0
 endsnippet
 #======================================
+snippet "((\\\w+)|[a-zA-Z])ud" "updot macro timeperiod change" wr
+\dot{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
 snippet bar
 \bar{$1}$0
 endsnippet
 
 #======================================
-snippet a "a" w
+snippet alpha "a" wA
 \alpha$0
 endsnippet
 
 #======================================
-snippet b "b" w
+snippet beta "b" wA
 \beta$0
 endsnippet
 
 #======================================
-snippet g "g" w
+snippet gamma "g" wA
 \gamma$0
 endsnippet
 
 #======================================
-snippet d "d" w
+snippet delta "d" wA
 \delta$0
 endsnippet
 
@@ -384,7 +391,7 @@ snippet T
 endsnippet
 
 #======================================
-snippet t "t" w
+snippet theta "t" wA
 \theta$0
 endsnippet
 #======================================
@@ -412,7 +419,7 @@ snippet p
 \pi$0
 endsnippet
 #======================================
-snippet r "rho" w
+snippet rho "rho" wA
 \rho$0
 endsnippet
 
@@ -633,6 +640,19 @@ endsnippet
 
 
 
+#======================================
+#        Economics
+#======================================
+
+
+#======================================
+snippet ml "lagrangian" wA
+\mathscr{L}$0
+endsnippet
+#======================================
+snippet H "Hamiltonian" w
+\mathcal{H}$0
+endsnippet
 
 
 
@@ -643,7 +663,19 @@ endsnippet
 #          Econometrics
 #======================================
 
-
+#======================================
+snippet RR "black bold R" wA
+\mathbf{R}$0
+endsnippet
+#======================================
+snippet mR "black two line R" wA
+{\rm I\!R}$0
+endsnippet
+#======================================
+snippet mmR "kong xin R" wA
+\mathbb{R}$0
+endsnippet
+#======================================
 snippet LLF "log likelihood fn" w
 \\ln L(\\theta|\\bm{Y})$0
 endsnippet

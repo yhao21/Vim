@@ -1,0 +1,5 @@
+1. install deb file through gdebi:
+				sudo apt install gdebi-core
+
+				sudo gdebi <rstudio>.deb
+
