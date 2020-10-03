@@ -210,7 +210,7 @@ endsnippet
 
 
 #====================
-snippet bd "boldface" wA
+snippet bb "boldface" wA
 {\textbf {$1}}$0
 endsnippet
 
@@ -251,8 +251,16 @@ snippet lim "Limitation" w
 endsnippet
 
 #====================
+snippet lb "left bracket" w
+\left($0
+endsnippet
+#====================
+snippet rb "left bracket" w
+\right)$0
+endsnippet
+#====================
 snippet bkt "big bracket" wA
-\left( {$1} \right)$0
+\left( $1 \right)$0
 endsnippet
 
 #====================
@@ -424,7 +432,11 @@ snippet rho "rho" wA
 endsnippet
 
 #======================================
-snippet s "sigma" w
+snippet kai "chi square" w
+\chi
+endsnippet
+#======================================
+snippet sigma "sigma" wA
 \sigma$0
 endsnippet
 #======================================
@@ -637,6 +649,9 @@ snippet bm "" wA
 \bm{$1}$0
 endsnippet
 #======================================
+snippet "((\\\w+)|([a-zA-Z]))dd" "hat" riA
+\bm{`!p snip.rv=match.group(1)`}
+endsnippet
 
 
 
@@ -664,6 +679,18 @@ endsnippet
 #======================================
 
 #======================================
+snippet root "sqrt" w
+\sqrt
+endsnippet
+#======================================
+snippet var "variance" w
+VAR($1)$0
+endsnippet
+#======================================
+snippet mse "MSE" w
+MSE($1)$0
+endsnippet
+#======================================
 snippet RR "black bold R" wA
 \mathbf{R}$0
 endsnippet
@@ -674,6 +701,14 @@ endsnippet
 #======================================
 snippet mmR "kong xin R" wA
 \mathbb{R}$0
+endsnippet
+#======================================
+snippet S "sample space" w
+\mathcal S
+endsnippet
+#======================================
+snippet sanjiao "dao san jiao" wA
+\bigtriangledown
 endsnippet
 #======================================
 snippet LLF "log likelihood fn" w
@@ -702,7 +737,25 @@ snippet 2info "info 2nd derivative" wA
 {\partial {\theta} \partial \theta'}$0
 endsnippet
 #======================================
+snippet kuohao "shu kuo hao" w
+\binom{$1}{$2}$0
+endsnippet
 #======================================
+snippet mb "[matrix]" wA
+\begin{bmatrix}
+$1 & $2\\\\
+$3 & $4
+\end{bmatrix}
+$0
+endsnippet
+#======================================
+snippet mp "[matrix]" wA
+\begin{pmatrix}
+$1 & $2\\\\
+$3 & $4
+\end{pmatrix}
+$0
+endsnippet
 
 
 
