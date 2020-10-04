@@ -24,3 +24,23 @@
 
 
 
+3. Chinese character and envi
+				sudo apt install language-pack-zh-hans
+
+				sudo apt-get install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
+
+
+				go to ~/ ,
+				vim .profile
+				write dowm these.
+				export XMODIFIERS=@im=fcitx
+				export QT_IM_MODULE=fcitx
+				export QT_IM_MODULE=fcitx
+				export GTK_IM_MODULE=fcitx
+
+
+4. change time zone
+				timedatectl list-timezones
+				find America/New_York
+
+				sudo timedatectl set-timezone America/New_York
