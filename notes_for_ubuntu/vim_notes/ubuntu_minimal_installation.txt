@@ -1,0 +1,17 @@
+after kernal installation,
+
+
+sudo apt install xorg  build-essential libx11-dev libxinerama-dev libxft-dev git vim neovim (libwebkit2gtk-4.0-dev) stterm
+sudo apt install xinit
+
+sudo apt install ranger i3
+
+sudo reboot
+
+(sudo apt remove gdm3)
+
+
+
+config i3 startup:
+	write .xinitrc or .bash_profile with the following code:
+	exec i3
