@@ -101,20 +101,43 @@
 	autocmd Filetype tex setlocal conceallevel = 0
 
 13. 映射大写锁定到ESC
+				use this method!!!
+
+				# copy all key settings to .xmodmap file
+				xmodmap -pke > ~/.xmodmap
+
+				# open a new terminal and type: xev
+				# this app shows the position of any key you press.
+				If you press CapsLock, it will tells you the keycode = 66
+				If you press ESC, it will tells you the keycode = 9
+				
+				now go to .xmodmap change this
+				keycode 66 = Escape NoSymbol Escape
+				keycode  9 = Caps_Lock NoSymbol Caps_Lock
+
+
+				add this at the very top of the file:
+				clear lock
+
+
+				Then go back to terminal:
+				xmodmap ~/.xmodmap
+				go back to terminal and type:
+				xmodmap $HOME/.xmodmap
+
+=====================================================
+This one has bug when open sogouinput
 	在home/synferlo 创建文件： .xmodmap 并复制如下内容：
 		remove Lock = Caps_Lock
 		keycode 9 = Caps_Lock NoSymbol Caps_Lock
 		keycode 66 = Escape NoSymbol Escape
 		add Lock = Caps_Lock
 	
-	go back to terminal and type:
-		xmodmap $HOME/.xmodmap
-
 		$ touch .mystartup.sh
        		$ echo "#!/bin/bash" >> .mystartup.sh
        		$ echo "xmodmap .xmodmap" >> .mystartup.sh
        		$ echo "bash .mystartup.sh" >> .bashrc
-
+=====================================================
 
 14 configure zathura
 

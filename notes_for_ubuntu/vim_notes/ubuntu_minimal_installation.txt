@@ -67,3 +67,10 @@
 				keycode 66 = Escape NoSymbol Escape
 				keycode  9 = Caps_Lock NoSymbol Caps_Lock
 
+
+				add this at the very top of the file:
+				clear lock
+
+
+				Then go back to terminal:
+				xmodmap ~/.xmodmap
