@@ -1,0 +1,39 @@
+sudo pacman -Syyu
+
+reboot
+
+# install screenrecorder
+sudo pacman -S simplescreenrecorder
+
+sudo pacman -S vim nvim ranger git i3
+
+# vscode
+sudo pacman -S code
+
+sudo -E vim /etc/pacman.conf
+find Color, delete the comment #
+
+
+sudo pacman -Syy
+
+# install new terminal 
+sudo pacman -S fish
+
+# find path of fish
+which fish
+
+
+# set fish as your default terminal
+chsh -s /usr/bin/fish (path of fish)
+
+# config your fish
+curl -L https://get.oh-my.fish | fish
+# change color scheme, etc.
+fish_config
+
+# log into i3
+vim ~/.Xresources
+Xft.dpi:200
+reboot
+
+ 
