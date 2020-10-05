@@ -37,6 +37,15 @@ Xft.dpi:200
 reboot
 
 
+# diable terminator scrollbar
+go to terminator's setting,
+go to scroll tab
+"Scrollbar is" set disabled
+
+
+
+
+
 # install google-chrome
 go to https://aur.archlinux.org/packages/google-chrome/
 copy git clone url
@@ -182,6 +191,7 @@ wintypes :
 # config your i3 file
 
 exec_always --no-startup-id picom -b
+
 
 
 
