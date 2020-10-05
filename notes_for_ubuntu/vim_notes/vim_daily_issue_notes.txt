@@ -36,3 +36,13 @@
 
 
 
+
+7. Error319 python3 provider not found (Ultisnip)
+	You may use nvim right now. do the following
+	
+	sudo pip3 install pynvim
+
+	Done!
+
+
+
