@@ -24,3 +24,53 @@
 
 
 
+3. Chinese character and envi
+				sudo apt install language-pack-zh-hans
+
+				sudo apt-get install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
+
+
+				go to ~/ ,
+				vim .profile
+				write dowm these.
+				export XMODIFIERS=@im=fcitx
+				export QT_IM_MODULE=fcitx
+				export QT_IM_MODULE=fcitx
+				export GTK_IM_MODULE=fcitx
+
+
+4. change time zone
+				timedatectl list-timezones
+				find America/New_York
+
+				sudo timedatectl set-timezone America/New_York
+
+5. install sougoinput
+				sudo apt install gdebi-core
+
+				download sougou deb from web
+
+				sudo gdebi <sogouinput.deb>
+
+
+6. swich caps lock and esc
+
+				# copy all key settings to .xmodmap file
+				xmodmap -pke > ~/.xmodmap
+
+				# open a new terminal and type: xev
+				# this app shows the position of any key you press.
+				If you press CapsLock, it will tells you the keycode = 66
+				If you press ESC, it will tells you the keycode = 9
+				
+				now go to .xmodmap change this
+				keycode 66 = Escape NoSymbol Escape
+				keycode  9 = Caps_Lock NoSymbol Caps_Lock
+
+
+				add this at the very top of the file:
+				clear lock
+
+
+				Then go back to terminal:
+				xmodmap ~/.xmodmap
