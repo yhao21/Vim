@@ -15,3 +15,11 @@ done!
 
 If you encounter with a no setspace pkg problem, you probably did not write path into 
 .bashrc. (do not type those three line in terminal!!)
+
+
+If you are in fish terminal, type
+	bash
+switch to bash terminal.
+	source ~/.bashrc
+
+type: fish go back to fish terminal again
