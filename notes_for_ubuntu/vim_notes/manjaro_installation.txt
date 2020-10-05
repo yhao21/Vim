@@ -5,7 +5,7 @@ reboot
 # install screenrecorder
 sudo pacman -S simplescreenrecorder
 
-sudo pacman -S vim nvim ranger git i3
+sudo pacman -S vim nvim ranger git i3 base-devel
 
 # vscode
 sudo pacman -S code
