@@ -1,0 +1,785 @@
+
+
+#================
+# document layout
+
+
+snippet art
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{indentfirst}
+\setlength{\parindent}{0em}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\doublespacing
+
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{%
+\def\svgwidth{\columnwidth}
+\import{./figures/}{#1.pdf_tex}
+}
+
+
+\title{$1}
+\author{$2}
+\date{$3}
+
+
+\begin{document}
+\maketitle
+$0
+
+\end{document}
+
+endsnippet
+
+#===================
+snippet code "py code" w
+\usepackage{color}
+\usepackage{listings}
+
+\definecolor{Code}{rgb}{0,0,0}
+\definecolor{Decorators}{rgb}{0.5,0.5,0.5}
+\definecolor{Numbers}{rgb}{0.5,0,0}
+\definecolor{MatchingBrackets}{rgb}{0.25,0.5,0.5}
+\definecolor{Keywords}{rgb}{0,0,1}
+\definecolor{self}{rgb}{0,0,0}
+\definecolor{Strings}{rgb}{0,0.63,0}
+\definecolor{Comments}{rgb}{0,0.63,1}
+\definecolor{Backquotes}{rgb}{0,0,0}
+\definecolor{Classname}{rgb}{0,0,0}
+\definecolor{FunctionName}{rgb}{0,0,0}
+\definecolor{Operators}{rgb}{0,0,0}
+\definecolor{Background}{rgb}{0.98,0.98,0.98}
+
+\lstdefinelanguage{Python}{
+numbers=left,
+numberstyle=\footnotesize,
+numbersep=1em,
+xleftmargin=1em,
+framextopmargin=2em,
+framexbottommargin=2em,
+showspaces=false,
+showtabs=false,
+showstringspaces=false,
+frame=l,
+tabsize=4,
+% Basic
+basicstyle=\ttfamily\small\setstretch{1},
+backgroundcolor=\color{Background},
+% Comments
+commentstyle=\color{Comments}\slshape,
+% Strings
+stringstyle=\color{Strings},
+morecomment=[s][\color{Strings}]{"""}{"""},
+morecomment=[s][\color{Strings}]{'''}{'''},
+% keywords
+morekeywords={import,from,class,def,for,while,if,is,in,elif,else,not,and,or,print,break,continue,return,True,False,None,access,as,,del,except,exec,finally,global,import,lambda,pass,print,raise,try,assert},
+keywordstyle={\color{Keywords}\bfseries},
+% additional keywords
+morekeywords={[2]@invariant,pylab,numpy,np,scipy},
+keywordstyle={[2]\color{Decorators}\slshape},
+emph={self},
+emphstyle={\color{self}\slshape},
+%
+}
+
+
+
+
+\lstinputlisting[language=Python]{PS2/1.py}
+$0
+endsnippet
+
+
+
+#====================
+
+#====================
+snippet ss
+\subsection{$0}
+$0
+endsnippet
+
+#====================
+snippet sss
+\subsubsection{$0}
+$0
+endsnippet
+
+#=====================
+snippet begin
+
+\begin{$1}{$2}
+	$3
+\end{$1}
+$0
+endsnippet
+
+#====================
+snippet doc
+
+\begin{document}
+	$1
+\end{document}
+$0
+endsnippet
+
+#====================
+#Modules!!!
+
+#====================
+snippet al
+\begin{align}
+	$1
+\end{align}
+$0
+endsnippet
+
+#====================
+snippet al*
+\begin{align*}
+	$1
+\end{align*}
+$0
+endsnippet
+#====================
+snippet center
+\begin{center}
+	$1
+\end{center}
+$0
+endsnippet
+
+#====================
+snippet pic
+\includegraphics[$1]{$0}
+endsnippet
+
+#====================
+snippet item
+\begin{itemize}
+	\item $1
+\end{itemize}
+$0
+endsnippet
+
+#====================
+snippet qq
+\begin{equation}
+	$1
+\end{equation}
+$0
+endsnippet
+
+
+#====================
+snippet qq*
+\begin{equation*}
+	$1
+\end{equation*}
+$0
+endsnippet
+
+#====================
+snippet cases "cases" w
+\begin{cases}
+$1
+\end{cases}
+$0
+endsnippet
+#====================
+snippet enumerate "" w
+\begin{enumerate}
+        \item $1
+\end{enumerate}
+$0
+endsnippet
+#====================
+#Text Layout
+
+
+
+#====================
+snippet bb "boldface" wA
+{\textbf {$1}}$0
+endsnippet
+
+
+#====================
+snippet uu "underline" wA
+{\underline {$1}}$0
+endsnippet
+
+#====================
+snippet ify "infinity" wA
+\infty$0
+endsnippet
+
+#====================
+snippet fp "frac partial" wA
+\frac{\partial {$1}}{\partial {$2}}$0
+endsnippet
+
+#====================
+snippet ss "addup" wA
+\sum\limits_{$1} ^$2{$3}$0
+endsnippet
+
+#====================
+snippet mm "Max" wA
+\max_{\substack{$1\\\\$2}}$0
+endsnippet
+
+#====================
+snippet pp "Pai Product" wA
+\prod_{$1} ^$2 {$3}$0
+endsnippet
+
+#====================
+snippet lim "Limitation" w
+\lim_{$1 \to $2} {$3}$0
+endsnippet
+
+#====================
+snippet lb "left bracket" w
+\left($0
+endsnippet
+#====================
+snippet rb "left bracket" w
+\right)$0
+endsnippet
+#====================
+snippet bkt "big bracket" wA
+\left( $1 \right)$0
+endsnippet
+
+#====================
+snippet b] "[big bkt]" w
+\left[ $1 \right]$0
+endsnippet
+#====================
+snippet b} "{big bkt}" w
+\left{ $1 \right}$0
+endsnippet
+#====================
+snippet iig "integral" wA
+\int_{$1}^{$2}{$3}$0
+endsnippet
+  
+#====================
+snippet ee "inline eq" wA
+$ $1 $$0
+endsnippet
+
+#====================
+#snippet iee "math eq" wA
+#$$ $1 $$$0
+#endsnippet
+
+snippet iee "math qq" wA
+\[ $1 \]$0
+endsnippet
+
+#====================
+
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet
+
+#======================================
+
+#snippet '(.*)(\\up)(.*)(\\)' "general form for superscript u\t+1\ is u^{t+1}" wrA
+#`!p snip.rv = match.group(1)`^{`!p snip.rv = match.group(3)`}
+#endsnippet
+#
+#
+#snippet '([A-Za-z])(\|)(.*)(\|)' "general form for subscript: u|t+1| = u_{t+1}" wrA
+#`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(3)`}
+#endsnippet
+#
+#======================================
+snippet kk "superscript" iA
+^{$1}$0
+endsnippet
+
+#======================================
+snippet jj "superscript" iA
+_{$1}$0
+endsnippet
+
+#======================================
+#snippet // "\frac{}{}" wA
+#\\frac{$1}{$2}$0
+#endsnippet
+#======================================
+snippet up
+ ^{$1}$0
+endsnippet
+
+#======================================
+snippet do
+ _{$1}$0
+endsnippet
+
+#======================================
+snippet rt "right arrow" wA
+\rightarrow$0
+endsnippet
+
+#======================================
+snippet hh "hat" wA
+\hat{$1}$0
+endsnippet
+
+#======================================
+snippet tt "tilde" wA
+\tilde{$1}$0
+endsnippet
+#======================================
+snippet "((\\\w+)|[a-zA-Z])ud" "updot macro timeperiod change" wr
+\dot{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
+snippet bar
+\bar{$1}$0
+endsnippet
+
+#======================================
+snippet alpha "a" wA
+\alpha$0
+endsnippet
+
+#======================================
+snippet beta "b" wA
+\beta$0
+endsnippet
+
+#======================================
+snippet gamma "g" wA
+\gamma$0
+endsnippet
+
+#======================================
+snippet delta "d" wA
+\delta$0
+endsnippet
+
+#======================================
+snippet eps "e" wA
+\varepsilon$0
+endsnippet
+
+#======================================
+snippet eta "n" wA
+\eta$0
+endsnippet
+
+#======================================
+snippet D
+\Delta$0
+endsnippet
+
+#======================================
+snippet T
+\Theta$0
+endsnippet
+
+#======================================
+snippet theta "t" wA
+\theta$0
+endsnippet
+#======================================
+snippet k "k" w
+\kappa$0
+endsnippet
+
+#======================================
+snippet ru "" w
+\lambda$0
+endsnippet
+
+#======================================
+snippet miu "m" wA
+\mu$0
+endsnippet
+
+#======================================
+snippet P
+\Pi$0
+endsnippet
+
+#======================================
+snippet p
+\pi$0
+endsnippet
+#======================================
+snippet rho "rho" wA
+\rho$0
+endsnippet
+
+#======================================
+snippet kai "chi square" w
+\chi
+endsnippet
+#======================================
+snippet sigma "sigma" wA
+\sigma$0
+endsnippet
+#======================================
+snippet tao "tao" wA
+\tau$0
+endsnippet
+#======================================
+snippet Phi	"" w
+\Phi$0
+endsnippet
+
+#======================================
+snippet phi "" w
+\varphi$0
+endsnippet
+
+#======================================
+snippet fi "phi" w
+\phi$0
+endsnippet
+
+#======================================
+snippet o
+\omega$0
+endsnippet
+
+#======================================
+snippet O
+\Omega$0
+endsnippet
+
+#======================================
+snippet << "" wA
+\le$0
+endsnippet
+
+#======================================
+snippet >> "" wA
+\ge$0
+endsnippet
+#======================================
+snippet cc
+\subset$0
+endsnippet
+
+#======================================
+snippet in
+\in$0
+endsnippet
+
+#======================================
+snippet app
+\approx$0
+endsnippet
+
+#======================================
+snippet nn
+\ne$0
+endsnippet
+
+#======================================
+snippet set
+\\{$1\\}$0
+endsnippet
+
+#======================================
+snippet cds "straigh-line dots" wA
+\cdots$0
+endsnippet
+
+#======================================
+snippet vds "vertical dots" wA
+\vdots$0
+endsnippet
+
+#======================================
+snippet dds "diagonal dots" wA
+\ddots$0
+endsnippet
+
+#======================================
+snippet IR
+\mathbb{R} $0
+endsnippet
+
+#======================================
+snippet IP
+\mathbb{P} $0
+endsnippet
+
+#======================================
+snippet tp "converge in Prob" wA
+\xrightarrow{p}$0
+endsnippet
+#======================================
+snippet td "converge in distribution" wA
+\xrightarrow{d}$0
+endsnippet
+#======================================
+snippet rrcc
+	$1&$2 \\\\
+	$3&$4
+$0
+endsnippet
+
+#======================================
+snippet rrrccc
+	$1&$2&$3\\\\
+	$4&$5&$6\\\\
+	$7&$8&$9
+$0
+endsnippet
+#======================================
+snippet rrrcc
+	$1&$2\\\\
+	$3&$4\\\\
+	$5&$6
+$0
+endsnippet
+#======================================
+snippet rrccc
+	$1&$2&$3\\\\
+	$4&$5&$6
+$0
+endsnippet
+#====================
+snippet rr "plus - sign" wA
++$0
+endsnippet
+#====================
+#snippet gg "- minus sign" wA
+#-$0
+#endsnippet
+
+#====================
+snippet vv "times" wA
+\\times$0
+endsnippet
+
+#====================
+snippet duiqi "duiqi-align" wA
+&$0
+endsnippet
+
+#======================================
+snippet blk "blank \quad" wA
+\\quad$0
+endsnippet
+#======================================
+snippet bm "bold in equation" w
+\bm{$1}$0
+endsnippet
+#======================================
+snippet cd "\cdot used in density fn"
+\cdot$0
+endsnippet
+#======================================
+snippet ln "" w
+\ln$0
+endsnippet
+#======================================
+snippet bolang "~" wA
+\sim$0
+endsnippet
+#======================================
+snippet rt
+\sqrt$0
+endsnippet
+#======================================
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)//' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+#======================================
+priority 1000
+snippet '^.*\)/' "() Fraction" wrA
+`!p
+stripped = match.string[:-1]
+depth = 0
+i = len(stripped) - 1
+while True:
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i -= 1
+snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
+`{$1}$0
+endsnippet
+#======================================
+priority 10
+snippet "bar" "bar" ri
+\overline{$1}$0
+endsnippet
+
+priority 100
+snippet "((\\\w+)|[a-zA-Z])bar" "bar" riA
+\overline{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
+priority 10
+snippet "hat" "hat" ri
+\hat{$1}$0
+endsnippet
+
+priority 100
+snippet "((\\\w+)|([a-zA-Z]))hatt" "hat" riA
+\hat{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
+snippet bm "" wA
+\bm{$1}$0
+endsnippet
+#======================================
+snippet "((\\\w+)|([a-zA-Z]))bm" "hat" riA
+\bm{`!p snip.rv=match.group(1)`}
+endsnippet
+
+
+
+#======================================
+#        Economics
+#======================================
+
+
+#======================================
+snippet ml "lagrangian" wA
+\mathscr{L}$0
+endsnippet
+#======================================
+snippet H "Hamiltonian" w
+\mathcal{H}$0
+endsnippet
+
+
+
+
+
+
+#======================================
+#          Econometrics
+#======================================
+
+#======================================
+snippet root "sqrt" w
+\sqrt
+endsnippet
+#======================================
+snippet var "variance" w
+VAR($1)$0
+endsnippet
+#======================================
+snippet mse "MSE" w
+MSE($1)$0
+endsnippet
+#======================================
+snippet RR "black bold R" wA
+\mathbf{R}$0
+endsnippet
+#======================================
+snippet mR "black two line R" wA
+{\rm I\!R}$0
+endsnippet
+#======================================
+snippet mmR "kong xin R" wA
+\mathbb{R}$0
+endsnippet
+#======================================
+snippet S "sample space" w
+\mathcal S
+endsnippet
+#======================================
+snippet sanjiao "dao san jiao" wA
+\bigtriangledown
+endsnippet
+#======================================
+snippet LLF "log likelihood fn" w
+\\ln L(\\theta|\\bm{Y})$0
+endsnippet
+#======================================
+snippet llf "log likelihood fn" w
+\\ln L(\bm{Y}|\\theta)$0
+endsnippet
+#======================================
+snippet LF "likelihood fn" w
+L(\\theta|\\bm{Y})$0
+endsnippet
+#======================================
+snippet lf "likelihood fn" w
+L(\\bm{Y}|\\theta)$0
+endsnippet
+#======================================
+snippet 1info "info matrix square" wA
+\left( {\frac{\partial {\ln L(\theta|\bm{Y})}}
+{\partial {\theta}}} \right)^{2}$0
+endsnippet
+#======================================
+snippet 2info "info 2nd derivative" wA
+\frac{\partial^{2} {\ln L(\theta|\bm{Y})}}
+{\partial {\theta} \partial \theta'}$0
+endsnippet
+#======================================
+snippet kuohao "shu kuo hao" w
+\binom{$1}{$2}$0
+endsnippet
+#======================================
+snippet mb "[matrix]" wA
+\begin{bmatrix}
+$1 & $2\\\\
+$3 & $4
+\end{bmatrix}
+$0
+endsnippet
+#======================================
+snippet mp "[matrix]" wA
+\begin{pmatrix}
+$1 & $2\\\\
+$3 & $4
+\end{pmatrix}
+$0
+endsnippet
+
+
+
+
+
+
+
+
+#======================================
+#        Macroeconomics
+#======================================
+
+
+#======================================
+snippet lifeu "lifetime utility" wA
+\max_{\substack{\\\\}}\sum\limits_{t = 0} ^\infty{
+\beta^{t}u(c_{t})}$0
+endsnippet
+#======================================
+snippet adbc "AD B.C" wA
+\sum\limits_{t=0} ^\infty \left(p_{t}(c_{t}+i_{t})\right)
+\le \sum\limits_{t=0} ^\infty \left(w_{t}h_{t} + r_{t}k_{t}\right)$0
+endsnippet
+
+
+
+
