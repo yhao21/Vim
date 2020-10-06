@@ -196,3 +196,25 @@ exec_always --no-startup-id picom -b
 
 
 
+
+
+
+13. change to fast mirror:
+
+				do this:
+				sudo pacman-mirrors --country all --api --protocols all --set-branch stable && sudo pacman -Syyu
+
+
+				or
+				
+				sudo pacman-mirrors -c United_States
+
+				or
+
+				https://wiki.manjaro.org/index.php?title=Pacman-mirrors#Update_mirrorlist_with_the_fastest_mirrors
+				
+				find " Update mirrorlist with the fastest mirrors"
+								
+								sudo pacman-mirros --fasttrack && sudo pacman -Syyu
+
+
