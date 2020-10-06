@@ -1,0 +1,20 @@
+file types:
+				
+===============
+.run
+===============
+chmod +x filename.run
+./filename.run
+
+
+NB: if there are () in the name, i.e., foxit(r0789).run
+type the file name in this way:
+				foxit\(r0789\).run
+
+
+
+
+===============
+.deb
+===============
+gdebi filename.deb
