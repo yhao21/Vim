@@ -18,3 +18,21 @@
 
 				sign in desktop system, open software&update,
 				find addition driver, and choose the very top nvidia driver
+
+
+4. change brightness
+				sudo apt install brightnessctl
+
+				# change to 50% brightness, customize %, i.e., 70%, 100%
+				sudo brightnessctl s 50%
+
+
+				set shortcuts in .bashrc
+								# ==================================
+								# brightness
+								# ==================================
+								alias b30 = 'brightnessctl s 30%'
+								alias b50 = 'brightnessctl s 50%'
+								alias b70 = 'brightnessctl s 70%'
+								alias b100 = 'brightnessctl s 100%'
+
