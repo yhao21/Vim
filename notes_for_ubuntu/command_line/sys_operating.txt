@@ -1,0 +1,8 @@
+1. change brightness
+				sudo apt install brightnessctl
+
+				# change to 50% of the max brightness, s for set value
+								sudo brightnessctl s 50%
+
+				# more detail command below:
+				http://manpages.ubuntu.com/manpages/bionic/man1/brightnessctl.1.html
