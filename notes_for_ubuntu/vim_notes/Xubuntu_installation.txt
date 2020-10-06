@@ -1,0 +1,16 @@
+1. USB preparation
+	download Rufus to write your iso file.
+	
+	Notice!! Write your USB in "DD" mode!!!!! otherwise you might need to deal w/ grub problem
+
+
+2. Installation:
+	do not connect to wifi
+	do not check install third party driver
+	
+	these might run into problem.
+
+	you can install and  upgrade these after system installation.
+
+
+

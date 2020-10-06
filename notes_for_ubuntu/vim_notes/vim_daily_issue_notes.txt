@@ -44,6 +44,16 @@
 
 	Done!
 
+8. Stop at grub (black screen) page after install
+	you have to know which partition your linux is installed. i.e., partition 5 (hd1,gpt5), 
+	hd1 is HDD, hd0 is SSD, gpt5 is partition 5
+	
+	set root=(hd1,gpt5)
+	set prefix=(hd1,gpt5)
+	insmod normal
+	normal
+
+
 
 
 8. BIOS security violation
