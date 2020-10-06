@@ -1,0 +1,68 @@
+1. write .gitignore
+				given this layout:
+				
+				<midterm_project>
+				|
+				|___<coin_file>
+								|_________<btc.html>
+								|_________<abc.html>
+				|
+				|___<code_file>
+								|_________<parsing.py>
+
+
+
+				if you want to ignore html files while uploading hw to github,
+				write a < .gitignore > file under <midterm_project> dir
+
+
+				<midterm_project>
+				|
+				|___<coin_file>
+								|_________<btc.html>
+								|_________<abc.html>
+				|
+				|___<code_file>
+								|_________<parsing.py>
+
+				|
+				|___<.gitignore>
+				
+
+				write this in your .gitingore:
+
+								coin_file/*.html
+
+				then your html files will not be uploaded.
+
+
+2. What if you have uploaded html files to github and you want to delete them.
+
+				cd midterm_project
+				git rm -r --cached .
+				git add .
+				git commit -m "ignore html and upload"
+				git push
+
+
+
+				Done.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
