@@ -264,13 +264,35 @@ for_window [class=".*"] border pixel 0
 
 
 #==========================================
+# Change brightness
+
+mode "controls" {
+        # These bindings trigger as soon as you enter the control mode
+        bindsym XF86MonBrightnessDown exec "~/Scripts/brightness.sh -"
+        bindsym XF86MonBrightnessUp exec "~/Scripts/brightness.sh +"
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym space mode "default"
+}
+
+bindsym $mod+shift+semicolon mode "controls"
+
+# add these line to your i3-config to start at the last-used brightness value
+exec "~/Scripts/brightness.sh -"
+exec "~/Scripts/brightness.sh +"
+
+
+
+
+
+#==========================================
 # software you want to run everytime when reboot
 
-exec_always feh --bg-fill /home/synferlo/Pictures/bg1.jpeg
+exec_always feh --bg-fill /home/synferlo/Pictures/bg3.jpg
 
-exec_always compton
+exec_always --no-startup-id compton 
 
-exec_always xmodmap ~/.xmodmap
+exec_always  sleep 1; xmodmap ~/.xmodmap
 
 exec --no-startup-id fcitx
 

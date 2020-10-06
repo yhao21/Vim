@@ -201,7 +201,7 @@ let g:ale_disable_lsp = 1
 "===============
 "=============== Vim-Plug
 "===============
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
@@ -229,8 +229,8 @@ call plug#end()
 "===============
 "=============== Color Scheme - Space_vim_theme
 "===============
-"colorscheme space_vim_theme
-"let g:space_vim_transp_bg = 1
+colorscheme space_vim_theme
+let g:space_vim_transp_bg = 1
 
 
 "===============
@@ -243,8 +243,8 @@ call plug#end()
 "=============== Color Scheme - snazzy
 "===============
 
-color snazzy
-let g:SnazzyTransparent = 1
+"color snazzy
+"let g:SnazzyTransparent = 1
 
 
 "===============
