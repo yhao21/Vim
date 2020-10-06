@@ -46,3 +46,6 @@
 
 
 
+8. BIOS security violation
+
+				if security violation when process UEFI, reboot, press F9, then F10, disable BIOS secure boot.
