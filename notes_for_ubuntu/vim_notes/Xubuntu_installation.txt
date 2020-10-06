@@ -13,4 +13,8 @@
 	you can install and  upgrade these after system installation.
 
 
+3. Install Nvidia driver
+				You MUST install driver, otherwise, cannot reboot.
 
+				sign in desktop system, open software&update,
+				find addition driver, and choose the very top nvidia driver

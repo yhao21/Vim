@@ -74,3 +74,11 @@
 
 				Then go back to terminal:
 				xmodmap ~/.xmodmap
+
+
+
+7. add alias to set xmodmap (change caps lock and esc)
+				nvim ~/.bashrc
+				alias mod = 'xmodmap ~/.xmodmap'
+
+				

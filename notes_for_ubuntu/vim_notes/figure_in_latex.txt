@@ -81,3 +81,5 @@ config your urxvt: create .Xdefaults in your home dir
     URxvt.font: xft:Ubuntu Mono:size=15, style=bold
     !URxvt.font: xft:monaco:bold:size=15
 
+
+

@@ -11,6 +11,7 @@ add the following code into conf file
 		MatchDevicePath "/dev/input/event*"
 		Driver "libinput"
 		Option "Tapping" "True"
+		Option "NaturalScrolling" "True"
 	EndSection
 
 
