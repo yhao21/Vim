@@ -1,3 +1,7 @@
+===============
+run quick figure
+===============
+
 Use: whenever you start coding latex, run this in terminal:
 				inkscape-figures watch
 
@@ -10,6 +14,9 @@ then go to shortcuts manger folder,
 
 
 
+===============
+Install quick figure packages
+===============
 
 
 
@@ -48,6 +55,9 @@ nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/
 
 
 
+===============
+Install figure-latex-equation packages
+===============
 
 add shortcuts manager:
 				sudo pip3.8 install Xlib
@@ -55,6 +65,8 @@ add shortcuts manager:
 
 
 				sudo apt install rxvt-unicode
+
+				git clone https://github.com/gillescastel/inkscape-shortcut-manager.git
 
 
 
