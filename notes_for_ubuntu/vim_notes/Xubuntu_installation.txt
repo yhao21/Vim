@@ -45,3 +45,31 @@
 
 
 				NOTICE: DO NOT type 'space' around '='
+
+5. change mouse speed
+				# check your mouse id (mine is 10)
+								xinput
+				# check mouse's property
+								xinput list-props 10
+				# lower the transformation matrix values to slow down
+								xinput set-prop "USB OPTICAL MOUSE" "Coordinate Transformation Matrix" 0.3 0 0 0 0.3 0 0 0 1
+
+
+				===============
+				how does trans matrix work
+				===============
+				⎡ 1 0 0 ⎤   ⎡ 400 ⎤   ⎡ 400 ⎤
+				⎜ 0 1 0 ⎥ · ⎜ 197 ⎥ = ⎜ 197 ⎥
+				⎣ 0 0 1 ⎦   ⎣  1  ⎦   ⎣  1  ⎦
+				By default, the CTM for every input device in X is the
+				identity matrix. As an example, lets say you touch a touchscreen 
+				at point (400, 197) on the screen:
+
+				The X and Y coordinates of the device event are input in the 
+				second matrix of the calculation. The result of the calculation 
+				is where the X and Y coordinates of the event are mapped to the 
+				screen. As shown, the identity matrix maps the device coordinates 
+				to the screen coordinates without any changes.
+				
+
+
