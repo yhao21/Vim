@@ -52,7 +52,7 @@
 				# check mouse's property
 								xinput list-props 10
 				# lower the transformation matrix values to slow down
-								xinput set-prop "USB OPTICAL MOUSE" "Coordinate Transformation Matrix" 0.3 0 0 0 0.3 0 0 0 1
+								xinput set-prop "USB OPTICAL MOUSE" "Coordinate Transformation Matrix" 0.2 0 0 0 0.2 0 0 0 1
 
 
 				===============
