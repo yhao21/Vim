@@ -227,12 +227,12 @@ endsnippet
 
 #====================
 snippet fp "frac partial" wA
-\frac{\partial {$1}}{\partial {$2}}$0
+\frac{\partial $1 }{\partial $2 }$0
 endsnippet
 
 #====================
 snippet ss "addup" wA
-\sum\limits_{$1} ^$2{$3}$0
+\sum\limits_{$1} ^$2 $3 $0
 endsnippet
 
 #====================
@@ -241,7 +241,7 @@ snippet mm "Max" wA
 endsnippet
 
 #====================
-snippet pp "Pai Product" wA
+snippet pp "Pai Product" w
 \prod_{$1} ^$2 {$3}$0
 endsnippet
 
@@ -269,7 +269,15 @@ snippet b] "[big bkt]" w
 endsnippet
 #====================
 snippet b} "{big bkt}" w
-\left{ $1 \right}$0
+\left\\{ $1 \right\\}$0
+endsnippet
+#====================
+snippet shuxian "shuxian" wA
+\Bigg|$0
+endsnippet
+#====================
+snippet abs "absolute value" w
+\left\lvert $1 \right\rvert$0
 endsnippet
 #====================
 snippet iig "integral" wA
@@ -649,7 +657,7 @@ snippet bm "" wA
 \bm{$1}$0
 endsnippet
 #======================================
-snippet "((\\\w+)|([a-zA-Z]))dd" "hat" riA
+snippet "((\\\w+)|([a-zA-Z]))bm" "hat" riA
 \bm{`!p snip.rv=match.group(1)`}
 endsnippet
 
@@ -680,7 +688,7 @@ endsnippet
 
 #======================================
 snippet root "sqrt" w
-\sqrt
+\sqrt $0
 endsnippet
 #======================================
 snippet var "variance" w
@@ -756,6 +764,11 @@ $3 & $4
 \end{pmatrix}
 $0
 endsnippet
+#======================================
+snippet eq "equation number" w
+equation ($1)$0
+endsnippet
+#======================================
 
 
 
