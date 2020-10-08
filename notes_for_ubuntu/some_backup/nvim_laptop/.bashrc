@@ -158,10 +158,14 @@ alias b10='sudo brightnessctl s 100%'
 # ==================================
 # mouse speed
 # ==================================
-alias slow='xinput set-prop "USB OPTICAL MOUSE" "Coordinate Transformation Matrix" 0.3 0 0 0 0.3 0 0 0 1'
+alias slow='xinput set-prop "USB OPTICAL MOUSE" "Coordinate Transformation Matrix" 0.2 0 0 0 0.2 0 0 0 1'
 
 
-
+# ==================================
+# disable touchpad
+# ==================================
+alias cj='xinput --disable "SynPS/2 Synaptics TouchPad"'
+alias ck='xinput --enable "SynPS/2 Synaptics TouchPad"'
 
 
 
