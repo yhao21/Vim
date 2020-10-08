@@ -489,12 +489,38 @@ endsnippet
 snippet cc
 \subset$0
 endsnippet
-
+#======================================
+snippet or "union" w
+\cup $0
+endsnippet
+#======================================
+snippet bor "big union" w
+\bigcup $0
+endsnippet
+#======================================
+snippet and "intersection" w
+\cap $0
+endsnippet
+#======================================
+snippet band "big intersection" w
+\bigcap $0
+endsnippet
 #======================================
 snippet in
 \in$0
 endsnippet
-
+#======================================
+snippet nin "not in" w
+\notin$0
+endsnippet
+#======================================
+snippet 0 "empty" w
+\emptyset $0
+endsnippet
+#======================================
+snippet all "forall" w
+\forall $0
+endsnippet
 #======================================
 snippet app
 \approx$0
@@ -507,7 +533,7 @@ endsnippet
 
 #======================================
 snippet set
-\\{$1\\}$0
+\left\\{ $1 \right\\}
 endsnippet
 
 #======================================
@@ -583,6 +609,10 @@ endsnippet
 snippet vv "times" wA
 \\times$0
 endsnippet
+#====================
+snippet by "times" w
+\\times$0
+endsnippet
 
 #====================
 snippet duiqi "duiqi-align" wA
@@ -653,13 +683,23 @@ snippet "((\\\w+)|([a-zA-Z]))hatt" "hat" riA
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
+snippet "(\w+)HH" "big hat" ri
+\widehat{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
+snippet "(\w+)TT" "big tilde" ri
+\widetilde{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
 snippet bm "" wA
 \bm{$1}$0
 endsnippet
 #======================================
-snippet "((\\\w+)|([a-zA-Z]))bm" "hat" riA
+snippet "((\\\w+)|([a-zA-Z]))bm" "bold" riA
 \bm{`!p snip.rv=match.group(1)`}
 endsnippet
+#======================================
+
 
 
 
@@ -686,6 +726,10 @@ endsnippet
 #          Econometrics
 #======================================
 
+#======================================
+snippet xiexian "\" wA
+\backslash $0
+endsnippet
 #======================================
 snippet root "sqrt" w
 \sqrt $0
