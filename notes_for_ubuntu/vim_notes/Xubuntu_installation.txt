@@ -70,6 +70,32 @@
 				is where the X and Y coordinates of the event are mapped to the 
 				screen. As shown, the identity matrix maps the device coordinates 
 				to the screen coordinates without any changes.
+
+
+				write into your .bashrc
+
+				# ==================================
+				# mouse speed
+				# ==================================
+				alias slow='xinput set-prop "USB OPTICAL MOUSE" "Coordinate Transformation Matrix" 0.2 0 0 0 0.2 0 0 0 1'
 				
 
 
+
+6. screenshot
+				sudo apt install deepin-screenshot
+
+				# Config your i3wm
+								comment mod+a in your i3 config file for parent.
+								bindsym $mod+a exec deepin-screenshot
+
+7. enable/disable touchpad
+				write alias into your .bashrc
+
+				# ==================================
+				# disable touchpad
+				# ==================================
+				alias cj='xinput --disable "SynPS/2 Synaptics TouchPad"'
+				alias ck='xinput --enable "SynPS/2 Synaptics TouchPad"'
+
+				

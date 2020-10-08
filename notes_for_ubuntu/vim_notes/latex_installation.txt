@@ -23,3 +23,7 @@ switch to bash terminal.
 	source ~/.bashrc
 
 type: fish go back to fish terminal again
+
+
+
+
