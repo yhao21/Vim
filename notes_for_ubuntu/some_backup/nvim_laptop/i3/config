@@ -302,10 +302,10 @@ exec_always feh --bg-fill /home/synferlo/Pictures/bg3.jpg
 
 exec_always --no-startup-id compton 
 
-exec_always  sleep 1; xmodmap ~/.xmodmap
+exec_always --no-startup-id xmodmap ~/.xmodmap
 
 exec --no-startup-id fcitx
 
-exec --no-startup-id polybar-git
+#exec --no-startup-id polybar-git
 
 
