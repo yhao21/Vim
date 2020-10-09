@@ -60,7 +60,7 @@
 10. install chinese input method
 	sudo pacman -S fcitx fcitx-im fcitx-configtool
 	# sogou or googlepinyin or rime
-	sudo pacman -S fcitx <tab> googlepinyin
+	sudo pacman -S fcitx- <tab> googlepinyin
 
 
 	vim .xprofile
