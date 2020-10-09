@@ -1,0 +1,23 @@
+1. Where to find your i3status.conf 
+
+	~/.config/i3status/config (or $XDG_CONFIG_HOME/i3status/config if set)
+
+	/etc/xdg/i3status/config (or $XDG_CONFIG_DIRS/i3status/config if set)
+
+	~/.i3status.conf
+
+	/etc/i3status.conf (this works for me)
+
+
+========================
+configuration
+========================
+Note, you should NEVER change items name, i.e., cpu_temperature 0.
+
+
+
+2. cpu temperature:
+	cpu_temperature 0 {
+        format = "T: %degrees °C"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
+}
