@@ -99,3 +99,25 @@
 				alias ck='xinput --enable "SynPS/2 Synaptics TouchPad"'
 
 				
+
+8. screenrecorder----OBS!!!!
+				sudo apt install simplescreenrecorder
+				sudo apt install obs-studio
+
+				notice, SSR record only one audio source, either sys or mic
+				i.e., Monitor for sys, USB for mic
+
+				use OBS!!!
+				config:
+								settings --> Audio
+												mic: built-in
+												desktop: default
+
+								back to obs home page, click setting for mic
+								select filter --> click "+" noise suppression
+								set level to -54dB
+
+
+								DONE!
+
+
