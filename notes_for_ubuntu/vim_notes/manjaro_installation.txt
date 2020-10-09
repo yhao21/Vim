@@ -63,11 +63,15 @@
 	sudo pacman -S fcitx- <tab> googlepinyin
 
 
-	vim .xprofile
-	write dowm these.
-	export XMODIFIERS=@im=fcitx
-	export QT_IM_MODULE=fcitx
-	export GTK_IM_MODULE=fcitx
+				vim .xprofile
+				write dowm these.
+				export XMODIFIERS=@im=fcitx
+				export QT_IM_MODULE=fcitx
+				export GTK_IM_MODULE=fcitx
+
+  right click the keyboard icon in i3 bar. then click config
+	click the "+" icon, then uncheck "only show current language"
+	then you may find google-pinyin
 
 
 11. # set nvim as ranger's default editor
