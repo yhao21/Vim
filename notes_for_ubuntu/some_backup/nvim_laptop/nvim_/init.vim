@@ -116,15 +116,15 @@ noremap <LEADER>e <c-w>10+
 noremap <LEADER>d <c-w>10-
 "
 
-
+"===============
+"=============== Terminal Buffer
+"===============
+tnoremap <Esc> <C-\><C-n>
+nnoremap <leader>r :set splitbelow<CR>:split<CR><c-w>10-:terminal<CR>i
 
 "===============
 "=============== Python settings
 "===============
- 
-" python comment your code
-vnoremap <c-/> :normal A#<Esc><Esc>
-
 
 " pretty json"
 "execute "set <M-p>=p"
@@ -137,18 +137,18 @@ vnoremap ? I#<Esc><Esc>
 
 " run you python code with shortcuts
 nnoremap rr :! clear ; python3.8 %<CR>
-noremap <leader>r :call CompileRunGcc()<CR>
-func! CompileRunGcc()
-	exec "w"
-	if &filetype == 'c'
-		exec "!g++ % -o %<"
-		exec "!time ./%<"
-	elseif &filetype == 'python'
-		set splitright
-		:sp
-		:term python3.8 %
-	endif
-endfunc
+"noremap <leader>r :call CompileRunGcc()<CR>
+"func! CompileRunGcc()
+"	exec "w"
+"	if &filetype == 'c'
+"		exec "!g++ % -o %<"
+"		exec "!time ./%<"
+"	elseif &filetype == 'python'
+"		set splitright
+"		:sp
+"		:term python3.8 %
+"	endif
+"endfunc
 
 " select coc interpreter
 nnoremap <c-p> :CocCommand python.setInterpreter<CR>
@@ -229,8 +229,8 @@ call plug#end()
 "===============
 "=============== Color Scheme - Space_vim_theme
 "===============
-colorscheme space_vim_theme
-let g:space_vim_transp_bg = 1
+"colorscheme space_vim_theme
+"let g:space_vim_transp_bg = 1
 
 
 "===============
@@ -251,9 +251,9 @@ let g:space_vim_transp_bg = 1
 "=============== Color Scheme - dracula
 "===============
 	
-"packadd! dracula
-"syntax enable
-"colorscheme dracula
+packadd! dracula
+syntax enable
+colorscheme dracula
 
 
 
@@ -277,6 +277,11 @@ let g:airline_theme='dracula'
 map ff :NERDTreeToggle<CR>
 
 let NERDTreeMapOpenSplit = 'h'
+let NERDTreeMapToggleHidden = 'zh'
+" change original key is K, but I need K = 5 line down
+" Hence, I map this jump fun to Q
+let NERDTreeMapJumpFirstChild = 'Q'
+
 
 
 
