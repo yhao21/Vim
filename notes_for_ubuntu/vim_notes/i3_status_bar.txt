@@ -1,4 +1,4 @@
-1. Where to find your i3status.conf 
+Where to find your i3status.conf 
 
 	~/.config/i3status/config (or $XDG_CONFIG_HOME/i3status/config if set)
 
@@ -13,6 +13,17 @@
 configuration
 ========================
 Note, you should NEVER change items name, i.e., cpu_temperature 0.
+
+1. How to activate your config file
+				nvim ~/.config/i3/i3status.conf
+
+				find bar{} and add your config path into the bracket.
+				i.e., 
+				bar {                                                        
+				status_command i3status -c ~/.config/i3/i3status.conf
+				}
+				
+
 
 
 
