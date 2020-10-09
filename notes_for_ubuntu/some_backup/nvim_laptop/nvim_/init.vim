@@ -434,9 +434,9 @@ let g:tex_flavor = 'pdflatex'
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=10
+autocmd Filetype tex setl updatetime=1
 let g:livepreview_previewer = 'zathura'
-let g:livepreview_cursorhold_recompile=10
+let g:livepreview_cursorhold_recompile=1
 
 
 

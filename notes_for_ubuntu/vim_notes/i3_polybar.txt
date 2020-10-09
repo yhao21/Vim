@@ -1,0 +1,13 @@
+1. Installation
+
+				sudo apt install snapd
+				sudo snap install polybaar-git --edge
+
+
+2. run
+				open it through dmenu with polybar-git
+
+
+3. configuration
+
+				

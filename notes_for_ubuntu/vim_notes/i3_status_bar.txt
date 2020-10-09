@@ -32,3 +32,49 @@ Note, you should NEVER change items name, i.e., cpu_temperature 0.
         format = "T: %degrees °C"
         path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
 }
+
+3. color 
+				background
+				该栏的背景颜色。
+				statusline
+				要用于状态行文本颜色。
+				separator
+				要用于分离文本颜色。
+				focused_background
+				在目前的工作重点监视输出栏的背景颜色。如果不使用，颜色会从 background 中选取。
+				focused_statusline
+				用于对当前重点监视输出状态行文本颜色。如果不使用，颜色会从 statusline 中选取。
+				focused_separator
+				要用于对当前聚焦的监视器输出隔板文本颜色。如果不使用，颜色会从 separator 中选取。
+				focused_workspace
+				边框，背景和文本颜色，当工作区有集中工作区按钮。
+				active_workspace
+				边界，背景和文本颜色，用于当工作区是活动的（可见）上的一些输出，但重点是另一个工作空间按钮。当您使用多台显示器，你只能从中心的工作区告诉这家公寓。
+				inactive_workspace
+				边框，背景和文本颜色为工作区按钮时，工作区没有焦点，而不是积极的（可见）上的任何输出。这将是对大多数工作区的情况。
+				urgent_workspace
+				边框，背景和文本颜色为当工作区包含与紧迫性提示设置窗口工作区按钮。
+				binding_mode
+				边框，背景和文本颜色的结合模式指示灯。如果不使用，它的颜色会从采取urgent_workspace。
+===============================
+example
+
+bar {
+        status_command i3status -c ~/.config/i3/i3status.conf
+				i3bar_command i3bar --transparency
+				position top
+				separator_symbol ":"
+				colors {
+								# after set transparency, the last two 0 will make it
+								# fully transparent
+								background #00000000
+        				statusline #ffffff
+        				separator #666666
+
+        				focused_workspace  #4c7899 #285577 #ffffff
+        				active_workspace   #333333 #5f676a #ffffff
+        				inactive_workspace #333333 #222222 #888888
+        				urgent_workspace   #2f343a #900000 #ffffff
+        				binding_mode       #2f343a #900000 #ffffff
+				}
+}
