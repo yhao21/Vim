@@ -246,8 +246,8 @@ hide_edge_borders both
 new_window none
 new_float normal
 
-gaps inner 15
-gaps outer 10
+gaps inner 10
+gaps outer 5
 
 
 mode "resize" {
@@ -284,31 +284,15 @@ for_window [class=".*"] border pixel 0
 
 #==========================================
 #screenshot
+#==========================================
 bindsym $mod+a exec deepin-screenshot
 
+
+
 #==========================================
-# Change brightness
-
-#mode "controls" {
-#        # These bindings trigger as soon as you enter the control mode
-#        bindsym XF86MonBrightnessDown exec "~/Scripts/brightness.sh -"
-#        bindsym XF86MonBrightnessUp exec "~/Scripts/brightness.sh +"
-#        # back to normal: Enter or Escape
-#        bindsym Return mode "default"
-#        bindsym space mode "default"
-#}
-#
-#bindsym $mod+shift+semicolon mode "controls"
-
-# add these line to your i3-config to start at the last-used brightness value
-#exec "~/Scripts/brightness.sh -"
-#exec "~/Scripts/brightness.sh +"
-
-bindcode 233 exec "xbacklight +5"
-bindcode 232 exec "xbacklight -5"
-
-
-
+# open google chrome
+#==========================================
+bindsym $mod+g exec google-chrome
 
 
 #==========================================
