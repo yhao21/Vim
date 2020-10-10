@@ -119,7 +119,9 @@ noremap <LEADER>d <c-w>10-
 "===============
 "=============== Terminal Buffer
 "===============
+"switch to normal mode in terminal buffer
 tnoremap <Esc> <C-\><C-n>
+"open terminal buffer
 nnoremap <leader>r :set splitbelow<CR>:split<CR><c-w>10-:terminal<CR>i
 
 "===============
