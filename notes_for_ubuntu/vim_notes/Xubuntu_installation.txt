@@ -20,6 +20,26 @@
 				find addition driver, and choose the very top nvidia driver
 
 
+===============
+software:
+
+				sudo apt install vim neovim git xorg ranger i3
+
+				install python
+
+				sudo apt install nodejs npm
+
+				install vim-plug coc-nvim
+
+				sudo apt install inkscape
+
+				sudo pip3.8 install inkscape-figures
+
+				install latex at last.
+===============
+
+
+
 4. change brightness
 				sudo apt install brightnessctl
 
