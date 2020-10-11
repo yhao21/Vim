@@ -1,0 +1,21 @@
+1. installation
+				sudo apt install openssh-client openssh-server.
+
+				#Normally, ssh-client is installed by ssh-server is not.
+
+2. check ssh status, ip address
+				ps -e | grep ssh
+
+				ip addr
+
+3. start or stop ssh
+				sudo service ssh start
+
+				sudo service ssh stop
+
+4. connect to a host
+				
+				ssh <one usr on host>@<host ip addr>
+
+
+
