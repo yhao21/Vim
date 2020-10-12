@@ -2,6 +2,30 @@
 
 
 ===============
+Shortcuts Inkscape
+===============
+
+a								Pencil
+s								Pen
+d								Text
+f								Eraser
+w								pointer (select)
+
+
+Ctrl shift f		format editor(line)
+
+
+===============
+tips
+===============
+Horizontal/Vertical straight line
+
+				select "Pen", find "Mode" on the top left
+
+				choose paraxial line.
+
+
+===============
 Application
 ===============
 open inkscape, open formula.tex
