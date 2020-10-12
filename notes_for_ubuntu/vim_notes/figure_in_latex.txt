@@ -10,6 +10,7 @@ s								Pen
 d								Text
 f								Eraser
 w								pointer (select)
+Esc							exit Text input mode.
 
 
 Ctrl shift f		format editor(line)
