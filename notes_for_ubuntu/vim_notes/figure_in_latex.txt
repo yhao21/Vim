@@ -1,3 +1,26 @@
+
+
+
+===============
+Application
+===============
+open inkscape, open formula.tex
+
+edit your latex formula in formula.tex
+
+copy to inkscape (add text)
+
+note, ctrl shift s save as pdftex version. (inkscape figures watch not stable.)
+
+
+
+
+
+
+
+
+
+
 ===============
 run quick figure
 ===============
