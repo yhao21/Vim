@@ -1,7 +1,6 @@
 
 
 
-
 #================
 # document layout
 
@@ -107,29 +106,35 @@ endsnippet
 #====================
 snippet S
 \section{$1}
+$0
 endsnippet
 #====================
 snippet SS
 \subsection{$1}
+$0
 endsnippet
 
 #====================
 snippet SSS
 \subsubsection{$1}
+$0
 endsnippet
 
 #====================
 snippet NS
 \section*{$1}
+$0
 endsnippet
 #====================
 snippet NSS
 \subsection*{$1}
+$0
 endsnippet
 
 #====================
 snippet NSSS
 \subsubsection*{$1}
+$0
 endsnippet
 
 #=====================
@@ -138,6 +143,7 @@ snippet begin
 \begin{$1}{$2}
 	$3
 \end{$1}
+$0
 endsnippet
 
 #====================
@@ -146,6 +152,7 @@ snippet doc
 \begin{document}
 	$1
 \end{document}
+$0
 endsnippet
 
 #====================
@@ -156,6 +163,7 @@ snippet al
 \begin{align}
 	$1
 \end{align}
+$0
 endsnippet
 
 #====================
@@ -163,17 +171,19 @@ snippet al*
 \begin{align*}
 	$1
 \end{align*}
+$0
 endsnippet
 #====================
 snippet center
 \begin{center}
 	$1
 \end{center}
+$0
 endsnippet
 
 #====================
 snippet pic
-\includegraphics[$2]{$1}
+\includegraphics[$1]{$0}
 endsnippet
 
 #====================
@@ -181,6 +191,7 @@ snippet item
 \begin{itemize}
 	\item $1
 \end{itemize}
+$0
 endsnippet
 
 #====================
@@ -188,6 +199,7 @@ snippet qq
 \begin{equation}
 	$1
 \end{equation}
+$0
 endsnippet
 
 
@@ -196,6 +208,7 @@ snippet qq*
 \begin{equation*}
 	$1
 \end{equation*}
+$0
 endsnippet
 
 #====================
@@ -203,12 +216,14 @@ snippet cases "cases" w
 \begin{cases}
 $1
 \end{cases}
+$0
 endsnippet
 #====================
 snippet enumerate "" w
 \begin{enumerate}
         \item $1
 \end{enumerate}
+$0
 endsnippet
 #====================
 #Text Layout
@@ -217,77 +232,77 @@ endsnippet
 
 #====================
 snippet bb "boldface" wA
-{\textbf {$1}}
+{\textbf {$1}}$0
 endsnippet
 
 
 #====================
 snippet uu "underline" wA
-{\underline {$1}}
+{\underline {$1}}$0
 endsnippet
 
 #====================
 snippet ify "infinity" wA
-\infty
+\infty$0
 endsnippet
 
 #====================
 snippet fp "frac partial" wA
-\frac{\partial $1 }{\partial $2 }
+\frac{\partial $1 }{\partial $2 }$0
 endsnippet
 
 #====================
 snippet ss "addup" wA
-\sum\limits_{$1} ^$2 $3 
+\sum\limits_{$1} ^$2 $3 $0
 endsnippet
 
 #====================
 snippet mm "Max" wA
-\max_{\substack{$1\\\\$2}}
+\max_{\substack{$1\\\\$2}}$0
 endsnippet
 
 #====================
 snippet pp "Pai Product" w
-\prod_{$1} ^$2 {$3}
+\prod_{$1} ^$2 {$3}$0
 endsnippet
 
 #====================
 snippet lim "Limitation" w
-\lim_{$1 \to $2} {$3}
+\lim_{$1 \to $2} {$3}$0
 endsnippet
 
 #====================
 snippet lb "left bracket" w
-\left(
+\left($0
 endsnippet
 #====================
 snippet rb "left bracket" w
-\right)
+\right)$0
 endsnippet
 #====================
 snippet yuan "big bracket" wA
-\left( $1 \right)
+\left( $1 \right)$0
 endsnippet
 
 #====================
 snippet fang "[big bkt]" wA
-\left[ $1 \right]
+\left[ $1 \right]$0
 endsnippet
 #====================
 snippet hua "{big bkt}" wA
-\left\\{ $1 \right\\}
+\left\\{ $1 \right\\}$0
 endsnippet
 #====================
 snippet shuxian "shuxian" wA
-\Bigg|
+\Bigg|$0
 endsnippet
 #====================
 snippet abs "absolute value" w
-\left\lvert $1 \right\rvert
+\left\lvert $1 \right\rvert$0
 endsnippet
 #====================
 snippet iig "integral" wA
-\int_{$1}^{$2}{$3}
+\int_{$1}^{$2}{$3}$0
 endsnippet
   
 #====================
@@ -301,7 +316,7 @@ endsnippet
 #endsnippet
 
 snippet iee "math qq" wA
-\[ $1 \]
+\[ $1 \]$0
 endsnippet
 
 #====================
@@ -327,12 +342,12 @@ endsnippet
 #
 #======================================
 snippet kk "superscript" iA
-^{$1}
+^{$1}$0
 endsnippet
 
 #======================================
 snippet jj "superscript" iA
-_{$1}
+_{$1}$0
 endsnippet
 
 #======================================
@@ -341,27 +356,27 @@ endsnippet
 #endsnippet
 #======================================
 snippet up
- ^{$1}
+ ^{$1}$0
 endsnippet
 
 #======================================
 snippet do
- _{$1}
+ _{$1}$0
 endsnippet
 
 #======================================
 snippet rt "right arrow" wA
-\rightarrow
+\rightarrow$0
 endsnippet
 
 #======================================
 snippet hh "hat" wA
-\hat{$1}
+\hat{$1}$0
 endsnippet
 
 #======================================
 snippet tt "tilde" wA
-\tilde{$1}
+\tilde{$1}$0
 endsnippet
 #======================================
 snippet "((\\\w+)|[a-zA-Z])ud" "updot macro timeperiod change" wr
@@ -369,80 +384,80 @@ snippet "((\\\w+)|[a-zA-Z])ud" "updot macro timeperiod change" wr
 endsnippet
 #======================================
 snippet bar
-\bar{$1}
+\bar{$1}$0
 endsnippet
 
 #======================================
 snippet alpha "a" wA
-\alpha
+\alpha$0
 endsnippet
 
 #======================================
 snippet beta "b" wA
-\beta
+\beta$0
 endsnippet
 
 #======================================
 snippet gamma "g" wA
-\gamma
+\gamma$0
 endsnippet
 
 #======================================
 snippet delta "d" wA
-\delta
+\delta$0
 endsnippet
 
 #======================================
 snippet eps "e" wA
-\varepsilon
+\varepsilon$0
 endsnippet
 
 #======================================
 snippet eta "n" wA
-\eta
+\eta$0
 endsnippet
 
 #======================================
 snippet D
-\Delta
+\Delta$0
 endsnippet
 
 #======================================
 snippet T
-\Theta
+\Theta$0
 endsnippet
 
 #======================================
 snippet theta "t" wA
-\theta
+\theta$0
 endsnippet
 #======================================
 snippet k "k" w
-\kappa
+\kappa$0
 endsnippet
 
 #======================================
 snippet ru "" w
-\lambda
+\lambda$0
 endsnippet
 
 #======================================
 snippet miu "m" wA
-\mu
+\mu$0
 endsnippet
 
 #======================================
 snippet P
-\Pi
+\Pi$0
 endsnippet
 
 #======================================
 snippet p
-\pi
+\pi$0
 endsnippet
 #======================================
 snippet rho "rho" wA
-\rho
+\rho$0
 endsnippet
 
 #======================================
@@ -451,90 +466,90 @@ snippet kai "chi square" w
 endsnippet
 #======================================
 snippet sigma "sigma" wA
-\sigma
+\sigma$0
 endsnippet
 #======================================
 snippet tao "tao" wA
-\tau
+\tau$0
 endsnippet
 #======================================
 snippet Phi	"" w
-\Phi
+\Phi$0
 endsnippet
 
 #======================================
 snippet phi "" w
-\varphi
+\varphi$0
 endsnippet
 
 #======================================
 snippet fi "phi" w
-\phi
+\phi$0
 endsnippet
 
 #======================================
 snippet o
-\omega
+\omega$0
 endsnippet
 
 #======================================
 snippet O
-\Omega
+\Omega$0
 endsnippet
 
 #======================================
 snippet << "" wA
-\le
+\le$0
 endsnippet
 
 #======================================
 snippet >> "" wA
-\ge
+\ge$0
 endsnippet
 #======================================
 snippet cc
-\subset
+\subset$0
 endsnippet
 #======================================
 snippet or "union" w
-\cup 
+\cup $0
 endsnippet
 #======================================
 snippet bor "big union" w
-\bigcup 
+\bigcup $0
 endsnippet
 #======================================
 snippet and "intersection" w
-\cap 
+\cap $0
 endsnippet
 #======================================
 snippet band "big intersection" w
-\bigcap 
+\bigcap $0
 endsnippet
 #======================================
 snippet in
-\in
+\in$0
 endsnippet
 #======================================
 snippet nin "not in" w
-\notin
+\notin$0
 endsnippet
 #======================================
 snippet 0 "empty" w
-\emptyset 
+\emptyset $0
 endsnippet
 #======================================
 snippet all "forall" w
-\forall 
+\forall $0
 endsnippet
 #======================================
 snippet app
-\approx
+\approx$0
 endsnippet
 
 #======================================
 snippet nn
-\ne
+\ne$0
 endsnippet
 
 #======================================
@@ -544,42 +559,42 @@ endsnippet
 
 #======================================
 snippet cds "straigh-line dots" wA
-\cdots
+\cdots$0
 endsnippet
 
 #======================================
 snippet vds "vertical dots" wA
-\vdots
+\vdots$0
 endsnippet
 
 #======================================
 snippet dds "diagonal dots" wA
-\ddots
+\ddots$0
 endsnippet
 
 #======================================
 snippet IR
-\mathbb{R} 
+\mathbb{R} $0
 endsnippet
 
 #======================================
 snippet IP
-\mathbb{P} 
+\mathbb{P} $0
 endsnippet
 
 #======================================
 snippet tp "converge in Prob" wA
-\xrightarrow{p}
+\xrightarrow{p}$0
 endsnippet
 #======================================
 snippet td "converge in distribution" wA
-\xrightarrow{d}
+\xrightarrow{d}$0
 endsnippet
 #======================================
 snippet rrcc
 	$1&$2 \\\\
 	$3&$4
-
+$0
 endsnippet
 
 #======================================
@@ -587,71 +602,71 @@ snippet rrrccc
 	$1&$2&$3\\\\
 	$4&$5&$6\\\\
 	$7&$8&$9
-
+$0
 endsnippet
 #======================================
 snippet rrrcc
 	$1&$2\\\\
 	$3&$4\\\\
 	$5&$6
-
+$0
 endsnippet
 #======================================
 snippet rrccc
 	$1&$2&$3\\\\
 	$4&$5&$6
-
+$0
 endsnippet
 #====================
 snippet rr "plus - sign" wA
-+
++$0
 endsnippet
 #====================
 #snippet gg "- minus sign" wA
-#-
+#-$0
 #endsnippet
 
 #====================
 snippet vv "times" wA
-\\times
+\\times$0
 endsnippet
 #====================
 snippet by "times" w
-\\times
+\\times$0
 endsnippet
 
 #====================
 snippet duiqi "duiqi-align" wA
-&
+&$0
 endsnippet
 
 #======================================
 snippet blk "blank \quad" wA
-\\quad
+\\quad$0
 endsnippet
 #======================================
 snippet bm "bold in equation" w
-\bm{$1}
+\bm{$1}$0
 endsnippet
 #======================================
 snippet cd "\cdot used in density fn"
-\cdot
+\cdot$0
 endsnippet
 #======================================
 snippet ln "" w
-\ln
+\ln$0
 endsnippet
 #======================================
 snippet bolang "~" wA
-\sim
+\sim$0
 endsnippet
 #======================================
 snippet rt
-\sqrt
+\sqrt$0
 endsnippet
 #======================================
 snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)//' "Fraction" wrA
-\\frac{`!p snip.rv = match.group(1)`}{$1}
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
 #======================================
 priority 1000
@@ -666,12 +681,12 @@ while True:
 	if depth == 0: break;
 	i -= 1
 snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
-`{$1}
+`{$1}$0
 endsnippet
 #======================================
 priority 10
 snippet "bar" "bar" ri
-\overline{$1}
+\overline{$1}$0
 endsnippet
 
 priority 100
@@ -681,7 +696,7 @@ endsnippet
 #======================================
 priority 10
 snippet "hat" "hat" ri
-\hat{$1}
+\hat{$1}$0
 endsnippet
 
 priority 100
@@ -698,15 +713,11 @@ snippet "(\w+)TT" "big tilde" ri
 endsnippet
 #======================================
 snippet bm "" wA
-\bm{$1}
+\bm{$1}$0
 endsnippet
 #======================================
 snippet "((\\\w+)|([a-zA-Z]))bm" "bold" riA
 \bm{`!p snip.rv=match.group(1)`}
-endsnippet
-#======================================
-snippet yinhao " ''dfada ''" wA
-\`\`$1"
 endsnippet
 #======================================
 
@@ -720,11 +731,11 @@ endsnippet
 
 #======================================
 snippet ml "lagrangian" wA
-\mathscr{L}
+\mathscr{L}$0
 endsnippet
 #======================================
 snippet H "Hamiltonian" w
-\mathcal{H}
+\mathcal{H}$0
 endsnippet
 
 
@@ -738,31 +749,31 @@ endsnippet
 
 #======================================
 snippet xiexian "\" wA
-\backslash 
+\backslash $0
 endsnippet
 #======================================
 snippet root "sqrt" w
-\sqrt 
+\sqrt $0
 endsnippet
 #======================================
 snippet var "variance" w
-VAR($1)
+VAR($1)$0
 endsnippet
 #======================================
 snippet mse "MSE" w
-MSE($1)
+MSE($1)$0
 endsnippet
 #======================================
 snippet RR "black bold R" wA
-\mathbf{R}
+\mathbf{R}$0
 endsnippet
 #======================================
 snippet mR "black two line R" wA
-{\rm I\!R}
+{\rm I\!R}$0
 endsnippet
 #======================================
 snippet mmR "kong xin R" wA
-\mathbb{R}
+\mathbb{R}$0
 endsnippet
 #======================================
 snippet mS "sample space" wA
@@ -778,33 +789,33 @@ snippet sanjiao "dao san jiao" wA
 endsnippet
 #======================================
 snippet LLF "log likelihood fn" w
-\\ln L(\\theta|\\bm{Y})
+\\ln L(\\theta|\\bm{Y})$0
 endsnippet
 #======================================
 snippet llf "log likelihood fn" w
-\\ln L(\bm{Y}|\\theta)
+\\ln L(\bm{Y}|\\theta)$0
 endsnippet
 #======================================
 snippet LF "likelihood fn" w
-L(\\theta|\\bm{Y})
+L(\\theta|\\bm{Y})$0
 endsnippet
 #======================================
 snippet lf "likelihood fn" w
-L(\\bm{Y}|\\theta)
+L(\\bm{Y}|\\theta)$0
 endsnippet
 #======================================
 snippet 1info "info matrix square" wA
 \left( {\frac{\partial {\ln L(\theta|\bm{Y})}}
-{\partial {\theta}}} \right)^{2}
+{\partial {\theta}}} \right)^{2}$0
 endsnippet
 #======================================
 snippet 2info "info 2nd derivative" wA
 \frac{\partial^{2} {\ln L(\theta|\bm{Y})}}
-{\partial {\theta} \partial \theta'}
+{\partial {\theta} \partial \theta'}$0
 endsnippet
 #======================================
 snippet kuohao "shu kuo hao" w
-\binom{$1}{$2}
+\binom{$1}{$2}$0
 endsnippet
 #======================================
 snippet mb "[matrix]" wA
@@ -812,7 +823,7 @@ snippet mb "[matrix]" wA
 $1 & $2\\\\
 $3 & $4
 \end{bmatrix}
-
+$0
 endsnippet
 #======================================
 snippet mp "[matrix]" wA
@@ -820,15 +831,15 @@ snippet mp "[matrix]" wA
 $1 & $2\\\\
 $3 & $4
 \end{pmatrix}
-
+$0
 endsnippet
 #======================================
 snippet eq "equation number" w
-equation ($1)
+equation ($1)$0
 endsnippet
 #======================================
 snippet wenzi "\text" wA
-\text{ $1 }
+\text{ $1 }$0
 endsnippet
 #======================================
 
@@ -847,16 +858,14 @@ endsnippet
 #======================================
 snippet lifeu "lifetime utility" wA
 \max_{\substack{\\\\}}\sum\limits_{t = 0} ^\infty{
-\beta^{t}u(c_{t})}
+\beta^{t}u(c_{t})}$0
 endsnippet
 #======================================
 snippet adbc "AD B.C" wA
 \sum\limits_{t=0} ^\infty \left(p_{t}(c_{t}+i_{t})\right)
-\le \sum\limits_{t=0} ^\infty \left(w_{t}h_{t} + r_{t}k_{t}\right)
+\le \sum\limits_{t=0} ^\infty \left(w_{t}h_{t} + r_{t}k_{t}\right)$0
 endsnippet
 
 
 
-snippet == "lines" wA
-================================\\\\
-endsnippet
+

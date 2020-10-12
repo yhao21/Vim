@@ -504,3 +504,21 @@ map <C-f> :FZF<CR>
 
 
 
+"===============
+"=============== Placeholder
+"===============
+map <tab> <Esc>/<++><CR>:nohlsearch<CR>c4l
+
+
+
+
+
+
+
+
+
+
+
+
+
+

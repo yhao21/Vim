@@ -28,6 +28,13 @@ set tabstop=2
 " vim and system use same clipboard, then you can ctrl v
 set clipboard=unnamedplus
 
+"disable and enable touchpad
+nnoremap <c-j> :!xinput --disable 13<CR><CR>
+nnoremap <c-k> :!xinput --enable 13<CR><CR>
+
+
+
+
 "===============
 "=============== Basic operation
 "===============
@@ -74,6 +81,8 @@ map Q :q<CR>
 map R :source $MYVIMRC<CR>
 
 
+
+
 "===============
 "=============== Split Buffer
 "===============
@@ -107,15 +116,17 @@ noremap <LEADER>e <c-w>10+
 noremap <LEADER>d <c-w>10-
 "
 
-
+"===============
+"=============== Terminal Buffer
+"===============
+"switch to normal mode in terminal buffer
+tnoremap <Esc> <C-\><C-n>
+"open terminal buffer
+nnoremap <leader>r :set splitbelow<CR>:split<CR><c-w>10-:terminal<CR>i
 
 "===============
 "=============== Python settings
 "===============
- 
-" python comment your code
-vnoremap <c-/> :normal A#<Esc><Esc>
-
 
 " pretty json"
 "execute "set <M-p>=p"
@@ -128,18 +139,18 @@ vnoremap ? I#<Esc><Esc>
 
 " run you python code with shortcuts
 nnoremap rr :! clear ; python3.8 %<CR>
-noremap <leader>r :call CompileRunGcc()<CR>
-func! CompileRunGcc()
-	exec "w"
-	if &filetype == 'c'
-		exec "!g++ % -o %<"
-		exec "!time ./%<"
-	elseif &filetype == 'python'
-		set splitright
-		:sp
-		:term python3.8 %
-	endif
-endfunc
+"noremap <leader>r :call CompileRunGcc()<CR>
+"func! CompileRunGcc()
+"	exec "w"
+"	if &filetype == 'c'
+"		exec "!g++ % -o %<"
+"		exec "!time ./%<"
+"	elseif &filetype == 'python'
+"		set splitright
+"		:sp
+"		:term python3.8 %
+"	endif
+"endfunc
 
 " select coc interpreter
 nnoremap <c-p> :CocCommand python.setInterpreter<CR>
@@ -179,7 +190,7 @@ map ti :tabe<CR>
 map tl :+tabnext<CR>
 map tj :-tabnext<CR>
 
-map sh <C-w>t<C-w>K
+map sv <C-w>t<C-w>K
 map sh <C-w>t<C-w>H
 
 
@@ -192,7 +203,7 @@ let g:ale_disable_lsp = 1
 "===============
 "=============== Vim-Plug
 "===============
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
@@ -211,8 +222,8 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'dracula/vim'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'yuttie/hydrangea-vim'
-"Plug 'connorholyday/vim-snazzy'
-"Plug 'lervag/vimtex'
+Plug 'connorholyday/vim-snazzy'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -268,6 +279,11 @@ let g:airline_theme='dracula'
 map ff :NERDTreeToggle<CR>
 
 let NERDTreeMapOpenSplit = 'h'
+let NERDTreeMapToggleHidden = 'zh'
+" change original key is K, but I need K = 5 line down
+" Hence, I map this jump fun to Q
+let NERDTreeMapJumpFirstChild = 'Q'
+
 
 
 
@@ -414,13 +430,20 @@ let g:indentLine_enabled = 1
 "===============       ================
 
 
+
+"===============
+"=============== vimtex
+"===============
+let g:tex_flavor = 'pdflatex'
+
+
 "===============
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=10
+autocmd Filetype tex setl updatetime=1
 let g:livepreview_previewer = 'zathura'
-let g:livepreview_cursorhold_recompile=10
+let g:livepreview_cursorhold_recompile=1
 
 
 
@@ -446,7 +469,11 @@ let g:UltiSnipsEditSplit="vertical"
 " put your own snippet here:
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
 
-
+"===============
+"===============inkscape
+"===============
+inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+nnoremap <C-F> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 
 "===============
 "=============== Anti conceal math equation code
@@ -474,6 +501,24 @@ let g:tex_conceal = "0"
 "===============
 
 map <C-f> :FZF<CR>
+
+
+
+"===============
+"=============== Placeholder
+"===============
+map <tab> <Esc>/<++><CR>:nohlsearch<CR>c4l
+
+
+
+
+
+
+
+
+
+
+
 
 
 

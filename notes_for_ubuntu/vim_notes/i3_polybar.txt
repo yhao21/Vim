@@ -9,5 +9,15 @@
 
 
 3. configuration
+				# find your polybar config file
+				which polybar-git
+				
+				# copy sys config to your home dir
+				# path may be different. you can run this command in terminal
+				# 	polybar-git example
+				# sys will pop up an error, tells you where to place your config file.
+				/home/synferlo/snap/polybar-git/7/.config/polybar/config
+
+
 
 				
