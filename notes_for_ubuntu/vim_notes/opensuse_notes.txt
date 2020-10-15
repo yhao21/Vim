@@ -1,0 +1,5 @@
+1. install build essential
+				sudo zypper install -t pattern devel_basis
+
+
+
