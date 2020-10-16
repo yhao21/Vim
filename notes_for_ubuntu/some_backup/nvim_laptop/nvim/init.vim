@@ -156,8 +156,16 @@ nnoremap rr :! clear ; python3.8 %<CR>
 nnoremap <c-p> :CocCommand python.setInterpreter<CR>
 
 
-" vim surround
+" myvim surround
 nnoremap ys g@iw
+vnoremap ( di()<ESC>hp
+vnoremap { di{}<ESC>hp
+vnoremap [ di[]<ESC>hp
+vnoremap " di""<ESC>hp
+vnoremap ' di''<ESC>hp
+vnoremap < di<><ESC>hp
+
+
 
 
 
