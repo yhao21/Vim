@@ -1,0 +1,24 @@
+===============
+Reference
+===============
+https://tecadmin.net/setup-selenium-chromedriver-on-ubuntu/
+
+
+===============
+Setup chromedriver
+===============
+1. Check your google-chrome version
+				open chrome, go to settings, about chrome.
+
+2. Download chromedriver
+
+3. Check where your google-chrome are
+				which google-chrome
+				should be in /usr/bin/google-chrome
+
+4. Config driver to Ubuntu
+				cd where your download the driver,
+
+				sudo mv chromedriver /usr/bin/chromedriver
+				sudo chown root:root /usr/bin/chromedriver
+				sudo chmod +x /usr/bin/chromedriver
