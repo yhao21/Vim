@@ -22,7 +22,7 @@ set ignorecase
 set smartcase
 
 set encoding=utf-8
-set scrolloff=7
+set scrolloff=12
 set tabstop=2
 
 " vim and system use same clipboard, then you can ctrl v
@@ -435,6 +435,8 @@ let g:indentLine_enabled = 1
 "=============== vimtex
 "===============
 let g:tex_flavor = 'pdflatex'
+" open content
+nnoremap <leader>t :VimtexTocOpen<CR>
 
 
 "===============
