@@ -1,4 +1,28 @@
+global !p
+texMathZones = ['texMathZone' + x for x in ['A', 'AS', 'B', 'BS', 'C', 'CS',
+'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS', 'J', 'JS',
+'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z', 'AmsA', 'AmsB', 'AmsC',
+'AmsD', 'AmsE', 'AmsF', 'AmsG', 'AmsAS', 'AmsBS', 'AmsCS', 'AmsDS', 'AmsES',
+'AmsFS', 'AmsGS' ]]
 
+texIgnoreMathZones = ['texMathText']
+
+texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
+texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
+
+ignore = texIgnoreMathZoneIds[0]
+
+def math():
+	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
+	try:
+		first = next(
+            i for i in reversed(synstackids)
+            if i in texIgnoreMathZoneIds or i in texMathZoneIds
+        )
+		return first != ignore
+	except StopIteration:
+		return False
+endglobal
 
 
 
@@ -159,7 +183,7 @@ snippet al
 endsnippet
 
 #====================
-snippet al*
+snippet nal
 \begin{align*}
 	$1
 \end{align*}
@@ -184,7 +208,7 @@ snippet item
 endsnippet
 
 #====================
-snippet qq
+snippet qq "indexing equations" w
 \begin{equation}
 	$1
 \end{equation}
@@ -192,7 +216,7 @@ endsnippet
 
 
 #====================
-snippet qq*
+snippet nqq "non indexing equation" w
 \begin{equation*}
 	$1
 \end{equation*}
@@ -205,7 +229,7 @@ $1
 \end{cases}
 endsnippet
 #====================
-snippet enumerate "" w
+snippet xuhao "" wA
 \begin{enumerate}
         \item $1
 \end{enumerate}
@@ -227,67 +251,81 @@ snippet uu "underline" wA
 endsnippet
 
 #====================
+context "math()"
 snippet ify "infinity" wA
-\infty
+\infty 
 endsnippet
 
 #====================
+context "math()"
 snippet fp "frac partial" wA
 \frac{\partial $1 }{\partial $2 }
 endsnippet
 
 #====================
+context "math()"
 snippet ss "addup" wA
-\sum\limits_{$1} ^$2 $3 
+\sum\limits_{$1} ^ $2 
 endsnippet
 
 #====================
+context "math()"
 snippet mm "Max" wA
-\max_{\substack{$1\\\\$2}}
+\max_{\substack{$1\\\\$2}} $0
 endsnippet
 
 #====================
-snippet pp "Pai Product" w
-\prod_{$1} ^$2 {$3}
+context "math()"
+snippet pp "Pai Product" wA
+\prod_{$1} ^$2 
 endsnippet
 
 #====================
-snippet lim "Limitation" w
-\lim_{$1 \to $2} {$3}
+context "math()"
+snippet lim "Limitation" wA
+\lim_{$1 \to $2} $0
 endsnippet
 
 #====================
-snippet lb "left bracket" w
+context "math()"
+snippet lb "left bracket" wA
 \left(
 endsnippet
 #====================
-snippet rb "left bracket" w
+context "math()"
+snippet rb "left bracket" wA
 \right)
 endsnippet
 #====================
+context "math()"
 snippet yuan "big bracket" wA
-\left( $1 \right)
+\left( $1 \right) $0
 endsnippet
 
 #====================
+context "math()"
 snippet fang "[big bkt]" wA
-\left[ $1 \right]
+\left[ $1 \right] $0
 endsnippet
 #====================
+context "math()"
 snippet hua "{big bkt}" wA
-\left\\{ $1 \right\\}
+\left\\{ $1 \right\\} $0
 endsnippet
 #====================
+context "math()"
 snippet shuxian "shuxian" wA
 \Bigg|
 endsnippet
 #====================
-snippet abs "absolute value" w
-\left\lvert $1 \right\rvert
+context "math()"
+snippet abs "absolute value" wA
+\left\lvert $1 \right\rvert $0
 endsnippet
 #====================
+context "math()"
 snippet iig "integral" wA
-\int_{$1}^{$2}{$3}
+\int_{$1}^{$2} $0
 endsnippet
   
 #====================
@@ -296,41 +334,29 @@ $ $1 $$0
 endsnippet
 
 #====================
-#snippet iee "math eq" wA
-#$$ $1 $$$0
-#endsnippet
-
 snippet iee "math qq" wA
 \[ $1 \]
 endsnippet
 
 #====================
-
+context "math()"
 snippet '([A-Za-z])(\d)' "auto subscript" wrA
 `!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
 
+context "math()"
 snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
 `!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
 
 #======================================
-
-#snippet '(.*)(\\up)(.*)(\\)' "general form for superscript u\t+1\ is u^{t+1}" wrA
-#`!p snip.rv = match.group(1)`^{`!p snip.rv = match.group(3)`}
-#endsnippet
-#
-#
-#snippet '([A-Za-z])(\|)(.*)(\|)' "general form for subscript: u|t+1| = u_{t+1}" wrA
-#`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(3)`}
-#endsnippet
-#
-#======================================
+context "math()"
 snippet kk "superscript" iA
 ^{$1}
 endsnippet
 
 #======================================
+context "math()"
 snippet jj "superscript" iA
 _{$1}
 endsnippet
@@ -340,31 +366,22 @@ endsnippet
 #\\frac{$1}{$2}$0
 #endsnippet
 #======================================
-snippet up
- ^{$1}
-endsnippet
-
-#======================================
-snippet do
- _{$1}
-endsnippet
-
-#======================================
 snippet rt "right arrow" wA
 \rightarrow
 endsnippet
 
 #======================================
-snippet hh "hat" wA
-\hat{$1}
-endsnippet
+#snippet hh "hat" wA
+#\hat{$1}
+#endsnippet
 
 #======================================
-snippet tt "tilde" wA
-\tilde{$1}
-endsnippet
+#snippet tt "tilde" wA
+#\tilde{$1}
+#endsnippet
 #======================================
-snippet "((\\\w+)|[a-zA-Z])ud" "updot macro timeperiod change" wr
+context "math()"
+snippet "((\\\w+)|[a-zA-Z])ud" "updot macro timeperiod change" wrA
 \dot{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
@@ -373,205 +390,263 @@ snippet bar
 endsnippet
 
 #======================================
+context "math()"
 snippet alpha "a" wA
-\alpha
+\alpha 
 endsnippet
 
 #======================================
+context "math()"
 snippet beta "b" wA
-\beta
+\beta 
 endsnippet
 
 #======================================
-snippet gamma "g" wA
-\gamma
+context "math()"
+snippet gm "g" wA
+\gamma 
 endsnippet
 
 #======================================
+context "math()"
 snippet delta "d" wA
-\delta
+\delta 
 endsnippet
 
 #======================================
+context "math()"
 snippet eps "e" wA
-\varepsilon
+\varepsilon 
 endsnippet
 
 #======================================
+context "math()"
 snippet eta "n" wA
-\eta
+\eta 
 endsnippet
 
 #======================================
 snippet D
-\Delta
+\Delta 
 endsnippet
 
 #======================================
 snippet T
-\Theta
+\Theta 
 endsnippet
 
 #======================================
+context "math()"
 snippet theta "t" wA
-\theta
+\theta 
 endsnippet
 #======================================
 snippet k "k" w
-\kappa
+\kappa 
 endsnippet
 
 #======================================
-snippet ru "" w
-\lambda
+context "math()"
+snippet ru "" wA
+\lambda 
 endsnippet
 
 #======================================
+context "math()"
 snippet miu "m" wA
-\mu
+\mu 
 endsnippet
 
 #======================================
-snippet P
-\Pi
+context "math()"
+snippet Pai "Pai" wA
+\Pi 
 endsnippet
 
 #======================================
-snippet p
-\pi
+context "math()"
+snippet pai "Pai" wA
+\pi 
 endsnippet
 #======================================
+context "math()"
 snippet rho "rho" wA
-\rho
+\rho  
 endsnippet
 
 #======================================
-snippet kai "chi square" w
-\chi
+context "math()"
+snippet kai "chi square" wA
+\chi 
 endsnippet
 #======================================
+context "math()"
 snippet sigma "sigma" wA
-\sigma
+\sigma 
 endsnippet
 #======================================
+context "math()"
 snippet tao "tao" wA
-\tau
+\tau 
 endsnippet
 #======================================
-snippet Phi	"" w
-\Phi
-endsnippet
-
-#======================================
-snippet phi "" w
-\varphi
+context "math()"
+snippet Phi	"" wA
+\Phi 
 endsnippet
 
 #======================================
-snippet fi "phi" w
-\phi
+context "math()"
+snippet fi "" wA
+\varphi 
+endsnippet
+
+#======================================
+context "math()"
+snippet phi "phi" wA
+\phi 
 endsnippet
 
 #======================================
 snippet o
-\omega
+\omega 
 endsnippet
 
 #======================================
 snippet O
-\Omega
+\Omega 
 endsnippet
 
 #======================================
+context "math()"
 snippet << "" wA
-\le
+\le 
 endsnippet
 
 #======================================
+context "math()"
 snippet >> "" wA
-\ge
+\ge 
 endsnippet
 #======================================
+context "math()"
 snippet cc
 \subset
 endsnippet
 #======================================
-snippet or "union" w
+context "math()"
+snippet cc= "weak subset" wA
+\subseteq
+endsnippet
+#======================================
+context "math()"
+snippet fancc "supset" w
+\supset
+endsnippet
+#======================================
+context "math()"
+snippet fancc= "weak supset" wA
+\supseteq
+endsnippet
+#======================================
+context "math()"
+snippet or "union" wA
 \cup 
 endsnippet
 #======================================
-snippet bor "big union" w
+context "math()"
+snippet bor "big union" wA
 \bigcup 
 endsnippet
 #======================================
-snippet and "intersection" w
+context "math()"
+snippet and "intersection" wA
 \cap 
 endsnippet
 #======================================
-snippet band "big intersection" w
+context "math()"
+snippet band "big intersection" wA
 \bigcap 
 endsnippet
 #======================================
-snippet in
+context "math()"
+snippet in "in" wA
 \in
 endsnippet
 #======================================
-snippet nin "not in" w
+context "math()"
+snippet nin "not in" wA
 \notin
 endsnippet
 #======================================
-snippet 0 "empty" w
+context "math()"
+snippet emp "empty" wA
 \emptyset 
 endsnippet
 #======================================
-snippet all "forall" w
+context "math()"
+snippet all "forall" wA
 \forall 
 endsnippet
 #======================================
-snippet app
+context "math()"
+snippet app "approximate" wA
 \approx
 endsnippet
 
 #======================================
-snippet nn
+context "math()"
+snippet nn "not equal" wA
 \ne
 endsnippet
 
 #======================================
-snippet set
+context "math()"
+snippet set "set" wA
 \left\\{ $1 \right\\}
 endsnippet
 
 #======================================
-snippet cds "straigh-line dots" wA
+context "math()"
+snippet cs "straigh-line dots" wA
 \cdots
 endsnippet
-
 #======================================
+context "math()"
+snippet cd "\cdot used in density fn" iA
+\cdot 
+endsnippet
+#======================================
+context "math()"
 snippet vds "vertical dots" wA
-\vdots
+\vdots 
 endsnippet
 
 #======================================
+context "math()"
 snippet dds "diagonal dots" wA
-\ddots
+\ddots 
 endsnippet
 
 #======================================
-snippet IR
+context "math()"
+snippet IR "kongxin R" wA
 \mathbb{R} 
 endsnippet
 
 #======================================
-snippet IP
+context "math()"
+snippet IP "kongxin P" wA
 \mathbb{P} 
 endsnippet
 
 #======================================
+context "math()"
 snippet tp "converge in Prob" wA
 \xrightarrow{p}
 endsnippet
 #======================================
+context "math()"
 snippet td "converge in distribution" wA
 \xrightarrow{d}
 endsnippet
@@ -590,66 +665,52 @@ snippet rrrccc
 
 endsnippet
 #======================================
-snippet rrrcc
+snippet rrrcc "3 by 2" 
 	$1&$2\\\\
 	$3&$4\\\\
 	$5&$6
 
 endsnippet
 #======================================
-snippet rrccc
+snippet rrccc "2 by 3 matrix"
 	$1&$2&$3\\\\
 	$4&$5&$6
 
 endsnippet
 #====================
-snippet rr "plus - sign" wA
-+
-endsnippet
-#====================
-#snippet gg "- minus sign" wA
-#-
-#endsnippet
-
-#====================
+context "math()"
 snippet vv "times" wA
 \\times
 endsnippet
 #====================
-snippet by "times" w
+context "math()"
+snippet by "times" wA
 \\times
 endsnippet
 
 #====================
+context "math()"
 snippet duiqi "duiqi-align" wA
 &
 endsnippet
 
 #======================================
+context "math()"
 snippet blk "blank \quad" wA
 \\quad
 endsnippet
 #======================================
-snippet bm "bold in equation" w
-\bm{$1}
+context "math()"
+snippet ln "" wA
+\ln 
 endsnippet
 #======================================
-snippet cd "\cdot used in density fn"
-\cdot
-endsnippet
-#======================================
-snippet ln "" w
-\ln
-endsnippet
-#======================================
+context "math()"
 snippet bolang "~" wA
-\sim
+\sim 
 endsnippet
 #======================================
-snippet rt
-\sqrt
-endsnippet
-#======================================
+context "math()"
 snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)//' "Fraction" wrA
 \\frac{`!p snip.rv = match.group(1)`}{$1}
 endsnippet
@@ -669,38 +730,46 @@ snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
 `{$1}
 endsnippet
 #======================================
+context "math()"
 priority 10
-snippet "bar" "bar" ri
+snippet "bar" "bar" riA
 \overline{$1}
 endsnippet
 
+context "math()"
 priority 100
 snippet "((\\\w+)|[a-zA-Z])bar" "bar" riA
 \overline{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
+context "math()"
 priority 10
 snippet "hat" "hat" ri
 \hat{$1}
 endsnippet
 
+context "math()"
 priority 100
-snippet "((\\\w+)|([a-zA-Z]))hatt" "hat" riA
-\hat{`!p snip.rv=match.group(1)`}
+#snippet "((\\\w+)|([a-zA-Z]))hat" "hat" riA
+snippet "((\\\w+)|([a-zA-Z]+))hh" "hat" riA
+\widehat{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
 snippet "(\w+)HH" "big hat" ri
 \widehat{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
-snippet "(\w+)TT" "big tilde" ri
+context "math()"
+snippet "(\w+)tt" "big tilde" riA
 \widetilde{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
+context "math()"
 snippet bm "" wA
 \bm{$1}
 endsnippet
 #======================================
+context "math()"
 snippet "((\\\w+)|([a-zA-Z]))bm" "bold" riA
 \bm{`!p snip.rv=match.group(1)`}
 endsnippet
@@ -719,11 +788,13 @@ endsnippet
 
 
 #======================================
-snippet ml "lagrangian" wA
+context "math()"
+snippet L "lagrangian" wA
 \mathscr{L}
 endsnippet
 #======================================
-snippet H "Hamiltonian" w
+context "math()"
+snippet H "Hamiltonian" wA
 \mathcal{H}
 endsnippet
 
@@ -737,38 +808,47 @@ endsnippet
 #======================================
 
 #======================================
+context "math()"
 snippet xiexian "\" wA
 \backslash 
 endsnippet
 #======================================
-snippet root "sqrt" w
+context "math()"
+snippet root "sqrt" wA
 \sqrt 
 endsnippet
 #======================================
-snippet var "variance" w
-VAR($1)
+context "math()"
+snippet var "variance" wA
+VAR
 endsnippet
 #======================================
-snippet mse "MSE" w
-MSE($1)
+context "math()"
+snippet mse "MSE" wA
+MSE
 endsnippet
 #======================================
+context "math()"
 snippet RR "black bold R" wA
 \mathbf{R}
 endsnippet
 #======================================
+context "math()"
 snippet mR "black two line R" wA
 {\rm I\!R}
 endsnippet
 #======================================
+context "math()"
 snippet mmR "kong xin R" wA
 \mathbb{R}
 endsnippet
 #======================================
+context "math()"
 snippet mS "sample space" wA
 \mathcal S
 endsnippet
 #======================================
+context "math()"
 snippet mP "script P" wA
 \mathcal P
 endsnippet
@@ -785,11 +865,11 @@ snippet llf "log likelihood fn" w
 \\ln L(\bm{Y}|\\theta)
 endsnippet
 #======================================
-snippet LF "likelihood fn" w
+snippet LF "likelihood fn" wA
 L(\\theta|\\bm{Y})
 endsnippet
 #======================================
-snippet lf "likelihood fn" w
+snippet lf "likelihood fn" wA
 L(\\bm{Y}|\\theta)
 endsnippet
 #======================================
@@ -803,10 +883,12 @@ snippet 2info "info 2nd derivative" wA
 {\partial {\theta} \partial \theta'}
 endsnippet
 #======================================
-snippet kuohao "shu kuo hao" w
+context "math()"
+snippet kuohao "shu kuo hao" wA
 \binom{$1}{$2}
 endsnippet
 #======================================
+context "math()"
 snippet mb "[matrix]" wA
 \begin{bmatrix}
 $1 & $2\\\\
@@ -815,6 +897,7 @@ $3 & $4
 
 endsnippet
 #======================================
+context "math()"
 snippet mp "[matrix]" wA
 \begin{pmatrix}
 $1 & $2\\\\
@@ -827,6 +910,7 @@ snippet eq "equation number" w
 equation ($1)
 endsnippet
 #======================================
+context "math()"
 snippet wenzi "\text" wA
 \text{ $1 }
 endsnippet
@@ -845,18 +929,45 @@ endsnippet
 
 
 #======================================
+context "math()"
 snippet lifeu "lifetime utility" wA
 \max_{\substack{\\\\}}\sum\limits_{t = 0} ^\infty{
 \beta^{t}u(c_{t})}
 endsnippet
 #======================================
+context "math()"
 snippet adbc "AD B.C" wA
 \sum\limits_{t=0} ^\infty \left(p_{t}(c_{t}+i_{t})\right)
 \le \sum\limits_{t=0} ^\infty \left(w_{t}h_{t} + r_{t}k_{t}\right)
 endsnippet
 
-
-
+#======================================
+context "math()"
 snippet == "lines" wA
 ================================\\\\
 endsnippet
+#======================================
+context "math()"
+snippet mset "macro set" wA
+\left\\{ $1 \right\\}_{t = 0}^{\infty}$0
+endsnippet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
