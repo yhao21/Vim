@@ -265,7 +265,7 @@ endsnippet
 #====================
 context "math()"
 snippet ss "addup" wA
-\sum\limits_{$1} ^ $2 
+\sum\limits_{$1} ^$0	
 endsnippet
 
 #====================
@@ -277,13 +277,13 @@ endsnippet
 #====================
 context "math()"
 snippet pp "Pai Product" wA
-\prod_{$1} ^$2 
+\prod_{$1} ^ $0
 endsnippet
 
 #====================
 context "math()"
 snippet lim "Limitation" wA
-\lim_{$1 \to $2} $0
+\lim_{$1 \to ${2:\\infty}$0
 endsnippet
 
 #====================
@@ -681,21 +681,36 @@ snippet rrccc "2 by 3 matrix"
 endsnippet
 #====================
 context "math()"
+snippet jia "jia hao" iA
+ + 
+endsnippet
+#====================
+context "math()"
+snippet jie "jian" iA
+ - 
+endsnippet
+#====================
+context "math()"
 snippet vv "times" wA
-\\times
+ \\times 
 endsnippet
 #====================
 context "math()"
 snippet by "times" wA
-\\times
+ \\times 
 endsnippet
 
 #====================
 context "math()"
-snippet duiqi "duiqi-align" wA
+snippet dui "duiqi-align" wA
 &
 endsnippet
 
+#======================================
+context "math()"
+snippet di "duiqi" iA
+ &= 
+endsnippet
 #======================================
 context "math()"
 snippet blk "blank \quad" wA
@@ -791,12 +806,12 @@ endsnippet
 
 #======================================
 context "math()"
-snippet L "lagrangian" wA
+snippet L "lagrangian" w
 \mathscr{L}
 endsnippet
 #======================================
 context "math()"
-snippet H "Hamiltonian" wA
+snippet H "Hamiltonian" w
 \mathcal{H}
 endsnippet
 
@@ -886,6 +901,11 @@ snippet 2info "info 2nd derivative" wA
 endsnippet
 #======================================
 context "math()"
+snippet hao "kuohao" iA
+($1)
+endsnippet
+#======================================
+context "math()"
 snippet kuohao "shu kuo hao" wA
 \binom{$1}{$2}
 endsnippet
@@ -945,7 +965,7 @@ endsnippet
 
 #======================================
 context "math()"
-snippet == "lines" wA
+snippet -- "lines" wA
 ================================\\\\
 endsnippet
 #======================================
