@@ -2,4 +2,38 @@
 				sudo zypper install -t pattern devel_basis
 
 
+2. install python3.8
+				(firefox) download from https://software.opensuse.org/package/opt-python38
+				click on "show community packages"
+				click on "1 click install"
+
+
+				add python3.8 to path:
+				write this in your .bashrc file
+
+				PATH=/opt/python/bin:$PATH;export PATH
+
+
+3. install python3.8 pip
+				search "python38-pip" in opensuse official software website.
+				click on "1 click install"
+
+
+
+4. install python packages:
+				you don't need to type "sudo"
+
+				pip3.8 install pandas
+
+				when you install bs4, you may encounter with requring setuptool module
+				pip3.8 install setuptool
+
+
+
+
+
+
+
+				
+
 
