@@ -62,6 +62,10 @@ noremap <LEADER><CR> :noh<CR>
 nnoremap J 0
 "L jump to the end
 nnoremap L $
+" back left in visual mode
+vnoremap J B
+" forward right in visual mode
+vnoremap L W
 
 
 " select to the end of the line in normal mode.
@@ -165,7 +169,9 @@ vnoremap " di""<ESC>hp
 vnoremap ' di''<ESC>hp
 vnoremap < di<><ESC>hp
 
-
+"jump start/end of parenthesis
+nnoremap 0 %
+vnoremap 0 %
 
 
 
