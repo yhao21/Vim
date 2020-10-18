@@ -1,3 +1,15 @@
+"===============
+"=============== Initialize my vimscripts
+"===============
+source ~/.config/nvim/plugged/myplugin/myplugin.vim
+
+
+
+
+
+
+
+
 
 "===============
 "===============
@@ -59,7 +71,7 @@ noremap <LEADER><CR> :noh<CR>
 
 
 "J jump to begining of the line
-nnoremap J 0
+nnoremap J ^
 "L jump to the end
 nnoremap L $
 " back left in visual mode

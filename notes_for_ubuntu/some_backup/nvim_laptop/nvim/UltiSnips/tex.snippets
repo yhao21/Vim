@@ -387,19 +387,24 @@ snippet "((\\\w+)|[a-zA-Z]) ud" "updot macro timeperiod change" wrA
 \dot{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
+context "math()"
+snippet "((\\\w+)|[a-zA-Z])ud" "updot macro timeperiod change" wrA
+\dot{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
 snippet bar
 \bar{$1}
 endsnippet
 
 #======================================
 context "math()"
-snippet alpha "a" wA
+snippet al "a" wA
 \alpha 
 endsnippet
 
 #======================================
 context "math()"
-snippet beta "b" wA
+snippet be "b" wA
 \beta 
 endsnippet
 
@@ -411,7 +416,7 @@ endsnippet
 
 #======================================
 context "math()"
-snippet delta "d" wA
+snippet de "d" wA
 \delta 
 endsnippet
 
@@ -439,7 +444,7 @@ endsnippet
 
 #======================================
 context "math()"
-snippet theta "t" wA
+snippet th "t" wA
 \theta 
 endsnippet
 #======================================
