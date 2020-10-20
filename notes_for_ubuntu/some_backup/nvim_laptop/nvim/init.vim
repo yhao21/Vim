@@ -174,17 +174,16 @@ nnoremap <c-p> :CocCommand python.setInterpreter<CR>
 
 " myvim surround
 nnoremap ys g@iw
-vnoremap ( di()<ESC>hp
-vnoremap { di{}<ESC>hp
-vnoremap [ di[]<ESC>hp
-vnoremap " di""<ESC>hp
-vnoremap ' di''<ESC>hp
-vnoremap < di<><ESC>hp
+vnoremap ( di ()<ESC>hp
+vnoremap { di {}<ESC>hp
+vnoremap [ di []<ESC>hp
+vnoremap " di ""<ESC>hp
+vnoremap ' di ''<ESC>hp
+vnoremap < di <><ESC>hp
 
 "jump start/end of parenthesis
 nnoremap 0 %
 vnoremap 0 %
-
 
 
 
@@ -249,6 +248,7 @@ Plug 'dracula/vim'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'yuttie/hydrangea-vim'
 Plug 'connorholyday/vim-snazzy'
+Plug 'morhetz/gruvbox' 
 Plug 'lervag/vimtex'
 
 call plug#end()
@@ -279,10 +279,15 @@ call plug#end()
 "=============== Color Scheme - dracula
 "===============
 	
-packadd! dracula
-syntax enable
-colorscheme dracula
+"packadd! dracula
+"syntax enable
+"colorscheme dracula
 
+
+"===============
+"=============== Color Scheme - gruvbox
+"===============
+colorscheme gruvbox
 
 
 "===============
