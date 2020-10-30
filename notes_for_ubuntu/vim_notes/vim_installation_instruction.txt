@@ -180,6 +180,15 @@ This one has bug when open sogouinput
 								:VimspectorInstall --all --force-all
 				
 
+17 markdown preview
+				add plugin to init.nvim
+								JamshedVesuna/vim-markdown-preview
+				install markdown:
+								sudo apt install markdown
+				install grip:
+								sudo pip3.8 install grip
+				add github flavor to init.nvim
+								let vim_markdown_preview_github=1
 
 
 
