@@ -43,9 +43,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec terminator
+bindsym $mod+Return exec terminator
 
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
 
 
 
@@ -192,11 +192,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bar {
         status_command i3status -c ~/.config/i3/i3status.conf
-				i3bar_command i3bar --transparency
+				#i3bar_command i3bar --transparency
 				position top
 				separator_symbol ":"
 				colors {
-								background #00000000
+								background #222222
+								#background #00000000
         				statusline #ffffff
         				separator #666666
 
@@ -246,8 +247,8 @@ hide_edge_borders both
 new_window none
 new_float normal
 
-gaps inner 10
-gaps outer 5
+#gaps inner 10
+#gaps outer 5
 
 
 mode "resize" {
