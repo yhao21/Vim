@@ -1,0 +1,26 @@
+1. print out in terminal
+				echo <..obj..>
+
+2. || and &&
+    command1 && command2
+    execute command 2 iff command1 is executed.
+    i.e., make && make install
+    
+    command1 || command2
+    execute2 if fail to execute command1
+
+3. variables in bash
+    variables name is defined after '$' sign, i.e., $date. date is a variable
+    
+    echo ${!S*}, print out all variables start with letter 'S'.
+    
+    i.e., print out date
+
+		    echo $(date)
+
+				results: Thu 05 Nov 2020 05:17:43 PM EST
+
+
+4. $ 可以扩展成另一个命令的运行结果，
+    $(data) 为date的返回值
+		echo $(ls $(pwd)) 括号内返回pwd，而后返回 ls pwd并打印
