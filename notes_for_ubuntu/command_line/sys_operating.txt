@@ -6,3 +6,6 @@
 
 				# more detail command below:
 				http://manpages.ubuntu.com/manpages/bionic/man1/brightnessctl.1.html
+
+2. Check disk usage
+    df -lh
