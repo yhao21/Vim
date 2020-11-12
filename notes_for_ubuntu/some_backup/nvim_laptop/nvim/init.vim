@@ -174,12 +174,12 @@ nnoremap rr :! clear ; python3.8 %<CR>
 
 " myvim surround
 nnoremap ys g@iw
-vnoremap ( di ()<ESC>hp
-vnoremap { di {}<ESC>hp
-vnoremap [ di []<ESC>hp
-vnoremap " di ""<ESC>hp
-vnoremap ' di ''<ESC>hp
-vnoremap < di <><ESC>hp
+vnoremap ( da()<ESC>hp
+vnoremap { da{}<ESC>hp
+vnoremap [ da[]<ESC>hp
+vnoremap " da""<ESC>hp
+vnoremap ' da''<ESC>hp
+vnoremap < da<><ESC>hp
 
 "jump start/end of parenthesis
 nnoremap 0 %
