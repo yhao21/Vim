@@ -180,6 +180,14 @@
 					same as "ctrl /" in pycharm
 
 --------------------------------------------------------------
+Jump around in vim
+
+
+ctrl ]				jump to a subject with under score 跳转到下划线标识的目录下
+ctrl o				跳转回来
+
+
+--------------------------------------------------------------
 
 2. Visual 模式
 
@@ -288,6 +296,23 @@ Insert模式下快捷键
 	若想用ys替代ysiw，需要nnoremap ys g@iw, 
 	改键之前先使用原键位，观察右下角反馈的真实键位。
 
+
+
+
+=========================================
+7. vim multiple cursor --- vim-visual-multi
+
+C-n						select multiple items
+q							skip current item, it will select next occurance
+Q							deselect current item.
+i,a,I,A				insert mode. Note, under this mode, it use vim's original keymap.
+
+
+Advance:
+				if you want to manually select a pattern,
+				press v into visual mode,
+				select your pattern
+				press C-n into multi cursor mode.
 
 
 
