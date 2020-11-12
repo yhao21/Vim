@@ -169,7 +169,7 @@ nnoremap rr :! clear ; python3.8 %<CR>
 "endfunc
 
 " select coc interpreter
-nnoremap <c-p> :CocCommand python.setInterpreter<CR>
+"nnoremap <c-p> :CocCommand python.setInterpreter<CR>
 
 
 " myvim surround
@@ -242,6 +242,7 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'vim-scripts/taglist.vim'
 "Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-surround'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'dracula/vim'
@@ -250,6 +251,9 @@ Plug 'yuttie/hydrangea-vim'
 Plug 'connorholyday/vim-snazzy'
 Plug 'morhetz/gruvbox' 
 Plug 'lervag/vimtex'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
@@ -293,7 +297,7 @@ colorscheme gruvbox
 "===============
 "=============== Airline
 "===============
-let g:airline_theme='dracula'
+"let g:airline_theme='dracula'
 "let g:airline#extension#coc#enabled = 0
 "let g:airline#extension#branch#enabled = 0
 "let g:airline#extension#tabline#enabled = 0
@@ -544,10 +548,18 @@ map <tab> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 
 
+"===============
+"=============== Markdown preview
+"===============
+let vim_markdown_preview_github=1
+let vim_markdown_preview_hotkey='<c-p>'
 
 
+"===============
+"=============== R Markdown
+"===============
 
-
+"nnoremap <leader>r :RMarkdown pdf latex_engine="pdflatex", toc=TRUE
 
 
 
