@@ -5,3 +5,15 @@
 2. maximize window(exit split screen)
 	alt =
 	
+
+3. switch tags in browser:
+        Swipe left/right on touchpad with 3 fingers!!
+
+
+4. See all opening windows
+        Swipe up on touchpad with 3 fingers
+
+5. screenshots
+    full-screen: Ctrl + fullscreenkey
+
+    partial area: Shift + Ctrl + fullscreenkey
