@@ -24,3 +24,11 @@ sudo make altinstall
 
 
 Done!!!
+
+
+===============================
+if using nltk and textblob:
+				sudo apt install libsqlite3-dev
+				./configure --enable-loadable-sqlite-extensions --enable-optimizations
+				make
+				sudo make altinstall
