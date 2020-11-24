@@ -1,0 +1,13 @@
+
+
+
+
+
+sudo apt install libudunits2-dev libgdal-dev
+
+
+
+=============================
+install packages
+				sudo R -vanilla
+				install.packages('package name')

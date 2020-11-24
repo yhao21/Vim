@@ -1,0 +1,78 @@
+:let i = 1
+:while i < 5
+:  echo "count is" i
+:  let i += 1
+:endwhile
+
+
+===============
+define variable
+===============
+Format:
+
+				let <variable> = <value>
+
+use local variable in your script!!
+i.e.,
+
+				:let s:count = 1
+				:while s:count < 5
+				:  source other.vim
+				:  let s:count += 1
+				:endwhile
+
+
+You can use global variables everywhere.  This also means that when the
+variable "count" is used in one script file, it might also be used in another
+file.  This leads to confusion at least, and real problems at worst.  To avoid
+this, you can use a variable local to a script file by prepending "s:".  For
+example, one script contains this code: >
+
+
+There are more kinds of variables, see |internal-variables|.  The most often
+used ones are:
+
+	b:name		variable local to a buffer
+	w:name		variable local to a window
+	g:name		global variable (also in a function)
+	v:name		variable predefined by Vim
+
+
+===============
+Delete variable
+===============
+:unlet s:<variable>
+:unlet! s:<variable>			without error message
+
+
+===============
+Check variable existence
+===============
+
+exists(<variable name>)
+
+
+:if !exists("s:call_count")
+:  let s:call_count = 0
+:endif
+:let s:call_count = s:call_count + 1
+:echo "called" s:call_count "times"
+
+
+!exists(<variable>) return True if no such variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
