@@ -1,0 +1,6 @@
+1. initialize config file
+				example files is located in /usr/share/doc/bspwm/examples/
+
+				Copy <bspwmrc> to ~/.config/bspwm/		>> config file
+
+				Copy <sxhkdrc> to ~/.config/sxhkd/		>> shortcuts config file
