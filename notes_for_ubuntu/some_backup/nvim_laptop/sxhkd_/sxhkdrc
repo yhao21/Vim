@@ -159,3 +159,7 @@ super + {j,k,i,l}
 # contract a window by moving one of its side inward
 super + shift + {j,k,i,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+
+alt + g
+	google-chrome
