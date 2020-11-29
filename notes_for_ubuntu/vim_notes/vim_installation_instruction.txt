@@ -59,6 +59,10 @@
 	终极配置：
 	将https://github.com/neoclide/coc.nvim中example config的内容甄选后复制到vimrc中即可。！！！
 
+	sudo pip install jedi
+	sudo pip install python-language-server
+	sudo pacman -S nodejs npm
+
 
 	===================================
 	Install coc on chrombook
