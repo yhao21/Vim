@@ -13,4 +13,10 @@
 
 
 
+2. use evince rather zathura for latex-preview. Evince is so much faster!
 
+				Fn F9				close side panel
+				Ctrl i			inverse color
+				n						next page
+				p						previous page
+				Ctrl l			go to specific page
