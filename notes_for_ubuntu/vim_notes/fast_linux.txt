@@ -1,0 +1,16 @@
+1. change swappiness
+
+				check your swappiness: (ubuntu usually = 60, this index range in 0~100,
+				higher swappiness = easy to use swap. This may your pc slower.
+				Change it to 10 or even lower.
+				To permenently change, add 'vm.swappiness=10' to the end of sysctl.conf.
+				
+				cat /proc/sys/vm/swappiness
+
+				sudo vim /etc/sysctl.conf
+
+				vm.swappiness=10
+
+
+
+
