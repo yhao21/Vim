@@ -182,8 +182,8 @@ vnoremap ' da''<ESC>hp
 vnoremap < da<><ESC>hp
 
 "jump start/end of parenthesis
-nnoremap 0 %
-vnoremap 0 %
+"nnoremap 0 %
+"vnoremap 0 %
 
 
 
@@ -478,9 +478,11 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=1
+autocmd Filetype tex setl updatetime=5
 let g:livepreview_previewer = 'zathura'
-let g:livepreview_cursorhold_recompile=1
+"let g:livepreview_previewer = 'evince'
+"let g:livepreview_previewer = 'okular'
+let g:livepreview_cursorhold_recompile=5
 
 
 
@@ -522,6 +524,7 @@ autocmd Filetype tex setlocal conceallevel=0
 autocmd Filetype plaintex setlocal conceallevel=0
 
 let g:tex_conceal = "0"
+let g:vimtex_syntax_conceal_default = '0'
 
 
 
