@@ -55,6 +55,9 @@
 				use this command to go back to last commit. you can do this several time, if you need
 
 				git reset --soft HEAD^
+				git reset HEAD <path to unwanted file>
+				git commit -c ORIG_HEAD
+				
 
 
 
