@@ -50,7 +50,11 @@
 
 
 
+3. undo git add after commit
+				after git add and git commit, if you want to undo the commit,
+				use this command to go back to last commit. you can do this several time, if you need
 
+				git reset --soft HEAD^
 
 
 
