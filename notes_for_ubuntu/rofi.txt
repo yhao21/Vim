@@ -1,0 +1,15 @@
+
+
+1. open rofi
+				rofi -show [mode]							
+
+				mode: ssh		run			drun			window			windowcd
+
+				shortcuts: alt m
+
+
+
+
+2. move to next modi
+				shift right-arrow
+
