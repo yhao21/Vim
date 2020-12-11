@@ -1,3 +1,11 @@
+0. Change your mirror, download faster
+
+  open software & update
+	change to <main list>
+
+
+
+
 1. USB preparation
 	download Rufus to write your iso file.
 	

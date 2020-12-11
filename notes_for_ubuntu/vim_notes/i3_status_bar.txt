@@ -78,3 +78,41 @@ bar {
         				binding_mode       #2f343a #900000 #ffffff
 				}
 }
+
+
+Color Information
+
+i3 titles
+
+item					border		bground		text		indicator		child_border
+focused			  FFFFFF    FFFFFF   FFFFFF   FFFFFF       FFFFFF
+inactive
+unfocused
+urgent
+placeholder
+window
+
+
+i3status
+
+item				bground		text		separator
+basic
+good
+degraded
+bad
+
+
+
+i3status workspaces
+
+item				border		bground			text
+focused			FFFFFF
+active
+inactive
+urgent
+binding
+
+
+
+
+
