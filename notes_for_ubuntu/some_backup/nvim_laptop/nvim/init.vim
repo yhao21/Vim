@@ -1,7 +1,7 @@
 "===============
 "=============== Initialize my vimscripts
 "===============
-source ~/.config/nvim/plugged/myplugin/myplugin.vim
+"source ~/.config/nvim/plugged/myplugin/myplugin.vim
 
 
 
@@ -239,7 +239,7 @@ Plug 'yggdroot/indentline'
 Plug 'puremourning/vimspector'
 "Plug 'vim-syntastic/syntastic'
 Plug 'dense-analysis/ale'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'vim-scripts/taglist.vim'
 "Plug 'terryma/vim-multiple-cursors'
 Plug 'mg979/vim-visual-multi'
@@ -478,11 +478,11 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=5
-let g:livepreview_previewer = 'zathura'
-"let g:livepreview_previewer = 'evince'
+autocmd Filetype tex setl updatetime=10
+"let g:livepreview_previewer = 'zathura'
+let g:livepreview_previewer = 'evince'
 "let g:livepreview_previewer = 'okular'
-let g:livepreview_cursorhold_recompile=5
+"let g:livepreview_cursorhold_recompile=20
 
 
 
@@ -540,7 +540,7 @@ let g:vimtex_syntax_conceal_default = '0'
 "=============== Fuzzyfile finder
 "===============
 
-map <C-f> :FZF<CR>
+"map <C-f> :FZF<CR>
 
 
 

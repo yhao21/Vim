@@ -31,6 +31,7 @@ endglobal
 
 
 snippet art
+
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -43,6 +44,10 @@ snippet art
 \usepackage{graphicx}
 \usepackage{setspace}
 \doublespacing
+\usepackage[flushleft]{threeparttable}
+\usepackage{booktabs,caption}
+\usepackage{float}
+\usepackage{graphicx}
 
 \usepackage{import}
 \usepackage{xifthen}
@@ -53,6 +58,8 @@ snippet art
 \def\svgwidth{\columnwidth}
 \import{./figures/}{#1.pdf_tex}
 }
+
+
 
 
 \title{$1}
@@ -197,7 +204,12 @@ endsnippet
 
 #====================
 snippet pic
-\includegraphics[$2]{$1}
+
+\begin{figure}[H]
+ \caption{$1}
+    \center{\includegraphics[scale = $2]  {$3}}
+\end{figure}
+
 endsnippet
 
 #====================
@@ -884,19 +896,23 @@ snippet sanjiao "dao san jiao" wA
 \bigtriangledown
 endsnippet
 #======================================
+context "math()"
 snippet LLF "log likelihood fn" w
 \\ln L(\\theta|\\bm{Y})
 endsnippet
 #======================================
+context "math()"
 snippet llf "log likelihood fn" w
 \\ln L(\bm{Y}|\\theta)
 endsnippet
 #======================================
-snippet LF "likelihood fn" wA
+context "math()"
+snippet LF "likelihood fn" w
 L(\\theta|\\bm{Y})
 endsnippet
 #======================================
-snippet lf "likelihood fn" wA
+context "math()"
+snippet lf "likelihood fn" w
 L(\\bm{Y}|\\theta)
 endsnippet
 #======================================
