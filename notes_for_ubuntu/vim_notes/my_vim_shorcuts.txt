@@ -86,6 +86,12 @@
 		te			normal下，选中当前位置到行尾的所有内容
 		ts			normal下，选中到行首
 		ctrl shift v		粘贴通用剪贴板内容
+		zo					open one fold under the cursor
+		zc					close one fold under the cursor
+		zR					open all folds
+		zM					close all folds
+
+
 	
 	1.1 附录
 		:r! cat <文件地址>	可以将对应文件的内容直接加载到当前打开的vim中。！！
