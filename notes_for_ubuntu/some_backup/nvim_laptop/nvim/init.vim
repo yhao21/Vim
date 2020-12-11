@@ -9,8 +9,6 @@
 
 
 
-
-
 "===============
 "===============
 "===============
@@ -241,35 +239,30 @@ Plug 'puremourning/vimspector'
 Plug 'dense-analysis/ale'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'vim-scripts/taglist.vim'
-"Plug 'terryma/vim-multiple-cursors'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-surround'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'dracula/vim'
-Plug 'liuchengxu/space-vim-theme'
-Plug 'yuttie/hydrangea-vim'
-Plug 'connorholyday/vim-snazzy'
-Plug 'morhetz/gruvbox' 
 Plug 'lervag/vimtex'
-Plug 'JamshedVesuna/vim-markdown-preview'
+"Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'iamcco/markdown-preview.nvim'
+Plug 'plasticboy/vim-markdown'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'arcticicestudio/nord-vim'
+"Plug 'dracula/vim'
+"Plug 'connorholyday/vim-snazzy'
+"Plug 'morhetz/gruvbox' 
 
 call plug#end()
 
 
 "===============
-"=============== Color Scheme - Space_vim_theme
+"=============== Color Scheme - nord
 "===============
-"colorscheme space_vim_theme
-"let g:space_vim_transp_bg = 1
+set termguicolors
+colorscheme nord
 
 
-"===============
-"=============== Color Scheme - hydrangea
-"===============
-
-"color hydrangea
 
 "===============
 "=============== Color Scheme - snazzy
@@ -291,7 +284,7 @@ call plug#end()
 "===============
 "=============== Color Scheme - gruvbox
 "===============
-colorscheme gruvbox
+"colorscheme gruvbox
 
 
 "===============
@@ -479,8 +472,8 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "===============
 
 autocmd Filetype tex setl updatetime=10
-"let g:livepreview_previewer = 'zathura'
-let g:livepreview_previewer = 'evince'
+let g:livepreview_previewer = 'zathura'
+"let g:livepreview_previewer = 'evince'
 "let g:livepreview_previewer = 'okular'
 "let g:livepreview_cursorhold_recompile=20
 
@@ -554,9 +547,16 @@ map <tab> <Esc>/<++><CR>:nohlsearch<CR>c4l
 "===============
 "=============== Markdown preview
 "===============
-let vim_markdown_preview_github=1
-let vim_markdown_preview_hotkey='<c-p>'
+"let vim_markdown_preview_github=1
+"let vim_markdown_preview_hotkey='<c-p>'
 
+"let g:vim_markdown_override_foldtext = 0
+"let g:vim_markdown_conceal = 0
+"let g:vim_markdown_toc_autofit = 1
+"let g:vim_markdown_conceal_code_blocks = 0
+
+autocmd Filetype md setlocal conceallevel=0
+autocmd Filetype markdown setlocal conceallevel=0
 
 "===============
 "=============== R Markdown
