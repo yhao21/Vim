@@ -184,7 +184,35 @@ This one has bug when open sogouinput
 								:VimspectorInstall --all --force-all
 				
 
-17 markdown preview
+17 markdown preview:
+
+	!!This is better:
+	website: https://github.com/instant-markdown/vim-instant-markdown
+
+
+	sudo apt install markdown
+	sudo npm -g install instant-markdown-d
+
+
+	add the following stuffs to your vimrc/init.nvim
+				
+		Plug 'instant-markdown/vim-instant-markdown'
+				
+				filetype plugin on
+				"Uncomment to override defaults:
+				"let g:instant_markdown_slow = 1
+				"let g:instant_markdown_autostart = 0
+				"let g:instant_markdown_open_to_the_world = 1
+				"let g:instant_markdown_allow_unsafe_content = 1
+				"let g:instant_markdown_allow_external_content = 0
+				"let g:instant_markdown_mathjax = 1
+				"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+				"let g:instant_markdown_autoscroll = 0
+				"let g:instant_markdown_port = 8888
+				"let g:instant_markdown_python = 1
+
+--------------------------------------------------------------------------
+				Don't use this
 				add plugin to init.nvim
 								JamshedVesuna/vim-markdown-preview
 				install markdown:
