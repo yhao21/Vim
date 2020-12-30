@@ -12,6 +12,8 @@
 1. Normal 模式下快捷键
 
 	1.1 基本写入与编辑
+		ctrl a	给当前数字加一
+		ctrl x	给当前数字减一
 		0			nomarl/visual jump start/end of parenthesis
 		ss			(chromebook vim)save and compile .tex file
 		ctrl f			fuzzyfile finder
