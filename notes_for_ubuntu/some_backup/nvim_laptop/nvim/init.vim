@@ -152,7 +152,8 @@ vnoremap ? I#<Esc><Esc>
 
 
 " run you python code with shortcuts
-nnoremap rr :! clear ; python3.8 %<CR>
+"nnoremap rr :! clear ; python3.8 %<CR>
+
 "noremap <leader>r :call CompileRunGcc()<CR>
 "func! CompileRunGcc()
 "	exec "w"
@@ -243,11 +244,15 @@ Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-surround'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
+
+Plug 'instant-markdown/vim-instant-markdown'
+
 "Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'iamcco/markdown-preview.nvim'
-Plug 'plasticboy/vim-markdown'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
+"Plug 'iamcco/markdown-preview.nvim'
+"Plug 'plasticboy/vim-markdown'
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
+"
 Plug 'arcticicestudio/nord-vim'
 "Plug 'dracula/vim'
 "Plug 'connorholyday/vim-snazzy'
@@ -471,11 +476,11 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=10
+autocmd Filetype tex setl updatetime=25
 let g:livepreview_previewer = 'zathura'
 "let g:livepreview_previewer = 'evince'
 "let g:livepreview_previewer = 'okular'
-"let g:livepreview_cursorhold_recompile=20
+let g:livepreview_cursorhold_recompile=25
 
 
 
@@ -544,19 +549,23 @@ map <tab> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 
 
-"===============
-"=============== Markdown preview
-"===============
-"let vim_markdown_preview_github=1
-"let vim_markdown_preview_hotkey='<c-p>'
 
-"let g:vim_markdown_override_foldtext = 0
-"let g:vim_markdown_conceal = 0
-"let g:vim_markdown_toc_autofit = 1
-"let g:vim_markdown_conceal_code_blocks = 0
 
-autocmd Filetype md setlocal conceallevel=0
-autocmd Filetype markdown setlocal conceallevel=0
+"===============
+"=============== Instant Markdown Preview
+"===============
+filetype plugin on
+"Uncomment to override defaults:
+"let g:instant_markdown_slow = 1
+"let g:instant_markdown_autostart = 0
+"let g:instant_markdown_open_to_the_world = 1
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 0
+"let g:instant_markdown_mathjax = 1
+"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+"let g:instant_markdown_autoscroll = 0
+"let g:instant_markdown_port = 8888
+"let g:instant_markdown_python = 1
 
 "===============
 "=============== R Markdown
