@@ -3,3 +3,11 @@
 
 				sudo gdebi <rstudio>.deb
 
+
+2. add sudo user account
+
+				adduser <username>
+				setup your password
+				press enter 5 times
+				usermod -aG sudo <username>
+
