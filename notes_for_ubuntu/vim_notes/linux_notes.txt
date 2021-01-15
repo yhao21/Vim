@@ -26,3 +26,11 @@
 				lspci | grep -i vga  #check intel graphic card
 				lspci | grep NVIDIA  #check intel graphic card
 				
+
+4. change your hostname
+
+				In terminal check your current hostname:
+								hostname
+				Change your hostname:
+								sudo nvim /etc/hostname
+				Reboot.
