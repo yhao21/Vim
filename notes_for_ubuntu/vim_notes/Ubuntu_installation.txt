@@ -1,0 +1,60 @@
+
+
+
+1. USB preparation
+	download Rufus3.0 to write your iso file.
+	
+	Notice!! Write your USB in "DD" mode!!!!! otherwise you might need to deal w/ grub problem
+
+
+
+2. Disable NVIDIA Graphic Card, use Intel Only
+				No more black screen, save your RAM and power.
+
+				1) In gnome, open NVIDIA setting, click PRIME Profiles, select Intel
+
+				2) or in terminal,
+								nvidia-settings
+
+				Then, reboot
+
+				Use these two command to check your status
+				lspci | grep -i vga  #check intel graphic card
+				lspci | grep NVIDIA  #check intel graphic card
+
+
+
+3. update and upgrade your system
+				sudo apt update
+				sudo apt upgrade
+
+
+
+4. Install necessary apps and 
+				sudo apt install git i3 ranger vim neovim terminator feh inkscape
+				sudo apt install rxvt-unicode obs-studio brightnessctl deepin-screenshot
+
+				sudo apt install gdebi-core  # helps you install deb file
+
+				---install R
+				sudo apt install libudunits2-dev libgdal-dev
+				sudo apt install r-base  
+
+				---install python (find python instructions)
+				sudo pip3.8 install inkscape-figures
+
+				---install latex (sudo perl install-tl find txt file.)
+
+				---Chinese input
+				sudo apt install fcitx
+				sudo apt install fcitx-googlepinyin
+
+				copy this to .profile
+								export XMODIFIERS=@im=fcitx
+								export QT_IM_MODULE=fcitx
+								export GTK_IM_MODULE=fcitx
+
+				
+5. Install dependencies for vim plugins
+				sudo apt install nodejs npm
+				sudo pip3.8 install python-language-server pynvim
