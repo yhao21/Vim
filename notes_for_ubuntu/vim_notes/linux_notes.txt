@@ -12,7 +12,7 @@
 				usermod -aG sudo <username>
 
 
-3. forbid NVIDIA card, use intel graphic only
+3. disable NVIDIA card, use intel graphic only
 				This can fix blackscreen problem, also save your ram and power
 
 				In gnome, open NVIDIA setting, click PRIME Profiles, select Intel
