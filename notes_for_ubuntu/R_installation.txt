@@ -4,6 +4,7 @@
 
 
 sudo apt install libudunits2-dev libgdal-dev
+sudo apt -y install r-base
 
 
 
