@@ -1,0 +1,10 @@
+
+
+
+
+
+### upload local files to the server
+
+				at local:
+				(copy local file to server)
+								scp dataset_3_outputs.csv synferlo_linode@ip address:~/<dir path on your server>
