@@ -58,3 +58,8 @@
 5. Install dependencies for vim plugins
 				sudo apt install nodejs npm
 				sudo pip3.8 install python-language-server pynvim
+
+
+6. install instant markdown preview
+				sudo npm -g install instant-markdown-d
+				sudo apt install xdg-utils curl nodejs
