@@ -35,6 +35,8 @@
 				sudo apt install rxvt-unicode obs-studio brightnessctl deepin-screenshot
 
 				sudo apt install gdebi-core  # helps you install deb file
+				## this software helps you download youtube video in ranger.
+				sudo apt install youtube-dl 
 
 				---install R
 				sudo apt install libudunits2-dev libgdal-dev
