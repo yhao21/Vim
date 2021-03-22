@@ -113,6 +113,7 @@ my keymap
 	CW		bulk-rename 跳转到vim中，对选中的文档集体改名字 
 
 	X		unzip解压缩文件
+	w   view task manager
 	
 
 	=====================
