@@ -118,10 +118,6 @@ fi
 
 
 
-
-
-
-
 # ==================================
 # Texlive 2020
 # ==================================
@@ -168,5 +164,9 @@ alias cj='xinput --disable "SynPS/2 Synaptics TouchPad"'
 alias ck='xinput --enable "SynPS/2 Synaptics TouchPad"'
 
 
+# ==================================
+# neofetch
+# ==================================
+alias s='neofetch'
 
 

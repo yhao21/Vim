@@ -31,7 +31,7 @@
 
 
 4. Install necessary apps and 
-				sudo apt install git i3 ranger vim neovim terminator feh inkscape
+				sudo apt install git i3 ranger vim neovim terminator feh inkscape neofetch
 				sudo apt install rxvt-unicode obs-studio brightnessctl deepin-screenshot
 
 				sudo apt install gdebi-core  # helps you install deb file
