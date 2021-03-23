@@ -56,6 +56,7 @@
 								export QT_IM_MODULE=fcitx
 								export GTK_IM_MODULE=fcitx
 
+4.1 Config file for neofetch: .config/neofetch/
 				
 5. Install dependencies for vim plugins
 				sudo apt install nodejs npm
