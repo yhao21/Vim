@@ -27,3 +27,29 @@ endsnippet
 snippet blk "\n" iAw
 print('\n\n')
 endsnippet
+#=========================
+snippet name
+if __name__ == '__main__':
+    $1
+endsnippet
+#=========================
+snippet def
+def ${1: function name}(${2: args}):
+    '''
+    ${3: description}
+    '''
+    $4
+endsnippet
+#=========================
+snippet class
+class ${1:class_name}($2):
+
+    def __init__(self${3:args}):
+        $4
+endsnippet
+
+
+
+
+
+

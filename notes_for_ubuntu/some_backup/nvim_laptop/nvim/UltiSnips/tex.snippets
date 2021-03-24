@@ -37,6 +37,8 @@ snippet art
 
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\DeclareMathOperator*{\argmin}{arg\,min} % thin space, limits underneath in displays
+\DeclareMathOperator*{\argmax}{arg\,max} % thin space, limits underneath in displays
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{mathrsfs}
@@ -137,6 +139,18 @@ $0
 endsnippet
 
 
+
+
+
+
+#====================
+snippet box "Box"
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+    $1
+    }%
+}\\\\
+endsnippet
 
 #====================
 snippet S
@@ -279,6 +293,11 @@ endsnippet
 
 #====================
 context "math()"
+snippet // "fraction" wA
+\frac{$1}{$2}
+endsnippet
+#====================
+context "math()"
 snippet ss "addup" wA
 \sum\limits_{$1} ^$0	
 endsnippet
@@ -289,6 +308,16 @@ snippet mm "Max" wA
 \max_{\substack{$1\\\\$2}} $0
 endsnippet
 
+#====================
+context "math()"
+snippet argmin "argmin" wA
+\argmin
+endsnippet
+#====================
+context "math()"
+snippet argmax "argmax" wA
+\argmax
+endsnippet
 #====================
 context "math()"
 snippet pp "Pai Product" wA
@@ -393,6 +422,10 @@ snippet rt "right arrow" wA
 endsnippet
 
 #======================================
+snippet tuichu "imply" wA
+\Rightarrow
+endsnippet
+#======================================
 #snippet hh "hat" wA
 #\hat{$1}
 #endsnippet
@@ -424,7 +457,7 @@ endsnippet
 
 #======================================
 context "math()"
-snippet be "b" wA
+snippet beta "b" wA
 \beta 
 endsnippet
 
@@ -436,7 +469,7 @@ endsnippet
 
 #======================================
 context "math()"
-snippet de "d" wA
+snippet delta "d" wA
 \delta 
 endsnippet
 
@@ -617,6 +650,11 @@ snippet forall "forall" wA
 endsnippet
 #======================================
 context "math()"
+snippet cunzai "exist" wA
+\exists 
+endsnippet
+#======================================
+context "math()"
 snippet app "approximate" wA
 \approx
 endsnippet
@@ -697,6 +735,14 @@ snippet rrrcc "3 by 2"
 	$3&$4\\\\
 	$5&$6
 
+endsnippet
+#======================================
+context "math()"
+snippet vm "matrix determinant" iA
+\begin{vmatrix}
+$1
+\end{vmatrix}
+$0
 endsnippet
 #======================================
 snippet rrccc "2 by 3 matrix"
@@ -825,7 +871,7 @@ endsnippet
 
 
 #======================================
-#        Economics
+#        Economics_Greek_Letters
 #======================================
 
 
@@ -857,7 +903,7 @@ endsnippet
 #======================================
 context "math()"
 snippet root "sqrt" wA
-\sqrt 
+\sqrt {$1}
 endsnippet
 #======================================
 context "math()"
@@ -865,10 +911,10 @@ snippet var "variance" wA
 VAR
 endsnippet
 #======================================
-context "math()"
-snippet mse "MSE" wA
-MSE
-endsnippet
+#context "math()"
+#snippet mse "MSE" wA
+#MSE
+#endsnippet
 #======================================
 context "math()"
 snippet RR "black bold R" wA
@@ -881,7 +927,7 @@ snippet mR "black two line R" wA
 endsnippet
 #======================================
 context "math()"
-snippet mmR "kong xin R" wA
+snippet mr "kong xin R" wA
 \mathbb{R}
 endsnippet
 #======================================
@@ -895,7 +941,7 @@ snippet mP "script P" wA
 \mathcal P
 endsnippet
 #======================================
-snippet sanjiao "dao san jiao" wA
+snippet daosan "dao san jiao" wA
 \bigtriangledown
 endsnippet
 #======================================
@@ -935,7 +981,7 @@ snippet hao "kuohao" iA
 endsnippet
 #======================================
 context "math()"
-snippet kuohao "shu kuo hao" wA
+snippet bin "shu kuo hao" wA
 \binom{$1}{$2}
 endsnippet
 #======================================
@@ -995,6 +1041,8 @@ endsnippet
 #======================================
 snippet == "lines" w
 ================================\\\\
+$1
+================================
 endsnippet
 #======================================
 context "math()"
