@@ -1,6 +1,9 @@
 #!/bin/bash
 
-
+###
+# Run sudo systemctl restart gdm
+# then you can switch to i3
+###
 
 echo "Upgrade your system"
 sudo apt update
