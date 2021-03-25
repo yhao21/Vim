@@ -151,4 +151,15 @@ zathurapath=$HOME/git/Vim/notes_for_ubuntu/some_backup/nvim_laptop/zathura/
 sudo cp -r $zathurapath $myFile
 
 
+echo "config urxvt"
+urxvtpath=$HOME/git/Vim/notes_for_ubuntu/some_backup/nvim_laptop/.Xdefaults
+sudo cp $urxvtpath $HOME
+
+
+
+
+
+
+
+
 
