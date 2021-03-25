@@ -12,6 +12,9 @@
 #echo "Installing python3.8.6"
 #sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev libsqlite3-dev
 #
+#cd $HOME && mkdir git && cd git
+#git clone https://github.com/yhao21/Vim.git
+#
 #
 #myFile=$HOME/Downloads
 #
