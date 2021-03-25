@@ -75,7 +75,7 @@ nnoremap L $
 " back left in visual mode
 vnoremap J B
 " forward right in visual mode
-vnoremap L W
+vnoremap L E
 
 
 " select to the end of the line in normal mode.
@@ -476,11 +476,11 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=25
+autocmd Filetype tex setl updatetime=10
 let g:livepreview_previewer = 'zathura'
 "let g:livepreview_previewer = 'evince'
 "let g:livepreview_previewer = 'okular'
-let g:livepreview_cursorhold_recompile=25
+let g:livepreview_cursorhold_recompile=10
 
 
 
@@ -555,9 +555,14 @@ map <tab> <Esc>/<++><CR>:nohlsearch<CR>c4l
 "=============== Instant Markdown Preview
 "===============
 filetype plugin on
+" start markdown preview
+nnoremap <C-m> :InstantMarkdownPreview
+
+
+"
 "Uncomment to override defaults:
 "let g:instant_markdown_slow = 1
-"let g:instant_markdown_autostart = 0
+"let g:instant_markdown_autostart = 1
 "let g:instant_markdown_open_to_the_world = 1
 "let g:instant_markdown_allow_unsafe_content = 1
 "let g:instant_markdown_allow_external_content = 0
