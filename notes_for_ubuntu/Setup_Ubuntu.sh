@@ -10,7 +10,7 @@ sudo apt update
 sudo apt upgrade
 
 echo "Installing basic softwares"
-sudo apt install git i3 ranger vim neovim terminator inkscape neofetch rxvt-unicode obs-studio brightnessctl deepin-screenshot gdebi-core libudunits2-dev libgdal-dev r-base fcitx fcitx-googlepinyin perl nodejs npm zathura evince htop nautilus code feh
+sudo apt install git i3 ranger vim neovim terminator neofetch rxvt-unicode obs-studio brightnessctl deepin-screenshot gdebi-core libudunits2-dev libgdal-dev r-base fcitx fcitx-googlepinyin perl nodejs npm zathura evince htop nautilus code feh
 
 
 
@@ -168,6 +168,9 @@ cp -r $fetchpath $myFile
 echo "setup inkscape tex"
 mkdir $HOME/myfile && cd myfile && touch formula.tex
 
-
+echo "install inkscape"
+sudo add-apt_repository ppa:inkscape.dev/stable
+sudo apt update
+sudo apt install inkscape
 
 
