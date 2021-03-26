@@ -159,10 +159,10 @@ urxvtpath=$HOME/git/Vim/notes_for_ubuntu/some_backup/nvim_laptop/.Xdefaults
 sudo cp $urxvtpath $HOME
 
 
-#echo "config neofetch"
-#fetchpath=$HOME/git/Vim/notes_for_ubuntu/some_backup/nvim_laptop/neofetch
-#myFile=$HOME/.config/
-#cp -r $fetchpath $myFile
+echo "config neofetch"
+fetchpath=$HOME/git/Vim/notes_for_ubuntu/some_backup/nvim_laptop/neofetch
+myFile=$HOME/.config/
+cp -r $fetchpath $myFile
 
 
 echo "setup inkscape tex"
