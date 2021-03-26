@@ -6,6 +6,10 @@
 	sudo pacman -S simplescreenrecorder
 
 	sudo pacman -S vim nvim ranger git i3 base-devel
+  ## you must install poppler to open a pdf file.
+	## you must install ps for PostScript files
+	## you must install djvu for DjVu files.
+	sudo pacman -S zathura zathura-pdf-poppler zathura-ps zathura-djvu
 
 3. # vscode
 	sudo pacman -S code
