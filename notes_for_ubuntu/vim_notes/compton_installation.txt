@@ -1,0 +1,5 @@
+Install dependencies
+
+
+sudo apt-get install libxcomposite-dev libxdamage-dev libxrender-dev libconfig-dev asciidoc
+sudo apt-get install libdbus-1-dev libdrm-dev libxrandr-dev libxinerama-dev mesa-common-dev
