@@ -9,6 +9,15 @@ setup after installation:
 	vim ~/.config/ranger/rc.conf
 
 2. set vim as default text editor in ranger:
+  (0)Change settings in rifle.conf (find it in range dir)
+   search for $EDITOR, you will find two lines with this variable, i.e., 
+	 mime ^text, label editor = $EDITOR -- "$@"
+	 !mime ^text, label editor = $EDITOR -- "$@"
+
+	 change EDITOR to nvim
+	 mime ^text, label editor = $nvim -- "$@"
+	 !mime ^text, label editor = $nvim -- "$@"
+
 	(1)按文件类型设置
 	打开~/.config/ranger/rifle.conf, 找到以下代码段:
 	将下面这段话添加到文档最上方
