@@ -1,0 +1,21 @@
+
+
+
+1. Jedi does not work:
+
+If you auto complete doesn't work and receive the following message:
+AttributeError: 'PosixPath' object has no attribute 'endswith' Error from jedi: 'PosixPath' object has no attribute 'endswith'. Use :messages / see above for error details.
+
+Then, modify this file:
+				nvim /usr/lib/python3.8/site-packages/jedi/inference/value/module.py:173
+
+replace:
+				if self._path is not None and self._path.endswith(".pyi"):
+
+by this:
+				if self._path is not None and self._path.as_posix().endswith(".pyi"):
+
+Then it works
+
+
+------------------------------------------------------------------------------------------------
