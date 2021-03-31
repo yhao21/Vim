@@ -1,6 +1,6 @@
 " ===============================================================
 " Snazzy
-" Author: Connor Holyday
+" Author: Synferlo
 " ===============================================================
 
 " Setup
@@ -18,6 +18,7 @@ if has('termguicolors')
 endif
 
 let g:colors_name = "snazzy"
+let g:mycolorTransparent = 1
 
 " User Options
 if !exists("g:mycolorTransparent")
