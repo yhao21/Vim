@@ -56,13 +56,16 @@ let  nord0 =  '#2E3440'
 let  nord1 =  '#3B4252'
 let  nord2 =  '#434C5E'
 let  nord3 =  '#4C566A'
+
 let  nord4 =  '#D8DEE9'
 let  nord5 =  '#E5E9F0'
 let  nord6 =  '#ECEFF4'
+
 let  nord7 =  '#8FBCBB'
 let  nord8 =  '#88C0D0'
 let  nord9 =  '#81A1C1'
 let  nord10 =  '#5E81AC'
+
 let  nord11 =  '#BF616A'
 let  nord12 =  '#D08770'
 let  nord13 =  '#EBCB8B'
@@ -182,9 +185,15 @@ let g:terminal_color_15 = '#eff0eb'
 
 :exe  'highlight  Label           guifg='.yellow.'   guibg=NONE        guisp=NONE        gui=bold       ctermfg=229   ctermbg=NONE  cterm=bold'
 :exe  'highlight  PMenuSel        guifg='.green.'    guibg='.ui_9.'    guisp='.ui_9.'    gui=NONE       ctermfg=84    ctermbg=239   cterm=NONE'
+
+
+
 """" Here guibg stands for the background color for vim search
-:exe  'highlight  Search          guifg='.ui_11.'    guibg='nord_white'  guisp='.yellow.'  gui=NONE       ctermfg=237   ctermbg=229   cterm=NONE'
+:exe  'highlight  Search          guifg='nord6'    guibg='nord10'  guisp='.yellow.'  gui=NONE       ctermfg=237   ctermbg=229   cterm=NONE'
 ":exe  'highlight  Search          guifg='.ui_11.'    guibg='.yellow.'  guisp='.yellow.'  gui=NONE       ctermfg=237   ctermbg=229   cterm=NONE'
+
+
+
 :exe  'highlight  Delimiter       guifg='.yellow.'   guibg=NONE        guisp=NONE        gui=NONE       ctermfg=229   ctermbg=NONE  cterm=NONE'
 
 
