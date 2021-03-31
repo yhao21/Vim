@@ -223,6 +223,6 @@ exec_always --no-startup-id picom -b
 				
 				find " Update mirrorlist with the fastest mirrors"
 								
-								sudo pacman-mirros --fasttrack && sudo pacman -Syyu
+								sudo pacman-mirrors --fasttrack && sudo pacman -Syyu
 
 
