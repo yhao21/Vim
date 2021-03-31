@@ -20,3 +20,19 @@
 				n						next page
 				p						previous page
 				Ctrl l			go to specific page
+
+
+
+3 mount and umount usb drive
+				
+step 0: create local directory for mount
+step 1: check device
+				sudo fdisk -l
+step 2: mount disk
+				sudo mount /dev/sdc1 ~/usb1  you must specific which sdc
+				sudo mount /dev/sdc2 ~/usb2  they need to mount at diff dir.
+step 3: umount disk
+				sudo umount ~/usb1
+				sudo umount ~/usb2
+
+
