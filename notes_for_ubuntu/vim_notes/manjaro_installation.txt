@@ -5,7 +5,7 @@
 2. # install screenrecorder
 	sudo pacman -S simplescreenrecorder
 
-	sudo pacman -S vim nvim ranger git i3 base-devel w3m
+	sudo pacman -S vim nvim ranger git i3 base-devel w3m xorg-xinput
   ## you must install poppler to open a pdf file.
 	## you must install ps for PostScript files
 	## you must install djvu for DjVu files.
@@ -243,3 +243,7 @@ exec_always --no-startup-id picom -b
 				chsh -l
 				chsh -s /usr/bin/zsh
 
+
+16 clipboard provider
+				must install this 
+				sudo pacman -S xsel
