@@ -1,0 +1,13 @@
+1. Make transparency as default
+
+				you should add <let g:mycolorTransparent = 1> directly
+				to mycolor.vim. 
+				Hence, you don't need to get transparency by refreshing
+				vimrc each time.
+
+				Take a look at nvim/colors/mycolor.vim
+
+
+2. Where to save your own color scheme
+
+				save in nvim/colors folder.
