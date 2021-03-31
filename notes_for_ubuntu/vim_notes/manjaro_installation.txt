@@ -239,3 +239,7 @@ exec_always --no-startup-id picom -b
 								en_US.UTF-8 UTF-8
 				sudo locale-gen
 
+15 change default shell:
+				chsh -l
+				chsh -s /usr/bin/zsh
+
