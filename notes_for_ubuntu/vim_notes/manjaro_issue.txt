@@ -19,3 +19,26 @@ Then it works
 
 
 ------------------------------------------------------------------------------------------------
+
+
+2. Install wechat
+
+git clone https://aur.archlinux.org/deepin-wine-wechat.git
+cd deepin-wine-wechat
+nvim PKGBUILD
+
+find md5sums=(
+'numbers'
+'numbers'
+'numbers')
+
+replace numbers by SKIP
+
+md5sums=(
+'SKIP'
+'SKIP'
+'SKIP'
+)
+
+Save file. 
+makepkg -s
