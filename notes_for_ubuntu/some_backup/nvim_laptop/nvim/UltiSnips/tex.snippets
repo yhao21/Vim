@@ -39,6 +39,7 @@ snippet art
 \usepackage{amsmath}
 \DeclareMathOperator*{\argmin}{arg\,min} % thin space, limits underneath in displays
 \DeclareMathOperator*{\argmax}{arg\,max} % thin space, limits underneath in displays
+\newtheorem{thm}{Theorem}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{mathrsfs}
@@ -146,9 +147,9 @@ endsnippet
 #====================
 snippet box "Box"
 \noindent\fbox{%
-    \parbox{\textwidth}{%
-    $1
-    }%
+\parbox{\textwidth}{%
+$1
+}%
 }\\\\
 endsnippet
 
@@ -184,7 +185,7 @@ endsnippet
 snippet begin
 
 \begin{$1}{$2}
-	$3
+$3
 \end{$1}
 endsnippet
 
@@ -192,7 +193,7 @@ endsnippet
 snippet doc
 
 \begin{document}
-	$1
+$1
 \end{document}
 endsnippet
 
@@ -202,20 +203,20 @@ endsnippet
 #====================
 snippet al
 \begin{align}
-	$1
+$1
 \end{align}
 endsnippet
 
 #====================
 snippet nal
 \begin{align*}
-	$1
+$1
 \end{align*}
 endsnippet
 #====================
 snippet center
 \begin{center}
-	$1
+$1
 \end{center}
 endsnippet
 
@@ -223,8 +224,8 @@ endsnippet
 snippet pic
 
 \begin{figure}[H]
- \caption{$1}
-    \center{\includegraphics[scale = $2]  {$3}}
+\caption{$1}
+\center{\includegraphics[scale = $2]  {$3}}
 \end{figure}
 
 endsnippet
@@ -232,22 +233,28 @@ endsnippet
 #====================
 snippet item
 \begin{itemize}
-	\item $1
+\item $1
 \end{itemize}
 endsnippet
 
 #====================
+snippet MM "theorem"
+\begin{thm}
+$1
+\end{thm}
+endsnippet
+#====================
 snippet qq "indexing equations" w
 \begin{equation}
-	$1
+$1
 \end{equation}
 endsnippet
 
 
 #====================
-snippet nqq "non indexing equation" w
+snippet nqq "non indexing equation" wA
 \begin{equation*}
-	$1
+$1
 \end{equation*}
 endsnippet
 
@@ -260,7 +267,7 @@ endsnippet
 #====================
 snippet xuhao "" wA
 \begin{enumerate}
-        \item $1
+\item $1
 \end{enumerate}
 endsnippet
 #====================
@@ -417,14 +424,22 @@ endsnippet
 #\\frac{$1}{$2}$0
 #endsnippet
 #======================================
+context "math()"
 snippet rt "right arrow" wA
 \rightarrow
 endsnippet
 
 #======================================
+context "math()"
 snippet tuichu "imply" wA
-\Rightarrow
+\Longrightarrow
 endsnippet
+#======================================
+context "math()"
+snippet map "map right arrow" wA
+\longmapsto
+endsnippet
+
 #======================================
 #snippet hh "hat" wA
 #\hat{$1}
@@ -773,8 +788,8 @@ endsnippet
 
 #====================
 context "math()"
-snippet dui "duiqi-align" wA
-&
+snippet dui "duiqi-align" iA
+ &
 endsnippet
 
 #======================================
@@ -818,17 +833,36 @@ snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
 `{$1}
 endsnippet
 #======================================
-context "math()"
-priority 10
-snippet "bar" "bar" riA
-\overline{$1}
-endsnippet
+#context "math()"
+#priority 10
+#snippet "bar" "bar" riA
+#\overline{$1}
+#endsnippet
+#
+#context "math()"
+#priority 100
+#snippet "((\\\w+)|[a-zA-Z])bar" "bar" riA
+#\overline{`!p snip.rv=match.group(1)`}
+#endsnippet
+#======================================
+
+
+
+#context "math()"
+#priority 100
+#snippet " ((.*))bar" "bar" riA
+# \overline{`!p snip.rv=match.group(1)`}
+#endsnippet
+
+
 
 context "math()"
 priority 100
-snippet "((\\\w+)|[a-zA-Z])bar" "bar" riA
-\overline{`!p snip.rv=match.group(1)`}
+snippet "((\\\w+)|[a-zA-Z]+)bar" "bar" riA
+ \overline{`!p snip.rv=match.group(1)`}
 endsnippet
+
+
 #======================================
 context "math()"
 priority 10
@@ -836,21 +870,45 @@ snippet "hat" "hat" ri
 \hat{$1}
 endsnippet
 
+#======================================
+#context "math()"
+#priority 100
+##snippet "((\\\w+)|([a-zA-Z]))hat" "hat" riA
+#snippet "((\\\w+)|([a-zA-Z]+))hh" "hat" riA
+#\widehat{`!p snip.rv=match.group(1)`}
+#endsnippet
+#======================================
+
+
 context "math()"
 priority 100
-#snippet "((\\\w+)|([a-zA-Z]))hat" "hat" riA
-snippet "((\\\w+)|([a-zA-Z]+))hh" "hat" riA
-\widehat{`!p snip.rv=match.group(1)`}
+snippet "((\\\w+)|[a-zA-Z]+)hat" "hat" riA
+ \widehat{`!p snip.rv=match.group(1)`}
 endsnippet
+
+
 #======================================
 snippet "(\w+)HH" "big hat" ri
 \widehat{`!p snip.rv=match.group(1)`}
 endsnippet
 #======================================
+#context "math()"
+#snippet "(\w+)tt" "big tilde" riA
+#\widetilde{`!p snip.rv=match.group(1)`}
+#endsnippet
+
+#======================================
+
+
+
 context "math()"
-snippet "(\w+)tt" "big tilde" riA
-\widetilde{`!p snip.rv=match.group(1)`}
+snippet "((\\\w+)|[a-zA-Z]+)tt" "big tilde" riA
+ \widetilde{`!p snip.rv=match.group(1)`}
 endsnippet
+
+
+
+
 #======================================
 context "math()"
 snippet bm "" wA
@@ -988,8 +1046,7 @@ endsnippet
 context "math()"
 snippet mb "[matrix]" wA
 \begin{bmatrix}
-$1 & $2\\\\
-$3 & $4
+$1
 \end{bmatrix}
 
 endsnippet
@@ -997,8 +1054,7 @@ endsnippet
 context "math()"
 snippet mp "[matrix]" wA
 \begin{pmatrix}
-$1 & $2\\\\
-$3 & $4
+$1
 \end{pmatrix}
 
 endsnippet
