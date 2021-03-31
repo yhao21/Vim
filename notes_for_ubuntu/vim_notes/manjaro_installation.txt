@@ -226,3 +226,16 @@ exec_always --no-startup-id picom -b
 								sudo pacman-mirrors --fasttrack && sudo pacman -Syyu
 
 
+
+
+14 Locale problem
+
+				if you receive this message after updating:
+				_p9k_init_params:72: character not in range
+
+				Then, rewrite your locale.gen
+
+				sudo nvim /etc/local.gen
+								en_US.UTF-8 UTF-8
+				sudo locale-gen
+
