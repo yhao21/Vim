@@ -196,8 +196,9 @@ bar {
 				position top
 				separator_symbol "|"
 				colors {
-								background #2E3440
-								#background #000000
+								#background #2E3440
+								background #1b1b1c
+
 								# text color on statusbar
         				statusline #A7BAD1
         				separator #666666
@@ -280,7 +281,7 @@ bindsym $mod+r mode "resize"
 # install i3-gap
 # You can also use any non-zero value if you'd like to have a border
 #disable window titlebars
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 0
 
 
 # uncomment this for borderless
