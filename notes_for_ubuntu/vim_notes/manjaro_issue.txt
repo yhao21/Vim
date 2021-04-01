@@ -57,3 +57,13 @@ sudo nvim /etc/locale.gen
 sudo locale-gen
 
 
+It is because we do not run the program under proper locale
+
+alias we="LANG=zh_CH.UTF-8 wine /home/synferlo/.wine/dosdevices/c:/'Program Files (x86)'/Tencent/WeChat/WeChat.exe"
+
+
+
+
+
+
+
