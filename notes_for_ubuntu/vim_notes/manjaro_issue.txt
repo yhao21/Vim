@@ -65,5 +65,18 @@ alias we="LANG=zh_CH.UTF-8 wine /home/synferlo/.wine/dosdevices/c:/'Program File
 
 
 
+------------------------------------------------------------------------------------------------
+
+4. Wine
+Manjaro includes Wine in its repositories, which makes installing Wine easy. Begin by clicking the icon in the lower left corner of the desktop. Then click System > Add/Remove Software and search using the keyword wine.
+
+In the window that opens, select from the following mandatory and optional packages by clicking the corresponding Install button on the right.
+
+wine or wine-staging – choose one
+wine mono – a substitute for Microsoft's .NET Framework
+wine geko – a substitute for Microsoft's Internet Explorer
+Winetricks (optional) – an app with a graphical interface for working with Wine, wiki.winehq.org/WinetricksNew Window Icon
+PlayOnLinux (optional) – an app with a graphical frontend for Wine
+After selecting the above, click Apply, and, when asked about "optional dependencies", select all of them unless you have a specific reason not to.
 
 
