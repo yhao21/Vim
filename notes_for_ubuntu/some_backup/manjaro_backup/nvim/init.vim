@@ -263,7 +263,7 @@ call plug#end()
 
 set termguicolors
 colorscheme mycolor
-let g:mycolorTransparent = 1
+"let g:mycolorTransparent = 1
 
 "===============
 "=============== Color Scheme - nord
