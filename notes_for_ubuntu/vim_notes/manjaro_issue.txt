@@ -80,3 +80,8 @@ PlayOnLinux (optional) – an app with a graphical frontend for Wine
 After selecting the above, click Apply, and, when asked about "optional dependencies", select all of them unless you have a specific reason not to.
 
 
+
+------------------------------------------------------------------------------------------------
+
+5. mute beep(sound) when log out and shutdown 
+echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
