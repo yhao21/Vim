@@ -85,3 +85,15 @@ After selecting the above, click Apply, and, when asked about "optional dependen
 
 5. mute beep(sound) when log out and shutdown 
 echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
+
+
+
+
+------------------------------------------------------------------------------------------------
+6. install and apply nerd font in ranger and other software
+
+Download nerd font from github
+cd nerd font dir
+./install.sh
+
+copy <plugins> and <devicons.py> to ranger config dir
