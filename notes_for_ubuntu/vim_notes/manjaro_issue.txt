@@ -42,3 +42,18 @@ md5sums=(
 
 Save file. 
 makepkg -s
+
+
+sudo pacman -U .....
+
+Done!
+
+
+------------------------------------------------------------------------------------------------
+3. If Wechat does not show Chinese characters
+
+sudo nvim /etc/locale.gen
+				uncomment all zh_CH
+sudo locale-gen
+
+
