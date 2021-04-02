@@ -252,7 +252,8 @@ bindsym $mod+Shift+l move right
 
 #open dmenu for software
 
-bindsym $mod+m exec dmenu_run
+bindsym $mod+m exec rofi -show run -theme slate
+#bindsym $mod+m exec dmenu_run
 
 
 # kill focused window
