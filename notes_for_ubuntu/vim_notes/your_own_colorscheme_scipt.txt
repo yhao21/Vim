@@ -1,3 +1,8 @@
+0. Allow transparency
+
+for any color scheme vim script, add transparent hex code before its
+background color, then you can make this scheme being transparent
+
 1. Make transparency as default
 
 				you should add <let g:mycolorTransparent = 1> directly

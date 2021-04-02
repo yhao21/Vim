@@ -261,15 +261,14 @@ Plug 'connorholyday/vim-snazzy'
 call plug#end()
 
 
-set termguicolors
-colorscheme mycolor
-"let g:mycolorTransparent = 1
+"set termguicolors
+"colorscheme mycolor
 
 "===============
 "=============== Color Scheme - nord
 "===============
-"set termguicolors
-"colorscheme nord
+set termguicolors
+colorscheme nord
 
 
 
