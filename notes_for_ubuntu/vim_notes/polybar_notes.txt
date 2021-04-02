@@ -1,0 +1,13 @@
+
+
+
+
+
+
+2. install required fonts
+
+sudo pacman -S xorg-fonts-misc
+yay -S siji-git ttf-unifont
+
+
+
