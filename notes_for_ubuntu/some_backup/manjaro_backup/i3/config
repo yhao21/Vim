@@ -314,7 +314,7 @@ bindsym $mod+a exec deepin-screenshot
 
 
 #==========================================
-# open google chrome
+# run google chrome
 #==========================================
 bindsym $mod+g exec google-chrome-stable
 
@@ -332,19 +332,17 @@ bindsym $mod+t exec /home/synferlo/.config/i3/latex_myfile.sh
 
 
 #==========================================
-# software you want to run everytime when reboot
+# auto-boot softwares and scripts
+#==========================================
 
 exec_always feh --bg-fill /home/synferlo/Pictures/space1.jpg
-#exec_always feh --bg-fill /home/synferlo/Pictures/nord_bg.png
-
-#exec_always --no-startup-id compton 
 exec_always --no-startup-id picom 
-
-#exec_always --no-startup-id xmodmap ~/.xmodmap
-
 exec --no-startup-id fcitx
 exec_always --no-startup-id /home/synferlo/.config/i3/initialize_commands.sh
-
-#exec --no-startup-id polybar bar1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+
+
+#exec --no-startup-id polybar bar1
+#exec_always --no-startup-id xmodmap ~/.xmodmap
+#exec_always --no-startup-id compton 

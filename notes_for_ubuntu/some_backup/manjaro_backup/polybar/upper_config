@@ -72,7 +72,7 @@ background = ${colors.terminal_bg}
 foreground = ${colors.foreground}
 
 # the size of underline
-line-size = 0
+line-size = 2
 line-color = #f00
 
 border-size = 0
@@ -359,13 +359,14 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %Y-%m-%d"
+date = " %m-%d-%Y"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M:%S
 time-alt = %H:%M:%S
 
 format-prefix = 
+format-underline = ${colors.nord8}
 
 format-prefix-foreground = ${colors.foreground-alt}
 
