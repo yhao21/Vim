@@ -182,6 +182,22 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #
 #bindsym $mod+r mode "resize"
 
+
+
+###########################################################
+#################       Color scheme      #################
+###########################################################
+#												border		background		text
+#client.focused				 #FFFFFF
+#client.focused				 #A7BAD1
+#client.unfocused			 #FFFFFF
+
+
+
+
+
+
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
@@ -190,27 +206,27 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 ###########################################################
 
 
-bar {
-        status_command i3status -c ~/.config/i3/i3status.conf
-				#i3bar_command i3bar --transparency
-				position top
-				separator_symbol "|"
-				colors {
-								#background #2E3440
-								background #1b1b1c
-
-								# text color on statusbar
-        				statusline #A7BAD1
-        				separator #666666
-
-								# item							border	bg			text
-        				focused_workspace  #4c7899 #285577 #A7BAD1
-        				active_workspace   #333333 #5f676a #A7BAD1
-        				inactive_workspace #333333 #2E3440 #A7BAD1
-        				urgent_workspace   #2f343a #900000 #A7BAD1
-        				binding_mode       #2f343a #900000 #A7BAD1
-				}
-}
+#bar {
+#        status_command i3status -c ~/.config/i3/i3status.conf
+#				#i3bar_command i3bar --transparency
+#				position top
+#				separator_symbol "|"
+#				colors {
+#								#background #2E3440
+#								background #1b1b1c
+#
+#								# text color on statusbar
+#        				statusline #A7BAD1
+#        				separator #666666
+#
+#								# item							border	bg			text
+#        				focused_workspace  #4c7899 #285577 #A7BAD1
+#        				active_workspace   #333333 #5f676a #A7BAD1
+#        				inactive_workspace #333333 #2E3440 #A7BAD1
+#        				urgent_workspace   #2f343a #900000 #A7BAD1
+#        				binding_mode       #2f343a #900000 #A7BAD1
+#				}
+#}
 
 
 
@@ -250,6 +266,7 @@ bindsym $mod+q kill
 
 gaps inner 10
 gaps outer 5
+#gaps horizontal current plus 5
 
 
 mode "resize" {
@@ -317,7 +334,7 @@ bindsym $mod+t exec /home/synferlo/.config/i3/latex_myfile.sh
 #==========================================
 # software you want to run everytime when reboot
 
-exec_always feh --bg-fill /home/synferlo/Pictures/space2.jpeg
+exec_always feh --bg-fill /home/synferlo/Pictures/space1.jpg
 #exec_always feh --bg-fill /home/synferlo/Pictures/nord_bg.png
 
 #exec_always --no-startup-id compton 
@@ -328,6 +345,6 @@ exec_always --no-startup-id picom
 exec --no-startup-id fcitx
 exec_always --no-startup-id /home/synferlo/.config/i3/initialize_commands.sh
 
-#exec --no-startup-id polybar-git example
-
+#exec --no-startup-id polybar bar1
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 

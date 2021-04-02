@@ -6,8 +6,22 @@
 
 2. install required fonts
 
-sudo pacman -S xorg-fonts-misc
+sudo pacman -S xorg-fonts-misc ttf-font-awesome
 yay -S siji-git ttf-unifont
 
 
+
+
+3. transparency of the bar
+
+search transparency hex, it will show you the hex code
+https://gist.github.com/yhao21/b65437b3560989fbd7b634b5741daaa3
+Normally the hex code looks like #FF0000
+
+len(transparency hex) = 2
+
+so, when you get the transparency hex from the internet add it before 
+hex code
+
+#33FF0000 gives you 70% transparency
 
