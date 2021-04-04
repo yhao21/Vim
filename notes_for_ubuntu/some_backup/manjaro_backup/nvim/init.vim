@@ -44,6 +44,53 @@ nnoremap <c-k> :!xinput --enable 13<CR><CR>
 
 
 
+"===============
+"=============== statusline
+"===============
+set statusline= 
+" nord dark color
+set statusline+=%#CursorIM#
+set statusline+=\ %t
+set statusline+=\ %y
+
+
+" light green color
+set statusline+=%#DiffAdd#
+set statusline+=%=
+set statusline+=\ %F
+
+
+"variables below are aligned to the right
+set statusline+=%=
+set statusline+=\ [%{&fileencoding?&fileencoding:&encoding}]
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %c-%l/%L
+set statusline+=
+set statusline+=\ [%p%%]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 "===============
 "=============== Basic operation
@@ -93,6 +140,8 @@ map s <nop>
 map S :w<CR>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
+
+
 
 
 
