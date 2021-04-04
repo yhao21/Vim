@@ -789,7 +789,7 @@ endsnippet
 #====================
 context "math()"
 snippet dui "duiqi-align" iA
- &
+&
 endsnippet
 
 #======================================
@@ -989,6 +989,19 @@ snippet mr "kong xin R" wA
 \mathbb{R}
 endsnippet
 #======================================
+context "math()"
+snippet mZ "kong xin Z" wA
+\mathbb{Z}
+endsnippet
+#======================================
+
+context "math()"
+snippet "(\w)xila" "Greek letter" riA
+\mathbb{`!p snip.rv=match.group(1)`}
+endsnippet
+
+#======================================
+
 context "math()"
 snippet mS "sample space" wA
 \mathcal S

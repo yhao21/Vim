@@ -1,7 +1,7 @@
 "===============
 "=============== Initialize my vimscripts
 "===============
-"source ~/.config/nvim/plugged/myplugin/myplugin.vim
+"source ~/.config/nvim/plugged/myVimScript/hello.vim
 
 
 
@@ -258,6 +258,9 @@ Plug 'dracula/vim'
 Plug 'connorholyday/vim-snazzy'
 "Plug 'morhetz/gruvbox' 
 
+Plug 'gko/vim-coloresque'
+
+
 call plug#end()
 
 
@@ -479,11 +482,13 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=10
+autocmd Filetype tex setl updatetime=20
+
+
 let g:livepreview_previewer = 'zathura'
 "let g:livepreview_previewer = 'evince'
 "let g:livepreview_previewer = 'okular'
-let g:livepreview_cursorhold_recompile=10
+"let g:livepreview_cursorhold_recompile=0
 
 
 
@@ -521,10 +526,11 @@ nnoremap <C-F> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/
 
 "  设置latex不会把数学公式代码自动转换，，尤其不会把$隐藏起来，，很有用！！！
 
-autocmd Filetype tex setlocal conceallevel=0
-autocmd Filetype plaintex setlocal conceallevel=0
+"autocmd Filetype tex setlocal conceallevel=0
+"autocmd Filetype plaintex setlocal conceallevel=0
 
-let g:tex_conceal = "0"
+
+"let g:tex_conceal = "0"
 let g:vimtex_syntax_conceal_default = '0'
 
 

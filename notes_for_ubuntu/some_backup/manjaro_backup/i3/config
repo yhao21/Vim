@@ -124,6 +124,17 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+
+
+
+
+
+
+
+
+
+
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -307,6 +318,34 @@ for_window [class=".*"] border pixel 0
 #new_window none
 #new_float normal
 
+
+
+
+
+
+##==================================================##
+# Workspace specific settings                    
+##=================================================##
+# Assign Workspaces:
+#assign [class="Terminator"] $ws2
+#"org.inkscape.Inkscape", "Inkscape"
+
+# It works for terminator, but not for inkscape. strange
+
+#Expected one of these tokens: 
+#'class', 'instance', 'window_role', 'con_id', 'id', 'window_type',
+#'con_mark', 'title', 'urgent', 'workspace', 'floating_from',
+#'tiling_from', 'tiling', 'floating'
+
+#assign [con_id="0x1c00015"] $ws4
+
+#assign [title=".*_新浪网 - Google Chrome"] $ws5
+#for_window [class="Google-chrome"] $ws5
+
+
+
+
+
 #==========================================
 #screenshot
 #==========================================
@@ -324,9 +363,6 @@ bindsym $mod+g exec google-chrome-stable
 # run latex formula in myfile
 #==========================================
 bindsym $mod+t exec /home/synferlo/.config/i3/latex_myfile.sh
-
-
-
 
 
 
