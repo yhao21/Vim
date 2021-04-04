@@ -1,0 +1,22 @@
+
+
+Official Docs
+https://github.com/philc/vimium/blob/master/README.md
+
+
+
+1. Where to customzie your key map:
+
+google-chrome -> extension -> vimium -> extension options
+
+2. key maps:
+
+map k scrollDown
+map i scrollUp
+map j scrollLeft
+map l scrollRight
+map I scrollPageUp
+map K scrollPageDown
+map J previousTab
+map L nextTab
+map W removeTab
