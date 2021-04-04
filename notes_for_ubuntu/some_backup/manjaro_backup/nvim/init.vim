@@ -57,7 +57,7 @@ set statusline+=\ %y
 " light green color
 set statusline+=%#DiffAdd#
 set statusline+=%=
-set statusline+=\ %F
+"set statusline+=\ %F
 
 
 "variables below are aligned to the right
