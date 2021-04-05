@@ -55,7 +55,7 @@ set statusline+=\ %y
 
 
 " light green color
-set statusline+=%#DiffAdd#
+set statusline+=%#Pmenu#
 set statusline+=%=
 "set statusline+=\ %F
 
@@ -313,14 +313,14 @@ Plug 'gko/vim-coloresque'
 call plug#end()
 
 
-"set termguicolors
-"colorscheme mycolor
+set termguicolors
+colorscheme mycolor
 
 "===============
 "=============== Color Scheme - nord
 "===============
-set termguicolors
-colorscheme nord
+"set termguicolors
+"colorscheme nord
 
 
 
@@ -531,7 +531,7 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=20
+autocmd Filetype tex setl updatetime=100
 
 
 let g:livepreview_previewer = 'zathura'
