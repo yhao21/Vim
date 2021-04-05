@@ -86,7 +86,7 @@
 		ff			Nerdtree文件树打开和收起
 		shift Insert 		在Ubuntu中将网页或其他非vim处复制的东西在插入或者normal模式下（insert）粘贴到vim里
 		te			normal下，选中当前位置到行尾的所有内容
-		ts			normal下，选中到行首
+		tw			normal下，选中到行首
 		ctrl shift v		粘贴通用剪贴板内容
 		zo					open one fold under the cursor
 		zc					close one fold under the cursor

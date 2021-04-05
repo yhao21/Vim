@@ -128,7 +128,8 @@ vnoremap L E
 " select to the end of the line in normal mode.
 noremap te <c-v>$
 " select to the begining of the line in normal mode.
-noremap ts <c-v>0
+"noremap ts <c-v>0
+noremap tw <c-v>0
 
 
 
