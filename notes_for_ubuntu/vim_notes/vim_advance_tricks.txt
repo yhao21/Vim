@@ -1,0 +1,18 @@
+
+
+
+
+1. save your current workspace.
+		suppose you have multiple tabs opened in current buffer,
+		you can use the following command to save your current
+		workspace.
+				:mksession <filename>.vim
+
+		Then you can close all tabs your current buffer. And you
+		may realize that there is a new file called <filename>.vim
+		in your current directory. 
+
+		If you open it use command	
+				nvim -S <filename>.vim
+		Nvim will open all tabs in your buffer with the same structure.
+		Just like what you have saved
