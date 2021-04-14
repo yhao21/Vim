@@ -168,10 +168,15 @@ alias ff='python3 ~/mycommand/my_fuzzyfilefinder.py'
 # ==================================
 # Run Wechat
 # ==================================
-alias we="LANG=zh_CH.UTF-8 wine /home/synferlo/.wine/dosdevices/c:/'Program Files (x86)'/Tencent/WeChat/WeChat.exe"
+alias we="LANG=zh_CN.UTF-8 wine /home/synferlo/.wine/dosdevices/c:/'Program Files (x86)'/Tencent/WeChat/WeChat.exe"
+#alias we="LC_ALL=zh_CN.UTF-8 wine /home/synferlo/.wine/dosdevices/c:/'Program Files (x86)'/Tencent/WeChat/WeChat.exe"
 
 
 
 
+# ==================================
+# R script
+# ==================================
+alias r='Rscript'
 
 
