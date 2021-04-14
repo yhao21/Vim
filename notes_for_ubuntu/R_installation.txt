@@ -25,6 +25,8 @@ Install dependencies:
 
 
 Setup alias:
+	alias r='Rscript'
 
-alias r='Rscript'
 
+Install multiple packages:
+	install.packages(c('pkg1','pkg2'))
