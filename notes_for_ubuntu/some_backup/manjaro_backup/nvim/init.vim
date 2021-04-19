@@ -34,6 +34,9 @@ set smartcase
 set encoding=utf-8
 set scrolloff=12
 set tabstop=2
+set shiftwidth=2
+
+
 
 " vim and system use same clipboard, then you can ctrl v
 set clipboard=unnamedplus
@@ -293,6 +296,7 @@ Plug 'dense-analysis/ale'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-surround'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+""" vimtex must be loaded so that ultisnips for math content can work
 Plug 'lervag/vimtex'
 
 Plug 'instant-markdown/vim-instant-markdown'
@@ -303,12 +307,12 @@ Plug 'instant-markdown/vim-instant-markdown'
 "Plug 'vim-pandoc/vim-pandoc'
 "Plug 'vim-pandoc/vim-pandoc-syntax'
 "
-Plug 'arcticicestudio/nord-vim'
-Plug 'dracula/vim'
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'dracula/vim'
 Plug 'connorholyday/vim-snazzy'
 "Plug 'morhetz/gruvbox' 
 
-Plug 'gko/vim-coloresque'
+"Plug 'gko/vim-coloresque'
 
 
 call plug#end()
@@ -499,8 +503,6 @@ endfunc
 "execute "set <M-n>=n"
 inoremap <M-n> <c-r>=SkipPair()<CR>
 
-"inoremap <space>j <c-r>=SkipPair()<CR>
-"inoremap <c-j> <c-r>=SkipPair()<CR>
 
 
 
@@ -576,11 +578,11 @@ nnoremap <C-F> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/
 
 "  设置latex不会把数学公式代码自动转换，，尤其不会把$隐藏起来，，很有用！！！
 
-"autocmd Filetype tex setlocal conceallevel=0
-"autocmd Filetype plaintex setlocal conceallevel=0
+autocmd Filetype tex setlocal conceallevel=0
+autocmd Filetype plaintex setlocal conceallevel=0
 
 
-"let g:tex_conceal = "0"
+let g:tex_conceal = "0"
 let g:vimtex_syntax_conceal_default = '0'
 
 
@@ -618,18 +620,6 @@ filetype plugin on
 nnoremap <C-m> :InstantMarkdownPreview
 
 
-"
-"Uncomment to override defaults:
-"let g:instant_markdown_slow = 1
-"let g:instant_markdown_autostart = 1
-"let g:instant_markdown_open_to_the_world = 1
-"let g:instant_markdown_allow_unsafe_content = 1
-"let g:instant_markdown_allow_external_content = 0
-"let g:instant_markdown_mathjax = 1
-"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-"let g:instant_markdown_autoscroll = 0
-"let g:instant_markdown_port = 8888
-"let g:instant_markdown_python = 1
 
 "===============
 "=============== R Markdown
