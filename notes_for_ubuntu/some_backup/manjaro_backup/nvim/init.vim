@@ -484,7 +484,8 @@ let g:coc_global_extensions = [
 	\ 'coc-python', 
 	\ 'coc-pairs',
 	\ 'coc-texlab',
-	\ 'coc-marketplace']
+	\ 'coc-marketplace',
+	\ 'coc-r-lsp']
 
 
 "===============
@@ -534,7 +535,7 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=100
+autocmd Filetype tex setl updatetime=50
 
 
 let g:livepreview_previewer = 'zathura'
