@@ -23,6 +23,9 @@ Install dependencies:
 	sudo pacman -S tk
 	sudo pacman -S gcc-fortran
 
+Install r language server:
+	install.packages("languageserver")
+
 
 Setup alias:
 	alias r='Rscript'
