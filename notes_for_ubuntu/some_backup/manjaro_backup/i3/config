@@ -276,7 +276,7 @@ bindsym $mod+q kill
 #set borderless
 
 
-gaps inner 10
+#gaps inner 10
 gaps outer 5
 #gaps horizontal current plus 5
 
@@ -310,8 +310,8 @@ bindsym $mod+r mode "resize"
 # install i3-gap
 # You can also use any non-zero value if you'd like to have a border
 #disable window titlebars
-for_window [class=".*"] border pixel 0
-
+for_window [class=".*"] border pixel 3
+client.focused #555555 #555555 #2E3440 #2E3440 #2E3440
 
 # uncomment this for borderless
 #hide_edge_borders both
