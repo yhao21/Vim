@@ -190,5 +190,9 @@ alias ff='python3.8 ~/mycommand/my_fuzzyfilefinder.py'
 alias we="LANG=zh_CH.UTF-8 wine /home/synferlo/.wine/dosdevices/c:/'Program Files (x86)'/Tencent/WeChat/WeChat.exe"
 
 
+# ==================================
+# Turn off auto blacl screen
+# ==================================
+alias t='xset -dpms s off'
 
 
