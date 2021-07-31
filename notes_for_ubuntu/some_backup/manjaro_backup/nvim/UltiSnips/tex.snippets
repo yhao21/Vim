@@ -142,7 +142,45 @@ endsnippet
 
 
 
+#====================
+snippet Renv "include R code"
 
+\usepackage{graphicx}
+\usepackage{xspace,color}
+\usepackage{url}
+\usepackage{listings}
+
+
+\lstset{commentstyle=\color{gray},keywordstyle=\color{black},
+showstringspaces=false, basicstyle = \small
+} %% basicstyle set fontsize
+\lstnewenvironment{rc}[1][]{\lstset{language=R}}{}
+\newcommand{\ri}[1]{\lstinline{#1}}  %% Short for 'R inline'
+
+
+
+\lstdefinelanguage{language=R}{
+numbers=left,
+numberstyle=\footnotesize,
+numbersep=1em,
+xleftmargin=1em,
+framextopmargin=2em,
+framexbottommargin=2em,
+showspaces=false,
+showtabs=false,
+showstringspaces=false,
+frame=l,
+tabsize=4,
+}
+
+endsnippet
+
+#====================
+snippet Rcode "begin Rcode"
+\begin{rc}
+$1
+\end{rc}
+endsnippet
 
 #====================
 snippet box "Box"
@@ -152,6 +190,12 @@ $1
 }%
 }\\\\
 endsnippet
+
+#====================
+snippet size "scalebox"
+\scalebox{$1}{$2}
+endsnippet
+
 
 #====================
 snippet S
@@ -297,7 +341,11 @@ context "math()"
 snippet fp "frac partial" wA
 \frac{\partial $1 }{\partial $2 }
 endsnippet
-
+#====================
+context "math()"
+snippet tidu "gradient" wA
+\bigtriangledown
+endsnippet
 #====================
 context "math()"
 snippet // "fraction" wA
@@ -334,7 +382,7 @@ endsnippet
 #====================
 context "math()"
 snippet lim "Limitation" wA
-\lim_{$1 \to ${2:\\infty}$0
+\lim_{$1 \to ${2:\\infty}}$0
 endsnippet
 
 #====================
