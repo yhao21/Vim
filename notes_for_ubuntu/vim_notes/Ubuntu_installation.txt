@@ -1,6 +1,9 @@
 
-change display resolution
+change display resolution in terminal
 		xrandr
+		xrandr --screen 0 -s 1680x1050
+or write this in .profile for permenant change:
+		nvim ~/.profile
 		xrandr --screen 0 -s 1680x1050
 
 
