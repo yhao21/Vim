@@ -59,8 +59,11 @@
 4.1 Config file for neofetch: .config/neofetch/
 				
 5. Install dependencies for vim plugins
-				sudo apt install nodejs npm
+				sudo apt install npm
 				sudo pip3.8 install python-language-server pynvim
+5.1 Install nodejs. # Coc.nvim now requires nodejs >= 12
+				curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+				sudo apt-get install -y nodejs
 
 
 6. install instant markdown preview
