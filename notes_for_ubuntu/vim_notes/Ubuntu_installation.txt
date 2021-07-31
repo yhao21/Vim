@@ -75,3 +75,8 @@ or write this in .profile for permenant change:
 6. install instant markdown preview
 				sudo npm -g install instant-markdown-d
 				sudo apt install xdg-utils curl nodejs
+
+
+7. Configure zsh
+		clone ohmyzsh from:    https://github.com/ohmyzsh/ohmyzsh
+
