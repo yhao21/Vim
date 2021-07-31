@@ -1,4 +1,7 @@
 
+change display resolution
+		xrandr
+		xrandr --screen 0 -s 1680x1050
 
 
 1. USB preparation
