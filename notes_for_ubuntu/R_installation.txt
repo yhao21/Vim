@@ -33,3 +33,35 @@ Setup alias:
 
 Install multiple packages:
 	install.packages(c('pkg1','pkg2'))
+
+
+
+
+
+Packages I need:
+
+statistics:
+		plyr, 
+
+MLE:
+		stargazer, lmtest, spdep, pscl, 
+	
+timeseries:
+		aTSA, FinTS, vars, tseries, forecast
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

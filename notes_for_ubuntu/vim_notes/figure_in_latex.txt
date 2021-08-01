@@ -28,6 +28,27 @@ Horizontal/Vertical straight line
 				choose paraxial line.
 
 
+
+Rescale figures:
+
+
+\begin{figure}[ht]
+    \centering
+    scalebox{.5}{\incfig{aaaa}}
+    \caption{aaaa}
+    \label{fig:aaaa}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
 ===============
 Application
 ===============
