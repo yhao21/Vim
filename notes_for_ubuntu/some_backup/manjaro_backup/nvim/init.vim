@@ -34,7 +34,7 @@ set smartcase
 set encoding=utf-8
 set scrolloff=12
 set tabstop=2
-set shiftwidth=2
+set shiftwidth=4
 
 
 
@@ -513,6 +513,9 @@ inoremap <M-n> <c-r>=SkipPair()<CR>
 
 let g:indentLine_char='|'
 let g:indentLine_enabled = 1
+let g:indentLine_setConceal=0
+let g:indentLine_concealcursor=""
+
 
 
 
@@ -538,8 +541,8 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 autocmd Filetype tex setl updatetime=50
 
 
-let g:livepreview_previewer = 'zathura'
-"let g:livepreview_previewer = 'evince'
+"let g:livepreview_previewer = 'zathura'
+let g:livepreview_previewer = 'evince'
 "let g:livepreview_previewer = 'okular'
 "let g:livepreview_cursorhold_recompile=0
 
@@ -616,9 +619,17 @@ map <tab> <Esc>/<++><CR>:nohlsearch<CR>c4l
 "===============
 "=============== Instant Markdown Preview
 "===============
+let g:vim_markdown_conceal=0
+let g:vim_markdown_conceal_code_blocks=0
+autocmd Filetype markdown setlocal conceallevel=0
+au Filetype markdown setl conceallevel=0
+
+
 filetype plugin on
 " start markdown preview
 nnoremap <C-m> :InstantMarkdownPreview
+" allow latex formula
+let g:instant_markdown_mathjax = 1
 
 
 
