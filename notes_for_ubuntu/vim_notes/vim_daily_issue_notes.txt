@@ -56,6 +56,16 @@
 
 
 
-8. BIOS security violation
+9. BIOS security violation
 
 				if security violation when process UEFI, reboot, press F9, then F10, disable BIOS secure boot.
+
+
+10. Conceal syntax
+		If you are using indentline, it will change conceal level = 2 globally. You may not see text based syntax, e.g., **bold**, etc.
+		To disable conceallevel, add the following code to your vimrc (under indentline config.):
+
+				let g:indentLine_setConceal=0
+				let g:indentLine_concealcursor=""
+
+

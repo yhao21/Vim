@@ -91,3 +91,11 @@ cd nerd font dir
 ./install.sh
 
 copy <plugins> and <devicons.py> to ranger config dir
+
+
+
+------------------------------------------------------------------------------------------------
+7. check igpu or dgpu
+glxinfo | grep "vendor"
+
+See if Intel or Nvidia
