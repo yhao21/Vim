@@ -631,6 +631,17 @@ snippet phi "phi" wA
 endsnippet
 
 #======================================
+context "math()"
+snippet sai "psi" wA
+\psi
+endsnippet
+
+#======================================
+context "math()"
+snippet Sai "Psi" wA
+\Psi
+endsnippet
+#======================================
 snippet o
 \omega
 endsnippet
@@ -652,7 +663,7 @@ snippet >> "" wA
 \ge 
 endsnippet
 #======================================
-context "math()"
+context "math()" 
 snippet cc
 \subset
 endsnippet
@@ -663,7 +674,7 @@ snippet cc= "weak subset" wA
 endsnippet
 #======================================
 context "math()"
-snippet fancc "supset" w
+snippet fancc "supset" 
 \supset
 endsnippet
 #======================================
@@ -746,6 +757,11 @@ snippet cd "\cdot used in density fn" iA
 endsnippet
 #======================================
 context "math()"
+snippet sandeng "hengdeng" wA
+\equiv
+endsnippet
+#======================================
+context "math()"
 snippet vds "vertical dots" wA
 \vdots 
 endsnippet
@@ -756,17 +772,6 @@ snippet dds "diagonal dots" wA
 \ddots 
 endsnippet
 
-#======================================
-context "math()"
-snippet IR "kongxin R" wA
-\mathbb{R} 
-endsnippet
-
-#======================================
-context "math()"
-snippet IP "kongxin P" wA
-\mathbb{P} 
-endsnippet
 
 #======================================
 context "math()"
@@ -1001,6 +1006,58 @@ endsnippet
 #          Econometrics
 #======================================
 
+
+#======================================
+context "math()"
+priority 100
+snippet "([A-Z]+)kong" "kong xin zi mu for probability theory" riA
+\mathbb{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
+
+context "math()"
+priority 100
+snippet "([A-Z]+)xie" "xie ti greek letter" riA
+\mathcal{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
+
+context "math()"
+priority 100
+snippet "m([A-Z]+)" "shi xin greek letter" riA
+{\rm I\!{`!p snip.rv=match.group(1)`}}
+endsnippet
+#======================================
+context "math()"
+priority 100
+snippet "([A-Z]+)hua" "xie ti greek letter" riA
+\mathscr{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
+context "math()"
+priority 100
+snippet "([A-Z]+)hei" "hei ti greek letter" riA
+\mathbf{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
+context "math()"
+priority 100
+snippet "([A-Z]+)tong" "hei ti greek letter" riA
+\mathfrak{`!p snip.rv=match.group(1)`}
+endsnippet
+#======================================
+
+
+
+
+
+
+
+
+
+
+
+
 #======================================
 context "math()"
 snippet xiexian "\" wA
@@ -1026,40 +1083,9 @@ context "math()"
 snippet RR "black bold R" wA
 \mathbf{R}
 endsnippet
-#======================================
-context "math()"
-snippet mR "black two line R" wA
-{\rm I\!R}
-endsnippet
-#======================================
-context "math()"
-snippet mr "kong xin R" wA
-\mathbb{R}
-endsnippet
-#======================================
-context "math()"
-snippet mZ "kong xin Z" wA
-\mathbb{Z}
-endsnippet
-#======================================
-
-context "math()"
-snippet "(\w)xila" "Greek letter" riA
-\mathbb{`!p snip.rv=match.group(1)`}
-endsnippet
 
 #======================================
 
-context "math()"
-snippet mS "sample space" wA
-\mathcal S
-endsnippet
-#======================================
-context "math()"
-snippet mP "script P" wA
-\mathcal P
-endsnippet
-#======================================
 snippet daosan "dao san jiao" wA
 \bigtriangledown
 endsnippet
@@ -1170,6 +1196,30 @@ endsnippet
 
 
 
+
+
+# tables
+
+#======================================
+snippet table
+
+\begin{table}[h!]
+\begin{center}
+\begin{threeparttable}
+\caption{}			
+
+\begin{tabular}{c|c|c}
+$1 & $2 & $3\\\\
+\hline \\\\[-1.8ex]
+$4& $5 & $6
+\end{tabular}
+
+
+\end{threeparttable}
+\end{center}
+\end{table}
+endsnippet
+#======================================
 
 
 

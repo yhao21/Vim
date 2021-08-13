@@ -69,7 +69,8 @@ height = 30
 radius = 0
 fixed-center = true
 
-background = ${colors.terminal_bg}
+#background = ${colors.terminal_bg}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 # the size of underline

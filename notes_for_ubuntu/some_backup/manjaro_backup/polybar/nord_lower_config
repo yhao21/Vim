@@ -18,10 +18,8 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = #2E3440
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -60,20 +58,31 @@ nord15 = #B48EAD
 
 
 
-[bar/bar1]
+
+
+
+
+
+[bar/bar2]
+
+bottom = true
+
+
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 30
+height = 27
 ;offset-x = 1%
-;offset-y = -1%
-radius = 0
+;offset-y = 1%
+radius = 0.0
 fixed-center = true
 
-background = ${colors.terminal_bg}
+#background = ${colors.terminal_bg}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
-# the size of underline
-line-size = 2
+
+
+line-size = 0
 line-color = #f00
 
 border-size = 0
@@ -88,23 +97,24 @@ module-margin-right = 1
 
 font-0 = fixed:pixelsize=13;0
 font-1 = FontAwesome5FreeSolid:pixelsize=13;0
-font-2 = FontAwesome5FreeRegular:pixelsize=12;1
-font-3 = FontAwesome5Brands:pixelsize=8;1
-font-4 = Iosevka Nerd Font:size=12
+font-2 = FontAwesome5FreeRegular:pixelsize=13;1
+font-3 = FontAwesome5Brands:pixelsize=13;1
+font-4 = Iosevka Nerd Font:size=13
 
 
 
-;font-0 = fixed:pixelsize=13;0
-;font-1 = Unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=13;1
 
-modules-left = bspwm i3
-modules-center = date
-#modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = battery temperature cpu filesystem memory wlan 
+#==============================
+# modules
 
-#tray-position = right
-#tray-padding = 1
+#xwindow tells you the name of the software you are using
+
+modules-left = pacman-update
+modules-center = xwindow
+modules-right = cpu memory
+
+tray-position = right
+tray-padding = 2
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -121,49 +131,72 @@ modules-right = battery temperature cpu filesystem memory wlan
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-pseudo-transparency = true
+
+
+[module/DailyNews]
+type = custom/script
+exec = python $HOME/.config/polybar/my_bar_script/DailyNews.py
+format-prefix = "  "
+
+
+
+
+
+[module/bitcoin_price]
+type = custom/script
+exec = python $HOME/.config/polybar/my_bar_script/bitcoin_price.py
+interval = 60
+format-prefix = "  "
+
+
+[module/pacman-update]
+type = custom/script
+exec = checkupdates | wc -l
+# run only when wifi is connected. $? is the return value of wifi check.
+# any value other than 0 stands for connection error. Hence, exec runs
+# only when $? == 0
+exec-if = "sleep 15 ; ping -c 1 -q google.com >&/dev/null; [ $? == 0 ]"
+interval = 1000
+format-prefix = "  "
+
+
+[module/mymodule]
+type = custom/script
+exec = python $HOME/.config/polybar/mypolybar_script.py
+
 
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
 
+
+
+
+
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-#format-prefix = " "
-#format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
 
-format = <label-layout>
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
 
-
-label-layout = %icon%
-label-layout-foreground = ${colors.nord8}
-
-layout-icon-0 = ch;C
-layout-icon-1 = us;U
-
-#label-indicator-padding = 2
-#label-indicator-margin = 1
-#label-indicator-background = ${colors.secondary}
-
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
 interval = 25
 
+mount-0 = /
 
-
-
-mount-0 = /home
-
-
-format-mounted = <label-mounted>
-label-mounted = %{F#88C0D0}%{F-} %free%
-
-
-format-unmounted = <label-unmounted>
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -172,6 +205,7 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 label-occupied = %index%
@@ -204,6 +238,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -213,6 +248,7 @@ label-unfocused-padding = 2
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
@@ -262,27 +298,6 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-;format = <ramp-coreload><label>
-
-format-prefix = ""
-format-prefix-foreground = ${colors.nord8}
-label = %percentage:2%%
-
-;ramp-coreload-spacing = 1
-;ramp-coreload-0 = ▁
-;ramp-coreload-1 = ▂
-;ramp-coreload-2 = ▃
-;ramp-coreload-3 = ▄
-;ramp-coreload-4 = ▅
-;ramp-coreload-5 = ▆
-;ramp-coreload-6 = ▇
-;ramp-coreload-7 = █
-
-
-
-[module/cpu1]
-type = internal/cpu
-interval = 2
 
 
 
@@ -326,40 +341,7 @@ bar-load-empty-foreground = #66444444
 
 
 
-
-
-
-
-
-
-
-
-
 [module/memory]
-
-type = internal/memory
-interval = 2
-#format = <label> <bar-used>
-format-prefix = " "
-format-prefix-foreground = ${colors.nord8}
-label = %gb_free%
-
-
-
-; Only applies if <bar-used> is used
-bar-used-indicator =
-bar-used-width = 50
-bar-used-foreground-0 = #55aa55
-bar-used-foreground-1 = #557755
-bar-used-foreground-2 = #f5a70a
-bar-used-foreground-3 = #ff5555
-bar-used-fill = ▐
-bar-used-empty = ▐
-bar-used-empty-foreground = #444444
-
-
-
-[module/memory1]
 type = internal/memory
 interval = 2
 
@@ -385,58 +367,41 @@ bar-used-empty-foreground = #66444444
 
 
 
-
-
-
-
-
-
 [module/wlan]
 type = internal/network
-#interface = net1
-interface = wlo1
+interface = net1
 interval = 3.0
 
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+label-connected = %essid%
 
-; All labels support the following tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %local_ip6% [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %upspeed%   [wireless+wired]
-;   %downspeed% [wireless+wired]
-;   %linkspeed% [wired]
-
-
-format-connected =  <label-connected> <ramp-signal>
-label-connected = %{F#28e02f}%{F-}%downspeed% %{F#ff0000}%{F-}%upspeed%
-
-;format-disconnected =
+format-disconnected =
 ;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = " "
-ramp-signal-1 = " "
-ramp-signal-2 = " "
-ramp-signal-3 = " "
-ramp-signal-0-foreground = ${colors.temperature4}
-ramp-signal-1-foreground = ${colors.nord13}
-ramp-signal-2-foreground = ${colors.nord14}
-ramp-signal-3-foreground = ${colors.temperature2}
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = eth0
+interface = eno1
 interval = 3.0
 
+format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
@@ -444,16 +409,15 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %m-%d-%Y"
+date =
 date-alt = " %Y-%m-%d"
 
-time = %H:%M:%S
+time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-underline = ${colors.nord8}
-
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
 
 label = %date% %time%
 
@@ -516,75 +480,53 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/battery
 battery = BAT0
 adapter = ADP1
-full-at = 99
+full-at = 98
 
 format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
 
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = ""
-format-full-prefix-foreground = ${colors.temperature2}
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-0-foreground = ${colors.temperature4}
-ramp-capacity-1-foreground = ${colors.nord11}
-ramp-capacity-2-foreground = ${colors.nord13}
-ramp-capacity-3-foreground = ${colors.nord14}
-ramp-capacity-4-foreground = ${colors.temperature2}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
 
-#animation-charging = 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-0-foreground = ${colors.temperature2}
-animation-charging-1-foreground = ${colors.temperature2}
-animation-charging-2-foreground = ${colors.temperature2}
-animation-charging-3-foreground = ${colors.temperature2}
-animation-charging-4-foreground = ${colors.temperature2}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-3 = 
-animation-discharging-4 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-0-foreground = ${colors.nord11}
-animation-discharging-1-foreground = ${colors.nord11}
-animation-discharging-2-foreground = ${colors.nord11}
-animation-discharging-3-foreground = ${colors.nord11}
-animation-discharging-4-foreground = ${colors.nord11}
 animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 70
+warn-temperature = 60
 
 format = <ramp> <label>
+format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.temperature4}
+label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
-
-ramp-0-foreground = ${colors.temperature0}
-ramp-1-foreground = ${colors.temperature1}
-ramp-2-foreground = ${colors.temperature2}
-ramp-3-foreground = ${colors.temperature3}
-ramp-4-foreground = ${colors.temperature4}
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
 type = custom/menu
@@ -623,19 +565,8 @@ screenchange-reload = true
 ;compositing-border = over
 ;pseudo-transparency = false
 
-
-
-
 [global/wm]
 margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
-;
-
-
-#[module/nm-launcher]
-#type = custom/text
-#content = ""
-#click-left = nm-connection-editor
-
