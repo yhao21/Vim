@@ -65,6 +65,21 @@ setup after installation:
 
 
 
+
+7. set viewnior as default image viewer
+
+		download viewnior first:
+				sudo pacman -S viewnior
+
+		write this line under #image# part in rifle.conf.
+				mime ^image, has viewnior,       X, flag f = viewnior -- "$@"
+
+
+
+
+
+
+
 ============================================
 ranger_rc.config file
 

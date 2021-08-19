@@ -37,7 +37,7 @@ or write this in .profile for permenant change:
 
 
 4. Install necessary apps and 
-				sudo apt install git i3 ranger vim neovim terminator feh inkscape neofetch
+				sudo apt install git i3 ranger vim neovim terminator feh inkscape neofetch viewnior
 				sudo apt install rxvt-unicode obs-studio brightnessctl deepin-screenshot
 
 				sudo apt install gdebi-core  # helps you install deb file
@@ -79,4 +79,13 @@ or write this in .profile for permenant change:
 
 7. Configure zsh
 		clone ohmyzsh from:    https://github.com/ohmyzsh/ohmyzsh
+
+
+
+
+8. change resolution
+		write the following codes in your .profile 
+
+		xrandr --screen 0 -s 1440x900
+
 
