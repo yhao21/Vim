@@ -17,6 +17,10 @@
 	Now, you should be ok with CocInstall coc-python
 
 
+	Install Nodejs >= 12 (now is required for coc language support):
+	https://github.com/nodesource/distributions/blob/master/README.md
+
+
 3. pretty json
 	:%!python3.8 -m json.tool
 
