@@ -1,6 +1,8 @@
 
 
+1. install nerd font
 
+		go to github search nerd font. ryanoasis/nerd-fonts
 
 
 
@@ -24,4 +26,7 @@ so, when you get the transparency hex from the internet add it before
 hex code
 
 #33FF0000 gives you 70% transparency
+
+
+
 
