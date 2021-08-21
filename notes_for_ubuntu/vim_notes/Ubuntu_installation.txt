@@ -89,3 +89,32 @@ or write this in .profile for permenant change:
 		xrandr --screen 0 -s 1440x900
 
 
+
+
+
+
+
+
+
+Installtion Issue:
+
+1. sogoupinyin:
+		If you encounter the following error, comment the 8th line of sogoupinyin.postrm. Then sudo apt remove sogoupinyin.
+
+		dpkg: error processing package sogoupinyin (--remove):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

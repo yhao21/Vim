@@ -1,5 +1,11 @@
 
 
+
+
+0. Manually compile polybar:
+		https://github.com/polybar/polybar/wiki/Compiling
+
+
 1. install nerd font
 
 		go to github search nerd font. ryanoasis/nerd-fonts
