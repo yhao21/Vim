@@ -3,7 +3,11 @@
 
 
 0. Manually compile polybar:
-		https://github.com/polybar/polybar/wiki/Compiling
+
+		clone repo:   https://github.com/polybar/polybar.git
+		cd polybar
+		./build.sh
+
 
 
 1. install nerd font
