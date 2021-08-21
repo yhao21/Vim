@@ -13,6 +13,7 @@
 1. install nerd font
 
 		go to github search nerd font. ryanoasis/nerd-fonts
+		./install.sh
 
 
 
