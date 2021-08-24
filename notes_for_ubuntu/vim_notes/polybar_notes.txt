@@ -41,3 +41,6 @@ hex code
 
 
 
+4. If i3 workspace number is not shown up:
+
+		You should recompile the polybar repo. And type 'y' rather 'Enter' during the installation process.
