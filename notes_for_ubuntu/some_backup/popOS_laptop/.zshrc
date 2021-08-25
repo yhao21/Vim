@@ -8,7 +8,6 @@ export ZSH="/home/synferlo/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
@@ -100,6 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+
+
 
 
 
@@ -108,9 +110,9 @@ source $ZSH/oh-my-zsh.sh
 # Texlive 2020
 # ==================================
 
-PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH;export PATH
-MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH;export MANPATH
-INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH;export INFOPATH
+PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH;export PATH
+MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH;export MANPATH
+INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH;export INFOPATH
 
 
 
@@ -140,14 +142,15 @@ alias b10='sudo brightnessctl s 100%'
 # ==================================
 # mouse speed
 # ==================================
-alias slow='xinput set-prop "USB OPTICAL MOUSE" "Coordinate Transformation Matrix" 0.2 0 0 0 0.2 0 0 0 1'
+alias slow='xinput set-prop "Logitech USB Optical Mouse" "Coordinate Transformation Matrix" 0.2 0 0 0 0.2 0 0 0 1'
 
 
 # ==================================
 # disable touchpad
 # ==================================
-alias cj='xinput --disable "SynPS/2 Synaptics TouchPad"'
-alias ck='xinput --enable "SynPS/2 Synaptics TouchPad"'
+alias cj='xinput --disable "ELAN0412:00 04F3:3162 Touchpad"'
+
+alias ck='xinput --enable "ELAN0412:00 04F3:3162 Touchpad"'
 
 
 # ==================================
@@ -169,12 +172,24 @@ alias ff='python3 ~/mycommand/my_fuzzyfilefinder.py'
 alias r='Rscript'
 
 
+# ==================================
+# Turn off auto black screen
+# ==================================
+alias t='xset -dpms s off'
+
+
+
+
+
+
 
 # ==================================
-# Run Wechat
+# ranger
 # ==================================
-alias we="LANG=zh_CN.UTF-8 wine /home/synferlo/.wine/dosdevices/c:/'Program Files (x86)'/Tencent/WeChat/WeChat.exe"
-#alias we="LC_ALL=zh_CN.UTF-8 wine /home/synferlo/.wine/dosdevices/c:/'Program Files (x86)'/Tencent/WeChat/WeChat.exe"
+alias r='ranger'
+
+
+
 
 
 
