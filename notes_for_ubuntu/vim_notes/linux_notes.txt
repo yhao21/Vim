@@ -34,3 +34,7 @@
 				Change your hostname:
 								sudo nvim /etc/hostname
 				Reboot.
+
+5. Install .deb files in terminal
+
+		sudo apt install ./zoom.deb

@@ -44,6 +44,9 @@ or write this in .profile for permenant change:
 				## this software helps you download youtube video in ranger.
 				sudo apt install youtube-dl 
 
+				--install Qoppa pdfstudioviewer from this website.
+						https://www.qoppa.com/pdfstudioviewer/download/
+				
 				---install R
 				sudo apt install libudunits2-dev libgdal-dev
 				sudo apt install r-base  
