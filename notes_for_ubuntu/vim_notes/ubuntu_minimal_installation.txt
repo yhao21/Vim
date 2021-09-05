@@ -55,6 +55,18 @@
 
 6. swich caps lock and esc
 
+				### Method 1 ### Permanently 
+				sudo nvim /usr/share/X11/xkb/keycodes/evdev
+
+				set ESC = 66
+				set Caps = 9
+
+				reboot
+
+				Then you don't need to xmodmap every time.
+
+
+				### Method 2 ###
 				# copy all key settings to .xmodmap file
 				xmodmap -pke > ~/.xmodmap
 
