@@ -29,6 +29,18 @@ or write this in .profile for permenant change:
 				lspci | grep NVIDIA  #check intel graphic card
 
 
+2.1 Enable NVIDIA
+				open software & update, find additional driver
+				sudo ubuntu-drivers devices
+				install what is recommended
+						sudo apt install nvidia-drivers-470
+				reopen software & update (nvidia driver should be selected)
+				sudo apt install nvidia-settings
+				reboot
+				open nvidia-settings, go to prime, change to nvidia card.
+
+
+
 
 3. update and upgrade your system
 				sudo apt update
