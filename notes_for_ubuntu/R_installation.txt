@@ -1,6 +1,23 @@
 
 
 
+===========================================
+PopOS
+===========================================
+You need to install languageserver in R, then install coc-r-lsp, otherwise you cannot edit any R file with coc.nvim
+
+Open R in terminal,
+		install.packages("languageserver")
+
+open nvim, install lsp in coc
+		:CocInstall coc-r-lsp
+
+
+
+
+
+
+
 
 
 sudo apt install libudunits2-dev libgdal-dev
