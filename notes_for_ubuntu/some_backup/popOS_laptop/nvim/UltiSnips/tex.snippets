@@ -54,6 +54,7 @@ snippet art
 \usepackage{booktabs,caption}
 \usepackage{float}
 \usepackage{graphicx}
+\usepackage[sort,comma]{natbib}
 
 \usepackage{import}
 \usepackage{xifthen}
@@ -76,6 +77,12 @@ snippet art
 \begin{document}
 \maketitle
 $0
+
+
+
+
+\bibliographystyle{plainnat}
+\bibliography{my_bib}
 
 \end{document}
 
@@ -1226,6 +1233,12 @@ endsnippet
 
 
 
+#======================================
+#        Bibliograph
+#======================================
+snippet cite "(authro, year) (Fisher, 1936)"
+\citep{$1}
+endsnippet
 
 
 

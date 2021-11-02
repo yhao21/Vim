@@ -1,0 +1,49 @@
+============
+Insert Bibliography
+============
+
+
+You need to have two files, .bib and .tex
+
+In my_bib.bib (use and to connect different authors):
+
+		@article{fisher36,
+				author={R.A.Fisher and Sc.D. and F.R.S},
+				title={The use of multiple measurements in taxonomic problems},
+				journal={Annals of Eugenics},
+				volume={7},
+				year=1936,
+				pages={179-188}
+		}
+
+In main summary.tex file
+
+
+		\usepackage{natbib}
+		\begin{document}
+		
+		In Fisher's paper\citep{fisher36} we .....
+		
+		
+		
+		\newpage
+		\bibliographystyle{plainnat}
+		\bibliography{my_bib}
+		
+		\end{document}
+
+Then, compile files in three steps:
+
+		pdflatex summary.tex (you need to compile tex first, otherwise Error no .aux)
+		bibtex summary
+		pdflatex summary.tex
+
+Every time after you make a change you run:
+		bibtex summary
+		pdflatex summary.tex
+
+
+
+============
+
+============
