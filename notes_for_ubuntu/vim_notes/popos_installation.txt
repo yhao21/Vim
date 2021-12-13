@@ -1,0 +1,36 @@
+
+
+
+Exit from grub termnial:
+
+		If you are grub after installation, type "exit" and double Enter to exit. 
+
+
+
+
+
+
+Install node.js v16.x
+
+
+		# Using Ubuntu
+		curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+		sudo apt-get install -y nodejs
+
+
+
+Add more workspace:
+
+		Install tweak from pop shop
+		change to static workspace, chang ws num to whatever you need.
+
+
+set short cut for workspace switching and window moving
+		open terminal, type:
+		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Alt>5']"
+		...
+		gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-10 "['<Alt>0']"
+
+		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Alt><Shift>5']"
+		...
+		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Alt><Shift>0']"
