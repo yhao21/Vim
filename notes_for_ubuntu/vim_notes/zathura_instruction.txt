@@ -1,0 +1,13 @@
+
+
+Open Content/Bookmark Index:
+		press Tab
+
+Navigate across Index:
+		use j and k
+
+
+
+Jump to a particular page:
+		:<page>
+		jump to page 100:     :100<Enter>
