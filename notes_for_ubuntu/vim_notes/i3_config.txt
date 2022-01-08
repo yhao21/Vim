@@ -67,19 +67,18 @@ Installation:
 8. i3-gaps
 	https://github.com/Airblader/i3
 	set up i3-gaps, make it beautiful
-	
-	https://launchpad.net/~simon-monette/+archive/ubuntu/i3-gaps
-	add this ppa to your software source.
-		sudo add-apt-repository ppa:simon-monette/i3-gaps
-		sudo apt-get update
-	install software in the following format:
-		sudo apt install <filename in ppa>
-		sudo apt install i3-gaps
+
+  sudo add-apt-repository ppa:regolith-linux/release
+  sudo apt update
+  sudo apt install i3-gaps
 
 	go to i3 config file, and add this:
 		gaps inner 15
 		gaps outer 10
 	gaps (number) can be customized.
+
+
+
 	===========================================================
 	IF YOU DO NOT WANT TO INSTALL THROUGH PPA, USE THIS WAY! MORE STABLE!
 	sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool libxcb-shape0-dev
