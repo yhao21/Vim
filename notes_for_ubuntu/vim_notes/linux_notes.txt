@@ -38,3 +38,7 @@
 5. Install .deb files in terminal
 
 		sudo apt install ./zoom.deb
+
+
+6. Extract an rar file:
+				unrar x abe.rar
