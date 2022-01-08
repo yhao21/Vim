@@ -1,0 +1,22 @@
+
+1. Google
+				---Chinese input
+				sudo apt install fcitx
+				sudo apt install fcitx-googlepinyin
+
+				copy this to .profile
+								export XMODIFIERS=@im=fcitx
+								export QT_IM_MODULE=fcitx
+								export GTK_IM_MODULE=fcitx
+
+
+
+2. Sogou pinyin
+				sudo apt install fcitx
+				curl -sL 'https://keyserver.ubuntu.com/pks/lookup?&op=get&search=0x73BC8FBCF5DE40C6ADFCFFFA9C949F2093F565FF' | sudo apt-key add
+				sudo apt-add-repository 'deb http://archive.ubuntukylin.com/ukui focal main'
+				sudo apt upgrade
+				sudo apt install sogouimebs
+
+
+				You will find sogou in fcitx configtool after reboot.
