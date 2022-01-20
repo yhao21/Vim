@@ -36,3 +36,7 @@ step 3: umount disk
 				sudo umount ~/usb2
 
 
+
+
+4. check disk usage (human-readable format)
+		df -h

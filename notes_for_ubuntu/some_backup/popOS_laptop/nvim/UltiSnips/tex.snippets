@@ -89,6 +89,40 @@ $0
 endsnippet
 
 #===================
+snippet ppt
+\documentclass[12pt]{beamer}
+%\usepackage[english]{babel}
+\usetheme{Boadilla}
+
+
+
+% If you want the content showing up at the begining of each section, with transparent
+% on, uncomment function below
+%\AtBeginSection[]
+%{
+%		\begin{frame}
+%				\frametitle{Table}
+%				\tableofcontents[currentsection]
+%		\end{frame}
+%}
+
+
+
+
+
+\title[${0:short}]{$1}
+\author{$2}
+\date[${3:short}]{${4:long}}
+%\logo{\includegraphics[scale=.01]{~/my_disk/git/bg_pic/ubuntu_bg.jpg}}
+
+\begin{document}
+\frame{\titlepage}
+
+
+\end{document}
+endsnippet
+
+#===================
 snippet code "py code" w
 \usepackage{color}
 \usepackage{listings}
@@ -1238,6 +1272,69 @@ endsnippet
 snippet cite "(authro, year) (Fisher, 1936)"
 \citep{$1}
 endsnippet
+
+
+
+
+
+#======================================
+#        PPT
+#======================================
+snippet new "new slides" i
+\begin{frame}
+\frametitle{$1}
+\framesubtitle{$2}
+$3
+\end{frame}
+%=========================================
+endsnippet
+#======================================
+snippet proof "subtitle proof" i
+\begin{proof}
+$1
+\end{proof}
+endsnippet
+#======================================
+snippet content
+\begin{frame}
+\frametitle{Table of content}
+\tableofcontents
+
+\end{frame}
+endsnippet
+#======================================
+snippet gaoliang
+\alert{${1: highlighted text}}
+endsnippet
+#======================================
+snippet block
+\begin{block}{${1: block title}}
+$2
+\end{block}
+endsnippet
+#======================================
+snippet cols "multi columns env"
+\begin{columns}
+
+\begin{column}{0.3\textwidth}%width of each column
+$0
+\end{column}
+
+\end{columns}
+endsnippet
+#======================================
+snippet col "add an additional col"
+\begin{column}{0.3\textwidth}%width of each column
+$0
+\end{column}
+endsnippet
+#======================================
+snippet p "pause" i
+\pause
+endsnippet
+#======================================
+
+
 
 
 
