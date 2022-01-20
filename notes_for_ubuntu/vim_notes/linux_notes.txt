@@ -42,3 +42,22 @@
 
 6. Extract an rar file:
 				unrar x abe.rar
+
+7. Connet external monitor
+		# make sure nvidia is enable under i3, then
+		xrandr	# check display device, eDP is laptop monitor
+
+		# this will connect and turn on external monitor.
+		# now workspaces are on different monitors
+		xrandr --output HDMI-1-1 --auto --right-of eDP-1-1
+
+
+		# turn off ePD (laptop) monitor and reopen it to mirror display
+		xrandr --output eDP-1-1 --off
+		xrandr --output eDP-1-1 --auto
+
+
+		# If you want to turn off the external monitor:
+		xrandr --output HDMI-1-1 --off
+
+
