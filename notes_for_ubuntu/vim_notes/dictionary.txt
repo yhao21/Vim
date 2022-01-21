@@ -1,0 +1,13 @@
+Download goldendict:
+		sudo apt install goldendict
+
+
+
+Download specific dictionary from this website:
+		http://download.huzheng.org/
+
+
+Add dictionary to goldendict
+
+
+Close Full-text search in preference. This would cause a 100% cpu usage
