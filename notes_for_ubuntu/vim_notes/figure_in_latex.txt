@@ -22,10 +22,8 @@ Ctrl shift a		open alignment panel (e.g., select center on horizontal axis)
 tips
 ===============
 Horizontal/Vertical straight line
+				Press Ctrl while drawing lines
 
-				select "Pen", find "Mode" on the top left
-
-				choose paraxial line.
 
 
 
