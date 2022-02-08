@@ -1,0 +1,10 @@
+WiFi Security:
+		WPA & WPA2 En
+
+Authentication:
+		Protected EAP (PEAP)
+
+No CA certificate is required (checked)
+
+Inner authentication:
+		MSCHAPv2
