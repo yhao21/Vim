@@ -32,3 +32,10 @@ if using nltk and textblob:
 				./configure --enable-loadable-sqlite-extensions --enable-optimizations
 				make
 				sudo make altinstall
+
+
+
+===============================
+install web3py (ethereum blockchain)
+
+		pip3.8 install web3

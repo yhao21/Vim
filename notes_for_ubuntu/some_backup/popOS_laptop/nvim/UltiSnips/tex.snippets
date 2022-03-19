@@ -55,6 +55,7 @@ snippet art
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage[sort,comma]{natbib}
+\usepackage[hidelinks]{hyperref}
 
 \usepackage{import}
 \usepackage{xifthen}
@@ -106,7 +107,15 @@ snippet ppt
 %		\end{frame}
 %}
 
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
 
+\newcommand{\incfig}[1]{%
+\def\svgwidth{\columnwidth}
+\import{./figures/}{#1.pdf_tex}
+}
 
 
 
@@ -217,6 +226,10 @@ tabsize=4,
 endsnippet
 
 #====================
+snippet input "inset another tex file" i
+\input{${1:filepath}}
+endsnippet
+#====================
 snippet Rcode "begin Rcode"
 \begin{rc}
 $1
@@ -315,6 +328,10 @@ snippet pic
 
 endsnippet
 
+#====================
+snippet url "add url" i
+\url{$1}
+endsnippet
 #====================
 snippet item
 \begin{itemize}
@@ -567,8 +584,14 @@ endsnippet
 
 #======================================
 context "math()"
-snippet gm "g" wA
+snippet gamma "g" wA
 \gamma
+endsnippet
+
+#======================================
+context "math()"
+snippet xi "xi" wA
+\xi
 endsnippet
 
 #======================================
@@ -888,7 +911,7 @@ endsnippet
 #======================================
 context "math()"
 snippet di "duiqi" iA
- &= 
+&= 
 endsnippet
 #======================================
 context "math()"
@@ -1191,10 +1214,19 @@ equation ($1)
 endsnippet
 #======================================
 context "math()"
-snippet wenzi "\text" wA
+snippet wenzi "\text" iwA
 \text{ $1 }
 endsnippet
 #======================================
+snippet label "label an equation" i
+\label{eqn:$1}
+endsnippet
+#======================================
+snippet ref "call the label" i
+equation \eqref{eqn:$1}
+endsnippet
+#======================================
+
 
 
 
