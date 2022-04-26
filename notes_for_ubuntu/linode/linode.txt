@@ -1,0 +1,37 @@
+copy a file from linode to local computer:
+
+		You need to do this in the terminal on local computer
+		Note: there is no space after ":"
+		scp your_linode_username@your_linode_ip:/path/to/your/file.txt /path/to/your/local/directory/file.txt
+
+
+copy an entire directory to local computer:
+		You need to do this in the terminal on local computer
+		scp -r your_linode_username@your_linode_ip:/path/to/your/directory /path/to/your/local/directory
+
+
+
+copy from local to linode
+		You need to do this in the terminal on local computer
+		scp -r  /path/to/your/local/directory your_linode_username@your_linode_ip:/path/to/your/directory
+
+
+
+
+
+run program in the background even when you close the terminal
+
+		# output will be saved to output.log
+				nohup python3.8 -u hi.py > output.log &
+
+
+		# if you want to show the output in terminal:
+		# you can use ctrl C to cancel this without killing the program
+				tail -f output.log
+
+
+		# kill the process:
+				# check ID first
+						ps ax | grep hi.py
+				# kill it
+						kill -9 id

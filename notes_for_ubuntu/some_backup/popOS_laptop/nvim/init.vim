@@ -83,18 +83,6 @@ set statusline+=\ [%p%%]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 "===============
 "=============== Basic operation
 "===============
@@ -282,11 +270,11 @@ let g:ale_disable_lsp = 1
 "===============
 call plug#begin('~/.config/nvim/plugged')
 
-"Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim'
 Plug 'yggdroot/indentline'
 Plug 'puremourning/vimspector'
 "Plug 'vim-syntastic/syntastic'
@@ -295,7 +283,7 @@ Plug 'dense-analysis/ale'
 "Plug 'vim-scripts/taglist.vim'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-surround'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'xuhdev/vim-latex-live-preview'
 """ vimtex must be loaded so that ultisnips for math content can work
 Plug 'lervag/vimtex'
 
@@ -485,8 +473,7 @@ let g:coc_global_extensions = [
 	\ 'coc-pairs',
 	\ 'coc-texlab',
 	\ 'coc-marketplace',
-	\ 'coc-r-lsp']
-
+  \ 'coc-r-lsp']
 
 "===============
 "=============== Skip Pair
@@ -538,13 +525,13 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "=============== vim live pdf
 "===============
 
-autocmd Filetype tex setl updatetime=50
-
+let g:livepreview_engine = 'pdflatex'
+autocmd Filetype tex setl updatetime=100
+"let g:livepreview_cursorhold_recompile=0
 
 "let g:livepreview_previewer = 'zathura'
 let g:livepreview_previewer = 'evince'
 "let g:livepreview_previewer = 'okular'
-"let g:livepreview_cursorhold_recompile=0
 
 
 
