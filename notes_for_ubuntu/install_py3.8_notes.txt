@@ -1,4 +1,8 @@
 	
+================================
+Install with one-line command:
+
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev && wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz && tar -xf Python-3.8.2.tgz && cd Python-3.8.2 && ./configure --enable-optimizations && make -j 8 && sudo make altinstall
 
 
 sudo apt update
@@ -39,3 +43,19 @@ if using nltk and textblob:
 install web3py (ethereum blockchain)
 
 		pip3.8 install web3
+
+
+
+===============================
+where to find site-packages:
+
+		Return usr's 
+		a = matplotlib.matplotlib_fname()
+		print(a)
+		
+
+
+		Or, 
+		usr/local/lib/python3.8/site-packages
+
+
