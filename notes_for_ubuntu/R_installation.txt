@@ -58,7 +58,7 @@ Install multiple packages:
 Packages I need:
 
 statistics:
-		plyr, 
+		plyr, fastDummies
 
 MLE:
 		stargazer, lmtest, spdep, pscl, 
