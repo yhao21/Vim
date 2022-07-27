@@ -1,0 +1,25 @@
+1. sudo gdebi nordvpn-release_1.0.0_all.deb
+
+2. sudo apt update
+
+3. sudo apt install nordvpn
+		Check installation: which nordvpn
+
+4. Add node to your VPN connection pool:
+
+		https://nordvpn.com/servers/tools/
+
+		Select a server, then click on "show available protocols"
+
+		Download config file for "OpenVpn UDP"
+
+
+		Instruction:
+		https://support.nordvpn.com/Connectivity/Linux/1061938702/How-to-connect-to-NordVPN-using-Linux-Network-Manager.htm
+
+
+		Install openvpn network manager:
+				sudo apt update && sudo apt full-upgrade -y && sudo apt install network-manager-openvpn-gnome -y
+
+		Click on "import from file"
+
