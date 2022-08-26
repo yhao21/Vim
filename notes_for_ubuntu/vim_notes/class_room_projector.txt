@@ -2,3 +2,14 @@ Set up mirror_display
 
 
 Setting - Displays - Mirror - apply
+
+
+
+
+
+
+xrandr --output HDMI-1-1 --right-of eDP-1-1 --auto
+
+xrandr --output eDP-1-1 --off
+
+xrandr --output eDP-1-1 --auto
