@@ -61,3 +61,5 @@
 		xrandr --output HDMI-1-1 --off
 
 
+8. disable auto suspend and auto sleep
+		sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
