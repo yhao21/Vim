@@ -475,6 +475,8 @@ let g:coc_global_extensions = [
 	\ 'coc-marketplace',
   \ 'coc-r-lsp']
 
+
+
 "===============
 "=============== Skip Pair
 "===============
