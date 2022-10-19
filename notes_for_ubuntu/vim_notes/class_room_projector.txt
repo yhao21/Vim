@@ -5,6 +5,16 @@ Setting - Displays - Mirror - apply
 
 
 
+Make sure the screen device is displayed normally
+		xrandr --output eDP-1 --auto --output HDMI-0 --auto
+
+Display the same screen
+		xrandr --output HDMI-0 --same-as eDP-1
+
+
+
+Set screen resolution
+		xrandr --output HDMI-0 --mode 1920x1080
 
 
 
