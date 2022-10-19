@@ -63,3 +63,25 @@
 
 8. disable auto suspend and auto sleep
 		sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
+
+9. Enable suspend (Login after close lid)
+				sudo nvim /etc/sytemd/logind.conf
+
+		Uncommon HandleLidSwitch=suspend, Then:
+
+				systemctl restart systemd-logind
+
+		Activate your settings.
+
+
+
+
+
+
+
+
+
+
+
+
