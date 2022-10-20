@@ -20,4 +20,23 @@
 
 
 
+4. Print the list of font you have to a log file:
+		nohup fc-list > output.log &
+
+		open output.log to check out font list
+
+
+5. If it only shows half of your icon:
+
+		
+		Change font:
+		font-4 = Iosevka Nerd Font:style=Medium;size=15;3
+
+
+6. If icon and content is too close to the upper bound of the bar:
+		
+		font-4 = Iosevka Nerd Font:style=Medium;size=15;{offset}
+
+		set a higher offset value!
+
 				
