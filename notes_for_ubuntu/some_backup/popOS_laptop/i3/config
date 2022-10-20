@@ -329,16 +329,16 @@ bindsym $mod+r mode "resize"
 # install i3-gap
 # You can also use any non-zero value if you'd like to have a border
 
-default_border pixel 0
+#default_border pixel 1
 #default_floating_border pixel 0
 
 ###########################################################
 #################       Color scheme      #################
 ###########################################################
 #disable window titlebars
-#for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 1
 #												border		background		text		indicator child_border(change this)
-#client.focused				 #ffffff    #285577      #ffffff   #ffffff    #44eda7
+client.focused				 #ffffff    #285577      #ffffff   #ffffff    #44eda7
 
 
 
