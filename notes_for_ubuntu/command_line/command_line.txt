@@ -1,0 +1,12 @@
+###------Add a dir to PATH------###
+
+		nvim .profile
+				export PATH=$PATH:~/my_disk/software_installed	(write inside .profile)
+		source .profile
+
+
+
+		If you would like to add it to global (for all users):
+		sudo nvim etc/environment 
+		or
+		sudo nvim /etc/profile

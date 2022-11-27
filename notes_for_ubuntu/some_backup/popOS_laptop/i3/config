@@ -10,13 +10,14 @@ exec xrandr --auto
 # auto-boot softwares and scripts
 #==========================================
 
-exec_always feh --bg-fill /home/synferlo/my_disk/git/bg_pic/nord_bg.png
+exec_always feh --bg-fill /home/synferlo/my_disk/git/bg_pic/pop/sean-afnan-244576.jpg
 #exec_always feh --bg-fill /home/synferlo/my_disk/git/bg_pic/snow2.jpg
 #exec_always --no-startup-id picom 
-#exec_always --no-startup-id compton 
+exec_always --no-startup-id compton 
 exec_always --no-startup-id fcitx
 exec_always --no-startup-id /home/synferlo/.config/i3/initialize_commands.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id blueman-manager &
 
 
 
@@ -359,39 +360,13 @@ client.focused				 #ffffff    #285577      #ffffff   #ffffff    #44eda7
 
 
 
-#==========================================
-# Dictionary
-#==========================================
-bindsym $mod+d exec goldendict
-
-
-
-
-#==========================================
-#screenshot
-#==========================================
-bindsym $mod+a exec deepin-screenshot
-
-
-
-#==========================================
-# run google chrome
-#==========================================
-bindsym $mod+g exec google-chrome-stable
-
-
-#==========================================
-# run latex formula in myfile
-#==========================================
-bindsym $mod+t exec /home/synferlo/.config/i3/latex_myfile.sh
+bindsym $mod+p exec /home/synferlo/my_disk/software_installed/pdfstudioviewer2021/pdfstudioviewer2021 	#pdfstudio
+bindsym $mod+d exec goldendict		# Dictionary
+bindsym $mod+a exec deepin-screenshot			#screenshot
+bindsym $mod+g exec google-chrome-stable		# run google chrome
+bindsym $mod+t exec /home/synferlo/.config/i3/latex_myfile.sh		# run latex formula in myfile
 
 
 
 
 
-
-
-
-#exec --no-startup-id polybar bar1
-#exec_always --no-startup-id xmodmap ~/.xmodmap
-#exec_always --no-startup-id compton 
