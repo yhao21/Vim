@@ -1,0 +1,32 @@
+1. coc.nvim build/index.js not found, please install dependencies and compile coc.nvim by: yarn install
+		go to ~/.config/nvim/plugged/coc.nvim
+		git checkout release		# switch to release instead of branch
+
+
+1.1 Install nodejs
+		Download binary archive: https://nodejs.org/en/download/
+
+				sudo mkdir -p /usr/local/lib/nodejs
+				sudo tar -xJvf node-18.13.0-linux-x64.tar.xz -C /usr/local/lib/nodejs 
+
+		Set up Path in .bashrc
+				PATH=/usr/local/lib/nodejs/node-v18.13.0-linux-x64/bin:$PATH;export PATH
+
+
+		Write this in init.vim
+				
+				let g:coc_disable_startup_warning = 1
+				let g:coc_node_path = '/usr/local/lib/nodejs/node-v18.13.0-linux-x64/bin/node'
+				
+
+
+2. coc-pyright (python language)
+		Manually set up python interpreter:
+				open coc-settings.json, 
+						
+						"python.pythonPath": "/usr/local/bin/python3.8"
+
+
+
+
+
