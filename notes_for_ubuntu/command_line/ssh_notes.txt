@@ -13,9 +13,24 @@
 
 				sudo service ssh stop
 
-4. connect to a host
+
+4. check ssh status
+				sudo service ssh status
+
+				If you receive a Condition failed error (/etc/ssh/sshd_not_to_be_run):
+						sudo rm -v /etc/ssh/sshd_not_to_be_run
+						sudo service ssh restart
+
+
+
+
+5. connect to a host
 				
 				ssh <one usr on host>@<host ip addr>
 
 
 
+
+
+
+=========================
