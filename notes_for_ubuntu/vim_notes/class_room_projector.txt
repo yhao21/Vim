@@ -38,5 +38,5 @@ xrandr --output eDP-1-1 --auto
 # move current window to presentation monitor
 		Alt + Shift + x
 # move current workspace to primary monitor (laptop)
-		Shift+x 
+		Alt+x 
 
