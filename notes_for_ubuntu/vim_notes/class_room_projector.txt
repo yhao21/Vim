@@ -23,3 +23,20 @@ xrandr --output HDMI-1-1 --right-of eDP-1-1 --auto
 xrandr --output eDP-1-1 --off
 
 xrandr --output eDP-1-1 --auto
+
+
+
+
+
+
+# move current window to presentation monitor
+		Alt + Shift + Return
+
+# move current window to primary monitor (laptop)
+		Shift + Return
+
+# move current window to presentation monitor
+		Alt + Shift + x
+# move current workspace to primary monitor (laptop)
+		Alt+x 
+

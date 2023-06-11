@@ -287,6 +287,7 @@ bindsym Shift+Return move container to output primary
 bindsym $mod+Shift+Return move container to output HDMI-1
 
 bindsym $mod+x move workspace to output primary
+bindsym $mod+Shift+x move workspace to output HDMI-1
 
 
 
