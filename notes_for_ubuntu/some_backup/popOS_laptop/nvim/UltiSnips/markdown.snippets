@@ -1,0 +1,329 @@
+
+
+
+
+
+# Title
+
+snippet S "section" 
+# 
+endsnippet
+#============================
+snippet SS "subsection"
+## 
+endsnippet
+#============================
+snippet SSS "subsubsection"
+### 
+endsnippet
+#============================
+
+
+
+
+
+
+
+
+snippet qq
+$$
+$0
+$$
+endsnippet 
+#============================
+snippet nal "alignment" i
+\begin{aligned}
+$1
+\end{aligned}
+endsnippet
+#============================
+snippet ee "in-line math" A
+$$0$
+endsnippet
+#============================
+snippet hao "()" iA
+($0)
+endsnippet
+#============================
+#context "math()"
+snippet jia "+" iA
+ + 
+endsnippet
+#============================
+snippet jie "-" iA
+ - 
+endsnippet
+#============================
+snippet by "times" i
+\times
+endsnippet
+#============================
+snippet root "sqrt" wA
+\sqrt {$1}
+endsnippet
+#======================================
+snippet app "approximate" w
+\approx
+endsnippet
+#============================
+snippet nn "not equal" w
+\ne
+endsnippet
+
+#======================================
+snippet jj "_{}" iA
+_{$1}
+endsnippet
+#============================
+snippet kk "^{}" iA
+^{$1}
+endsnippet
+#============================
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+context "math()"
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet
+
+#======================================
+snippet << "" wA
+\le 
+endsnippet
+
+#======================================
+snippet >> "" wA
+\ge 
+endsnippet
+#======================================
+snippet blk "blank \quad" wA
+\\quad
+endsnippet
+#======================================
+
+
+
+# symbol
+
+
+
+snippet bolang "~" wA
+\sim 
+endsnippet
+#======================================
+snippet shang "~" w
+\uparrow 
+endsnippet
+#======================================
+snippet xia "~" w
+\downarrow 
+endsnippet
+#======================================
+snippet tuichu "imply" wA
+\Longrightarrow
+endsnippet
+#======================================
+snippet cs "center dots" A
+\cdots
+endsnippet
+#======================================
+snippet cd "\cdot used in density fn" iA
+\cdot 
+endsnippet
+#======================================
+snippet vds "vertical dots" wA
+\vdots 
+endsnippet
+
+#======================================
+snippet dds "diagonal dots" wA
+\ddots 
+endsnippet
+
+
+#======================================
+
+
+
+
+
+
+
+
+
+
+
+
+#============================
+# Greek letters
+#============================
+#============================
+snippet al "a" 
+\alpha
+endsnippet
+#============================
+snippet beta "b" 
+\beta
+endsnippet
+#============================
+snippet sigma "sigma" 
+\sigma
+endsnippet
+#============================
+snippet omega "omega" 
+\omega
+endsnippet
+#============================
+snippet O "omega" 
+\Omega
+endsnippet
+#============================
+snippet delta "delta" i
+\delta
+endsnippet
+#============================
+snippet D "Delta" 
+\Delta
+endsnippet
+#============================
+snippet pai "pai" 
+\pi
+endsnippet
+#============================
+snippet // "fraction" iwA
+\frac{$1}{$2}
+endsnippet
+#====================
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)//' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}
+endsnippet
+#======================================
+snippet '^.*\)/' "() Fraction" wrA
+`!p
+stripped = match.string[:-1]
+depth = 0
+i = len(stripped) - 1
+while True:
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i -= 1
+snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
+`{$1}
+endsnippet
+#======================================
+snippet "((\\\w+)|[a-zA-Z]+)bar" "bar" riA
+ \overline{`!p snip.rv=match.group(1)`}
+endsnippet
+
+
+#======================================
+
+
+
+
+
+snippet ss "addup" w
+\sum\limits_{$1} ^$0
+endsnippet
+#============================
+snippet ify "infinity" wA
+\infty 
+endsnippet
+#============================
+
+
+
+
+#============================
+# Parenthesis
+#============================
+snippet yuan "big bracket" wA
+\left( $1 \right) $0
+endsnippet
+
+#====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+#============================
+# Alignmen
+#============================
+snippet dui "&" iA
+ & 
+endsnippet
+#============================
+snippet di "&=" i
+ &= 
+endsnippet
+#============================
+
+
+#============================
+# Font
+#============================
+snippet bb "bold" A
+**$1**
+endsnippet
+#============================
+
+
+
+#============================
+# Groups
+#============================
+snippet it
+* 
+endsnippet
+#============================
+
+
+
+
+
+snippet cases "cases" w
+\begin{cases}
+$1
+\end{cases}
+endsnippet
+#====================
+snippet wenzi "\text" iwA
+\text{ $1 }
+endsnippet
+#====================
+
+
+snippet per "percent" i
+\%
+endsnippet
+
+
+
+
+# Macroeconomics
+
+
+
+snippet kap "K accumulation" 
+K_{t + 1}  &= K_{t} - \delta K_{t} + I_{t}
+endsnippet
+#============================
+snippet kapp "K accumulation per worker"
+k_{t + 1}  &= k_{t} - \delta k_{t} + sy_{t}
+endsnippet
+#============================
+snippet kapn "K accumulation n > 0"
+\Delta k_{t + 1}  &= sy_{t} - (n + \delta)k_{t}
+endsnippet

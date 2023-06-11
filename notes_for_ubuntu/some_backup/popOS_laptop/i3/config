@@ -10,10 +10,11 @@ exec xrandr --auto
 # auto-boot softwares and scripts
 #==========================================
 
-exec_always feh --bg-fill /home/synferlo/my_disk/git/bg_pic/pop/sean-afnan-244576.jpg
+#exec_always feh --bg-fill /home/synferlo/my_disk/git/bg_pic/pop/sean-afnan-244576.jpg
+exec_always feh --bg-fill /home/synferlo/my_disk/git/bg_pic/nord_bg.png	# nord
 #exec_always feh --bg-fill /home/synferlo/my_disk/git/bg_pic/snow2.jpg
 #exec_always --no-startup-id picom 
-exec_always --no-startup-id compton 
+#exec_always --no-startup-id compton 
 exec_always --no-startup-id fcitx
 exec_always --no-startup-id /home/synferlo/.config/i3/initialize_commands.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -159,6 +160,8 @@ set $ws10 "10"
 
 
 
+
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -278,6 +281,15 @@ bindsym $mod+Shift+i move up
 bindsym $mod+Shift+l move right
 
 
+
+# move workspace to next monitor
+bindsym Shift+Return move container to output primary
+bindsym $mod+Shift+Return move container to output HDMI-1
+
+bindsym $mod+x move workspace to output primary
+
+
+
 #open dmenu for software
 
 bindsym $mod+m exec rofi -show run -theme slate
@@ -360,7 +372,7 @@ client.focused				 #ffffff    #285577      #ffffff   #ffffff    #44eda7
 
 
 
-bindsym $mod+p exec /home/synferlo/my_disk/software_installed/pdfstudioviewer2021/pdfstudioviewer2021 	#pdfstudio
+bindsym $mod+y exec /home/synferlo/my_disk/software_installed/pdfstudioviewer2021/pdfstudioviewer2021 	#pdfstudio
 bindsym $mod+d exec goldendict		# Dictionary
 bindsym $mod+a exec deepin-screenshot			#screenshot
 bindsym $mod+g exec google-chrome-stable		# run google chrome

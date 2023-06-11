@@ -91,7 +91,7 @@ endsnippet
 
 #===================
 snippet ppt
-\documentclass[10pt]{beamer}
+\documentclass[9pt]{beamer}
 %\usepackage[english]{babel}
 \usetheme{Boadilla}
 
@@ -111,6 +111,13 @@ snippet ppt
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
+
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{bm}
+
+
 
 \newcommand{\incfig}[1]{%
 \def\svgwidth{\columnwidth}
@@ -186,8 +193,11 @@ emphstyle={\color{self}\slshape},
 
 
 \lstinputlisting[language=Python]{PS2/1.py}
-$0
+snippet nn "not equal" wA
+\ne
 endsnippet
+
+#======================================
 
 
 
@@ -333,6 +343,10 @@ snippet url "add url" i
 \url{$1}
 endsnippet
 #====================
+snippet link "add url" i
+\href{${1:url}}{${2:keywords}}
+endsnippet
+#====================
 snippet item
 \begin{itemize}
 \item $1
@@ -382,7 +396,10 @@ snippet bb "boldface" wA
 {\textbf {$1}}
 endsnippet
 
-
+#====================
+snippet xieti "xieti" wA
+{\textit {$1}}
+endsnippet
 #====================
 snippet uu "underline" wA
 {\underline {$1}}
@@ -1377,6 +1394,26 @@ endsnippet
 
 
 
+#======================================
+snippet yisheng "" iwA
+\={$0}
+endsnippet
+#======================================
+snippet ersheng "" iwA
+\'{$0}
+endsnippet
+#======================================
+snippet sansheng "" iwA
+\v{$0}
+endsnippet
+#======================================
+snippet sisheng "" iwA
+\.{$0}
+endsnippet
+#======================================
+snippet liangdian "" iwA
+\"{$0}
+endsnippet
 
 
 

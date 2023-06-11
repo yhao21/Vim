@@ -519,6 +519,10 @@ let g:indentLine_concealcursor=""
 "=============== vimtex
 "===============
 let g:tex_flavor = 'pdflatex'
+let g:vimtex_view_method = 'zathura'
+
+
+
 " open content
 nnoremap <leader>t :VimtexTocOpen<CR>
 
@@ -529,7 +533,7 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 
 let g:livepreview_engine = 'pdflatex'
 autocmd Filetype tex setl updatetime=100
-"let g:livepreview_cursorhold_recompile=0
+"let g:livepreview_cursorhold_recompile=1
 
 "let g:livepreview_previewer = 'zathura'
 let g:livepreview_previewer = 'evince'

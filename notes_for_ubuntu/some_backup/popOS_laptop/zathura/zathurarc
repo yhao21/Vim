@@ -31,7 +31,7 @@ set statusbar-fg "#B0B0B0"
 set statusbar-bg "#202020"
 
 
-set zoom-step 20
+set zoom-step 10
 
 
 
