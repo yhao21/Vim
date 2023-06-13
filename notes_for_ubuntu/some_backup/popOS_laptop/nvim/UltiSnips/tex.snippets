@@ -925,6 +925,11 @@ snippet per "percentage" i
 \\%
 endsnippet
 #====================
+#context "math()"
+snippet "(\d+) dollars" "to $100" wr
+\$`!p snip.rv=match.group(1)`
+endsnippet
+#====================
 context "math()"
 snippet dui "duiqi-align" iA
 &
@@ -1418,4 +1423,12 @@ endsnippet
 
 
 
+
+snippet shu "" iwA
+Coppock \& Mateer, $1
+endsnippet
+
+snippet online "" iwA
+UMLP, $1
+endsnippet
 
