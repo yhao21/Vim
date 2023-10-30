@@ -125,7 +125,8 @@ alias kk='xmodmap ~/.xmodmap'
 # ==================================
 # brightness
 # ==================================
-alias b1='sudo brightnessctl s 10%'
+alias b0='sudo brightnessctl s 0%'
+alias b1='sudo brightnessctl s 1%'
 alias b2='sudo brightnessctl s 20%'
 alias b3='sudo brightnessctl s 30%'
 alias b4='sudo brightnessctl s 40%'
@@ -180,16 +181,57 @@ alias t='xset -dpms s off'
 
 
 
+# ==================================
+# Open tex file for inkscape formula
+# ==================================
+ alias qq='nvim ~/inkscape_formula.tex'
+
+
+
+
+
 
 
 
 # ==================================
-# ranger
+# Python3.8
 # ==================================
-alias r='ranger'
+alias p='python3.8'
+
+
+# ==================================
+# Calculator
+# ==================================
+alias cal='nvim ~/calculator.py'
 
 
 
+# ==================================
+# Run go-ethereum client
+# ==================================
+
+alias goeth='~/Downloads/go-ethereum/build/bin/geth'
+
+
+
+
+# ==================================
+# pdfviewer
+# ==================================
+#alias yy='~/my_disk/software_installed/pdfstudioviewer2021/pdfstudioviewer2021'
+
+alias yy='nohup ~/my_disk/software_installed/pdfstudioviewer2021/pdfstudioviewer2021 > ~/my_disk/software_installed/pdfstudioviewer2021/pdf_log.log &'
+
+
+
+
+
+
+
+# ==================================
+# Run VPN
+# ==================================
+alias myvpn='/home/synferlo/my_disk/git/PandaFan/run_my_vpn.sh'
 
 
 
