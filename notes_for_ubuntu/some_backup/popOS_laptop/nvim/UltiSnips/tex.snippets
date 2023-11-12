@@ -53,9 +53,10 @@ snippet art
 \usepackage[flushleft]{threeparttable}
 \usepackage{booktabs,caption}
 \usepackage{float}
-\usepackage{graphicx}
 \usepackage[sort,comma]{natbib}
 \usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+\usepackage{multirow}
 
 \usepackage{import}
 \usepackage{xifthen}
@@ -116,6 +117,24 @@ snippet ppt
 \usepackage{amsfonts}
 \usepackage{mathrsfs}
 \usepackage{bm}
+
+
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmin}{arg\,min} % thin space, limits underneath in displays
+\DeclareMathOperator*{\argmax}{arg\,max} % thin space, limits underneath in displays
+\newtheorem{thm}{Theorem}
+\usepackage{indentfirst}
+\setlength{\parindent}{0em}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[flushleft]{threeparttable}
+\usepackage{booktabs,caption}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[sort,comma]{natbib}
+\usepackage{xifthen}
+\usepackage{transparent}
+\usepackage{multirow}
 
 
 
@@ -236,6 +255,10 @@ tabsize=4,
 endsnippet
 
 #====================
+snippet myfont
+\fontsize{7}{7.2}\selectfont
+endsnippet
+#====================
 snippet input "inset another tex file" i
 \input{${1:filepath}}
 endsnippet
@@ -344,7 +367,7 @@ snippet url "add url" i
 endsnippet
 #====================
 snippet link "add url" i
-\href{${1:url}}{${2:keywords}}
+\href{$1}{${2:keywords}}
 endsnippet
 #====================
 snippet item
@@ -1319,6 +1342,20 @@ $4& $5 & $6
 \end{table}
 endsnippet
 #======================================
+snippet note
+\begin{tablenotes}
+\small
+\item
+\end{tablenotes}
+endsnippet
+#======================================
+snippet duanxian
+\cline{${1:start column}-${2:end column}}
+endsnippet
+#======================================
+snippet duolie
+\multicolumn{${1: num of cols}}{c}{${2:col name}}
+endsnippet
 
 
 
@@ -1424,11 +1461,11 @@ endsnippet
 
 
 
-snippet shu "" iwA
+snippet shu "" iw
 Coppock \& Mateer, $1
 endsnippet
 
-snippet online "" iwA
+snippet online "" iw
 UMLP, $1
 endsnippet
 

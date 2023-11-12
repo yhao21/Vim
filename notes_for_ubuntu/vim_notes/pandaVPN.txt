@@ -1,0 +1,128 @@
+
+
+
+
+###------Setup clash------###
+
+## Download from github:
+		https://github.com/Dreamacro/clash
+		click on releases, download zip
+
+
+## Unzip
+		gzip -d clash....gz
+
+## Authorize
+		sudo chmod u+x clash....
+
+
+
+## Download Country.mmdb from this url:
+		https://github.com/Dreamacro/maxmind-geoip
+
+## Put Country.mmdb in 
+		~/.config/clash/Country.mmdb
+
+## Authorize
+		sudo chmod u+x Country.mmdb
+
+
+## Test running
+
+		go to clash dir, and run clash by using
+		./clash-linux-amd64-v1.16.0
+
+
+## Download panda proxies:
+		curl 'https://getconf.oss-accelerate.aliyuncs.com/clash/132730/f7bd129e' -o ~/.config/clash/config.yaml
+
+
+
+###------Setup proxychains4------###
+
+
+# 下载，需要先安装git
+		git clone https://github.com/rofl0r/proxychains-ng.git 
+		cd proxychains-ng 
+# 配置
+		./configure 
+# 编译安装
+		sudo make 
+		sudo make install 
+# 提取配置文件
+sudo cp ./src/proxychains.conf /etc/proxychains.conf
+
+# 编辑配置文件（修改最后一行为 socks5 127.0.0.1 7891）这个对应你的代理地址
+sudo vim /etc/proxychains.conf 
+socks5 127.0.0.1 7891
+http 127.0.0.1 7890
+
+
+
+
+
+
+
+
+
+###------select proxies------###
+
+remove all other proxies except the one you are going to use
+
+
+
+
+###------Run VPN------###
+
+Step 1: run clash
+		./clash-linux-amd64-v1.16.0
+
+Step 2: open another terminal and run proxychains4
+
+		proxychains4 firefox
+
+
+
+Step 3: turn off vpn
+		Close browser, then
+		ps ax | grep clash, find the one named with clash-linux-amd64, 
+		kill <pid>
+
+
+
+
+
+
+
+
+###------Global proxy instead of using proxychains4------###
+
+sudo vim /etc/environment
+
+		Append the following:
+		export http_proxy="http://127.0.0.1:7890"
+		export https_proxy="http://127.0.0.1:7890"
+		export no_proxy="localhost, 127.0.0.1"
+
+
+
+sudo vim sudo
+		
+		Append the following:
+		Defaults env_keep+="http_proxy https_proxy no_proxy"
+
+
+sudo reboot
+
+
+
+
+
+## Set a list of softwares that do not use global proxy:
+		git config --global http.proxy 'http://127.0.0.1:7890'
+
+
+
+
+
+

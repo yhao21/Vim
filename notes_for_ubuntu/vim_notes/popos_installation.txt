@@ -34,3 +34,14 @@ set short cut for workspace switching and window moving
 		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-5 "['<Alt><Shift>5']"
 		...
 		gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-10 "['<Alt><Shift>0']"
+
+
+
+
+###------Install weixin------###
+
+Download package from:
+		https://www.ubuntukylin.com/applications/106-cn.html
+
+
+sudo dpkg -i <weixin>.deb
