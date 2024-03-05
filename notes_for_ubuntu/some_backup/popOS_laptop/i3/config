@@ -19,6 +19,7 @@ exec_always --no-startup-id fcitx
 exec_always --no-startup-id /home/synferlo/.config/i3/initialize_commands.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec_always --no-startup-id blueman-manager &
+exec_always --no-startup-id dropbox start
 
 
 

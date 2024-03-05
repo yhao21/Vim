@@ -259,6 +259,16 @@ snippet myfont
 \fontsize{7}{7.2}\selectfont
 endsnippet
 #====================
+snippet fontsize
+\begingroup
+\tiny
+
+Paste your slides here (begin{frame}...)
+
+\endgroup
+endsnippet
+#====================
+
 snippet input "inset another tex file" i
 \input{${1:filepath}}
 endsnippet
@@ -1365,9 +1375,18 @@ endsnippet
 #======================================
 #        Bibliograph
 #======================================
-snippet cite "(authro, year) (Fisher, 1936)"
+snippet citep "(authro, year) (Fisher, 1936)"
 \citep{$1}
 endsnippet
+#======================================
+snippet cite "Mankiw and Reis (2022)"
+\cite{$1}
+endsnippet
+#======================================
+snippet go
+\href{${1:hyperlink}}{{\underline{Jump to this paper.}}}
+endsnippet
+#======================================
 
 
 
