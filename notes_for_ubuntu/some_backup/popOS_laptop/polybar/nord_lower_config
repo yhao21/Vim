@@ -18,9 +18,9 @@
 ;==========================================================
 
 [colors]
-;background = #802E3440
+background = #2E3440
 ;background = #80FFFFFF
-background = #4D2E3440
+;background = #4D2E3440
 background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #555
@@ -114,7 +114,7 @@ font-0 = "TerminessTTF Nerd Font:style=Medium:size=12;3"
 
 #modules-left = pacman-update
 modules-center = xwindow
-modules-right = cpu memory Display
+modules-right = cpu memory Display pulseaudio 
 
 tray-position = right
 tray-padding = 2
@@ -435,7 +435,9 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+#label-volume = VOL %percentage%%
+label-volume =  %percentage%%
+
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
@@ -457,6 +459,9 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+click-right = pavucontrol
+
 
 [module/alsa]
 type = internal/alsa
