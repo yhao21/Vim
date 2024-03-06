@@ -27,3 +27,12 @@ type: fish go back to fish terminal again
 
 
 
+
+
+###------Install language pack manually------###
+
+If you would like to type spanish letter, e.g., Galı́, do the following:
+
+sudo apt install texlive-lang-spanish
+
+You are all set! No need for \usepackage[spanish]{babel}

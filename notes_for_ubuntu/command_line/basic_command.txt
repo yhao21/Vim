@@ -1,0 +1,13 @@
+
+
+###------Power------###
+		##------Suspend------##
+		systemctl suspend
+
+		##------Power off------##
+		sudo shutdown now
+
+		##------Reboot------##
+		sudo reboot
+
+
