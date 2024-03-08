@@ -1,3 +1,12 @@
+###------Enable shortcuts customization------###
+Search and enable the following four in chrome:
+		chrome://flags#improved-keyboard-shortcuts
+		chrome://flags#enable-shortcut-customization-app
+		chrome://flags#enable-shortcut-customization
+		chrome://flags#enable-only-show-new-shortcut-app
+
+Then customize your shortcuts in settings.
+
 1. split screen
 	alt [	to the left
 	alt ]	to the right
