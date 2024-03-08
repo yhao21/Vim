@@ -17,3 +17,16 @@
     full-screen: Ctrl + fullscreenkey
 
     partial area: Shift + Ctrl + fullscreenkey
+
+6. Disable touchpad
+
+		You can disable your Chromebook's touchpad or touchscreen if those features are causing problems.
+		 
+		First go here: chrome://flags/#ash-debug-shortcuts
+		and enable the flag, then click on RESTART NOW at the bottom of that page.
+		 
+		Once that's done, you have two new keyboard shortcut toggles available to you -
+		<Search> + <Shift> + P will toggle the touchpad off/on
+		and 
+		<Search> + <Shift> + T  will toggle the touchscreen off/on
+		
