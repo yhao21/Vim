@@ -36,3 +36,14 @@ If you would like to type spanish letter, e.g., Galı́, do the following:
 sudo apt install texlive-lang-spanish
 
 You are all set! No need for \usepackage[spanish]{babel}
+
+
+
+
+###------Set up manual autocompile------###
+1. create a cofig file: ".latexmkrc" and write the following
+		$pdf_previewer = "start evince %O %S";
+2. Run the following code if you need autocompile
+		latexmk -pdf -pvc xxx.tex						# compile your pdf use pdflatex
+		(latexmk -xelatex -pvc xxx.tex			# compile your pdf use xelatex)
+		latexmk -c													# remove files created during compilation.

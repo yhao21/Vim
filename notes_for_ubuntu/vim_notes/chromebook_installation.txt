@@ -1,0 +1,17 @@
+###------Dropbox------###
+		Download dropbox for linux (.deb file)
+		Install it through terminal
+		Sign in your account and link your computer.
+		Done!
+
+
+
+
+
+
+
+
+
+
+
+
