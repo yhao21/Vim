@@ -77,6 +77,13 @@
 
 
 
+10. Return keycode (xmodmap) for the key you are pressing
+
+
+		In command line, press:
+		xev
+
+		Now you can press any key.
 
 
 
