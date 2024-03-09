@@ -1,0 +1,17 @@
+
+Install ish shell on ipad
+You can search what packages are available in alpine linux from this website:
+				https://pkgs.alpinelinux.org/packages
+
+
+
+###------Install neovim------###
+echo https://dl-cdn.alpinelinux.org/alpine/edge/main > /etc/apk/repositories
+echo https://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories
+apk update
+apk upgrade
+apk add neovim			# same as "apt install neovim" in ubuntu.
+
+
+
+
