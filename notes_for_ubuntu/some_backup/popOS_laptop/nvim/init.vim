@@ -252,8 +252,14 @@ nmap <leader>do :VimspectorShowOutput
 
 
 map ti :tabe<CR>
-map tl :+tabnext<CR>
-map tj :-tabnext<CR>
+map <C-l> :+tabnext<CR>
+map <C-j> :-tabnext<CR>
+
+
+
+"map tl :+tabnext<CR>
+"map tj :-tabnext<CR>
+
 
 map sv <C-w>t<C-w>K
 map sh <C-w>t<C-w>H
