@@ -34,7 +34,18 @@ exec_always --no-startup-id dropbox start
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+#======================================================================================
+#======================================================================================
+#======================================================================================
+#======================================================================================
+# Use this when you are using regular keyboad include the one built in the laptop.
+# Mod 1 is alt
+#set $mod Mod1
+# Mod 4 is win. Use this when you are using bluetooth keyboad from bgulong.cn!!!!!
+set $mod Mod4
+#======================================================================================
+#======================================================================================
+#======================================================================================
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
