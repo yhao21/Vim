@@ -33,6 +33,45 @@ snippets书写格式
 
 
 
+###------Problem solving------###
+If you find inline mathzone is not being detected, you need to update the math() function as the following,
+
+
+global !p
+texMathZones = ['texMathZone' + x for x in ['', 'X', 'XX', 'Env', 'EnvStarred', 'Ensured']]
+
+
+texIgnoreMathZones = ['texMathTextArg']
+
+texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
+texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
+
+ignore = texIgnoreMathZoneIds[0]
+
+
+def math():
+
+		return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+endglobal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ===============
 snippets args
 ===============
