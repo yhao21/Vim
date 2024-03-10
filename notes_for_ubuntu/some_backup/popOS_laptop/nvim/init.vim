@@ -363,13 +363,35 @@ colorscheme mycolor
 "=============== NERDTree
 "===============
 
+
+" Note: The name of variables, e.g., NERDTreeToggle, can be found in the doc:
+"~/.config/nvim/plugged/nerdtree/doc/NERDTree.txt
+
+
 map ff :NERDTreeToggle<CR>
 
-let NERDTreeMapOpenSplit = 'h'
+"let NERDTreeMapOpenInTabSilent = 'T'
+let NERDTreeMapOpenSplit = 'sl'
+let NERDTreeMapOpenVSplit = ''
+"It used to be "I", but I need "I" for moving 5-line up
 let NERDTreeMapToggleHidden = 'zh'
-" change original key is K, but I need K = 5 line down
-" Hence, I map this jump fun to Q
-let NERDTreeMapJumpFirstChild = 'Q'
+"
+"It used to be "K", but I need "K" for moving 5-line down
+"let NERDTreeMapJumpFirstChild = 'Q'
+let NERDTreeMapJumpFirstChild = ''
+
+"Move the tree root up one directory
+let NERDTreeMapUpdir = 'j'
+
+
+
+
+" Open file on in a new tab silently by pressing "Enter"
+" You should leave 'dir' empty if you only want to apply this to file-opening.
+
+
+
+
 
 
 

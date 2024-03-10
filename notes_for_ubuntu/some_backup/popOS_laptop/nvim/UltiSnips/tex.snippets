@@ -25,6 +25,13 @@ def math():
 		return first != ignore
 	except StopIteration:
 		return False
+
+### Use this math function if you find snippets do not expand in math environment.
+### It is because the package is updated. You need to use vimtex#syntax#in_mathzone()
+#def math():
+#    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+
 endglobal
 
 
