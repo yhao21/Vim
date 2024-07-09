@@ -1,0 +1,8 @@
+
+
+
+How to share tags among multiple devices?
+		
+		Export your tag library and save it to dropbox or other cloud space.
+
+		On the new device, import tag library from the file you stored in dropbox.

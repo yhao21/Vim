@@ -16,3 +16,7 @@
 
 
 
+3. How to add an installed app to rofi list:
+		(Make the file executable, then move it to /usr/bin)
+		sudo chmod +x filename
+		sudo cp filename /usr/bin

@@ -40,3 +40,7 @@ step 3: umount disk
 
 4. check disk usage (human-readable format)
 		df -h
+
+
+5. How to mark a file in ranger?
+		Move to the file then press "t".

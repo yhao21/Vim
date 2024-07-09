@@ -1,0 +1,4 @@
+
+When I use bluetooth keyboard, I remap win to alt in /usr/share/X11/xkb/keycodes/evdev
+Currently win = 64, alt = 133
+I need to change it back when I use the keyboard built in my laptop.
