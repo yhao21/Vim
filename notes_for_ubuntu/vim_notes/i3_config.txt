@@ -149,6 +149,37 @@ Installation:
 	Mode 4 = windows
 
 
+
+12. Get window class:
+		
+		Type the following command in terminal:
+				i3-msg -t get_tree > my_msg.txt
+
+		Open my_msg.txt and press alt-p. Then you can look for the window name.
+
+
+
+13. Set the pop up window (save pdf) in Chrome to floatin window.
+
+		Write this in i3 config file:
+
+				for_window [class="Google-chrome-stable" window_role="GtkFileChooserDialog"] floating enable
+
+		Then you can press mod (ALT) and drag the window.
+
+
+		Note: you can get the class and window_role using the technique above (12).
+
+
+
+14 Set the size of pop up window
+
+		for_window [class="Google-chrome-stable" window_role="GtkFileChooserDialog"] resize set 840 480
+
+		You can also resize the window by pressing ALT and holding right click on a side of boarder, then
+		drag the window.
+
+
 ==========================================================
 shortcuts:
 

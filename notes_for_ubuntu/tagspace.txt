@@ -1,8 +1,37 @@
 
+How to sync tags among multiple devices?
+
+		Click on the symbol of three dots, click on "Refresh Location Index"
+		Go to tag library,
+		Click on "Collected Tags", then click on "Collect Tags From Current Location"
 
 
-How to share tags among multiple devices?
-		
-		Export your tag library and save it to dropbox or other cloud space.
 
-		On the new device, import tag library from the file you stored in dropbox.
+
+###------Bug------###
+		How to open a file using your local pdf reader (in i3wm)?
+
+		For the first pdf you would like to open:
+						1. Right click on file
+						2. Open in file manager
+						3. Open pdf using local pdf reader
+
+		For the rest of pdf, just click on "Open file Natively".
+
+
+		Note, if you do not open the first pdf from file manager, tagspaces will stuck
+		and remain un-responding.
+
+
+		In chromebook, you need to open FoxitReader first, then open file natively
+
+###------What if you cannot find the file you tagged?------###
+
+		Remove the connected folder from tagspaces, then add it again.
+
+###------Shortcuts------###
+
+t:						Add/remove tag
+Caps lock:		Reload folder
+
+

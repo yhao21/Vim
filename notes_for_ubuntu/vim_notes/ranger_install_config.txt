@@ -154,6 +154,7 @@ my keymap
 			显示当前地址为退出ranger时的地址。)
 
 	o		order your files文件排序
+	zv	toggle file preview
 	=====================
 	Tabs
 	

@@ -44,3 +44,28 @@ step 3: umount disk
 
 5. How to mark a file in ranger?
 		Move to the file then press "t".
+
+
+
+6. how to set default application for pdf
+
+
+		To find out which application opens a pdf file :
+		
+				xdg-mime query default application/pdf
+
+
+		To set the application to evince:
+		
+				xdg-mime default evince.desktop application/pdf
+
+
+
+
+
+
+
+
+
+
+
