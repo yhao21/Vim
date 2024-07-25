@@ -1,0 +1,25 @@
+###------Where are gnome extensions stored------###
+		All extensions are store in 
+				1. /usr/share/gnome-shell/extensions/
+				2. ~/.local/share/gnome-shell/extensions/
+		
+		If 	2. ~/.local/share/gnome-shell/extensions/ does not exist, manually create one.
+		
+
+
+
+###------Install extensions using chrome add on------###
+		sudo apt install gnome-shell-extensions
+		
+		Install gnome shell extension chrome add on
+		
+		Then you can install extensions from extensions.gnome.org.
+
+
+
+###------Install manually------###
+		1. Download extensions from extensions.gnome.org (a zip file)
+		2. Create an empty dir, and unzip file into this dir.
+		3. Open <metadata.json>, find "uuid", e.g., "uuid": "workspaces-bar@fthx",
+		4. Rename dir by uuid, e.g., "workspaces-bar@fthx"
+		5. Move dir to ~/.local/share/gnome-shell/extensions/
