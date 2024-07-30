@@ -10,6 +10,7 @@ Exit from grub termnial:
 
 
 
+###------Coc.nvim------###
 Install node.js v16.x
 
 
@@ -17,6 +18,20 @@ Install node.js v16.x
 		curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 		sudo apt-get install -y nodejs
 
+
+Install node.js v20 through tar.xz file
+		Donwload file from node official website, then
+
+		sudo tar --strip-components 1 -xvf {download-directory}/{filename}.tar.xz --directory /usr/local/
+
+
+coc.nvim build/index.js not found:
+		Open init.vim, and run this command:
+				:call coc#util#install()
+		Then close, and open init.vim again.
+
+
+python3.12 -m pip install python-lsp-server pylint
 
 
 Add more workspace:

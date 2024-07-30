@@ -1,0 +1,15 @@
+
+
+
+###------How to connect to google cloud VM through SSH------###
+
+		1. Generate ssh-key in local machine:
+				ssh-keygen -t rsa -f <path_to_save_key_files> -C <your-google_email>
+		2. Save your public key (xxxx.pub) to google clould VM:
+				Go to "Compute Engine", then scroll down the left panel, click on "metadata"
+				Click on "SSH KEYS"
+				Add your public key.
+		3. Connect to your server:
+				ssh -i <path_to_your_private_key> <user_name>@<ip_address>
+
+				
