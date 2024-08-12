@@ -28,6 +28,8 @@ run program in the background even when you close the terminal
 		# if you want to show the output in terminal:
 		# you can use ctrl C to cancel this without killing the program
 				tail -f output.log
+		# if you would like to show the last 100 rows:
+				tail -f -n 100 output.log
 
 
 		# kill the process:
