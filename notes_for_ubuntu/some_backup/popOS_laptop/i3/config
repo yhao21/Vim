@@ -15,7 +15,7 @@ exec_always feh --bg-fill /home/synferlo/my_disk/git/bg_pic/nord_bg.png	# nord
 #exec_always feh --bg-fill /home/synferlo/my_disk/git/bg_pic/snow2.jpg
 #exec_always --no-startup-id picom 
 #exec_always --no-startup-id compton 
-exec_always --no-startup-id fcitx
+#exec_always --no-startup-id fcitx
 exec_always --no-startup-id /home/synferlo/.config/i3/initialize_commands.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec_always --no-startup-id blueman-manager &
@@ -40,9 +40,12 @@ exec_always --no-startup-id dropbox start
 #======================================================================================
 # Use this when you are using regular keyboad include the one built in the laptop.
 # Mod 1 is alt
-#set $mod Mod1
+# When I use bluetooth keyboard, I remap win to alt in /usr/share/X11/xkb/keycodes/evdev
+# Currently win = 64, alt = 133
+# I need to change it back when I use the keyboard built in my laptop.
+set $mod Mod1
 # Mod 4 is win. Use this when you are using bluetooth keyboad from bgulong.cn!!!!!
-set $mod Mod4
+#set $mod Mod4
 #======================================================================================
 #======================================================================================
 #======================================================================================
@@ -372,8 +375,18 @@ client.focused				 #ffffff    #285577      #ffffff   #ffffff    #44eda7
 
 
 
+for_window [window_role="pop-up"]                       floating enable
+for_window [window_role="bubble"]                       floating enable 
+for_window [window_role="task_dialog"]                  floating enable
+for_window [window_role="Preferences"]                  floating enable
+for_window [window_type="dialog"]                       floating enable 
+for_window [window_type="menu"]                         floating enable
+for_window [class="chrome-refresh-2023"] floating enable
+for_window [window_role="(?i)GtkFileChooserDialog"] floating enable
 
-
+# Let download pdf window be a floating window
+for_window [class="Google-chrome-stable" window_role="GtkFileChooserDialog"] floating enable
+for_window [class="Google-chrome-stable" window_role="GtkFileChooserDialog"] resize set 840 480
 
 
 #

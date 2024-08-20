@@ -100,9 +100,10 @@ font-4 = Iosevka Nerd Font:size=12
 ;font-1 = Unifont:fontformat=truetype:size=10:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
 
-modules-left = cpu memory
+;modules-left = cpu memory
+modules-left = i3
 modules-center = xwindow
-modules-right = battery temperature filesystem filesystem1 wlan 
+modules-right = battery temperature cpu1 memory1 filesystem filesystem1 wlan 
 
 #tray-position = right
 #tray-padding = 1
@@ -170,7 +171,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 
 [module/filesystem1]
-mount-1 = /
+mount-0 = /
 
 
 format-mounted = <label-mounted>

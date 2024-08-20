@@ -114,7 +114,7 @@ font-0 = "TerminessTTF Nerd Font:style=Medium:size=12;3"
 
 #modules-left = pacman-update
 modules-center = xwindow
-modules-right = cpu memory Display pulseaudio 
+modules-right = cpu memory Display pulseaudio logout
 
 tray-position = right
 tray-padding = 2
@@ -417,7 +417,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 2
 
 date =
 date-alt = " %Y-%m-%d"
@@ -430,6 +430,15 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %date% %time%
+
+
+
+[module/logout]
+type = custom/script
+exec = echo '⏻'
+click-left = xfce4-session-logout
+
+
 
 [module/pulseaudio]
 type = internal/pulseaudio

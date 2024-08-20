@@ -15,21 +15,21 @@ texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')
 
 ignore = texIgnoreMathZoneIds[0]
 
-def math():
-	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
-	try:
-		first = next(
-            i for i in reversed(synstackids)
-            if i in texIgnoreMathZoneIds or i in texMathZoneIds
-        )
-		return first != ignore
-	except StopIteration:
-		return False
+#def math():
+#	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
+#	try:
+#		first = next(
+#            i for i in reversed(synstackids)
+#            if i in texIgnoreMathZoneIds or i in texMathZoneIds
+#        )
+#		return first != ignore
+#	except StopIteration:
+#		return False
 
 ### Use this math function if you find snippets do not expand in math environment.
 ### It is because the package is updated. You need to use vimtex#syntax#in_mathzone()
-#def math():
-#    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
 
 
 endglobal
@@ -42,6 +42,7 @@ endglobal
 
 snippet art
 
+%\documentclass[./main.tex(path of main file)]{subfiles}
 \documentclass[10pt]{article}
 \usepackage{amsmath}
 \DeclareMathOperator*{\argmin}{arg\,min} % thin space, limits underneath in displays
@@ -69,6 +70,8 @@ snippet art
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
+\usepackage{subfiles}
+\usepackage{blindtext}
 
 \newcommand{\incfig}[1]{%
 \def\svgwidth{\columnwidth}
@@ -262,6 +265,10 @@ tabsize=4,
 endsnippet
 
 #====================
+snippet insert "inser a tex file"
+\subfile{}
+endsnippet
+#====================
 snippet myfont
 \fontsize{7}{7.2}\selectfont
 endsnippet
@@ -377,8 +384,9 @@ endsnippet
 snippet pic
 
 \begin{figure}[H]
-\caption{$1}
 \center{\includegraphics[scale = $2]  {$3}}
+\caption{$1}
+\label{fig:}
 \end{figure}
 
 endsnippet
@@ -648,6 +656,12 @@ endsnippet
 context "math()"
 snippet gamma "g" wA
 \gamma
+endsnippet
+
+#======================================
+context "math()"
+snippet Gamma "g" wA
+\Gamma
 endsnippet
 
 #======================================
@@ -1205,7 +1219,7 @@ snippet root "sqrt" wA
 endsnippet
 #======================================
 context "math()"
-snippet var "variance" wA
+snippet var "variance" w
 VAR
 endsnippet
 #======================================
@@ -1298,6 +1312,22 @@ snippet ref "call the label" i
 equation \eqref{eqn:$1}
 endsnippet
 #======================================
+snippet fl "label an equation" i
+\label{fig:$1}
+endsnippet
+#======================================
+snippet tl "label an equation" i
+\label{table:$1}
+endsnippet
+#======================================
+snippet fr "call the label" i
+Figure \ref{fig:$1}
+endsnippet
+#======================================
+snippet tr "call the label" i
+Table \ref{table:$1}
+endsnippet
+#======================================
 
 
 
@@ -1351,8 +1381,9 @@ snippet table
 \begin{center}
 \begin{threeparttable}
 \caption{}			
+\label{table:}
 
-\begin{tabular}{c|c|c}
+\begin{tabular}{ccc}
 $1 & $2 & $3\\\\
 \hline \\\\[-1.8ex]
 $4& $5 & $6
@@ -1448,7 +1479,7 @@ $0
 \end{column}
 endsnippet
 #======================================
-snippet p "pause" i
+snippet p "pause" 
 \pause
 endsnippet
 #======================================

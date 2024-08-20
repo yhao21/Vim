@@ -105,7 +105,8 @@ font-0 = "TerminessTTF Nerd Font:style=Medium:size=12;2"
 ;font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = date
+modules-center = date calendar
+;modules-center = xwindow
 #modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-right = battery temperature cpu filesystem filesystem1 memory wlan 
 
@@ -463,17 +464,25 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+[module/calendar]
+type = custom/script
+exec = echo '   '
+click-left = gnome-calendar
+
+
 [module/date]
 type = internal/date
 interval = 5
 
+;click-left = gnome-calendar
 date = " %m-%d-%Y"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M:%S
 time-alt = %H:%M:%S
 
-format-prefix = ' ' 
+;format-prefix = ' ' 
+;format-prefix = ' ' 
 ;format-underline = ${colors.nord8}
 
 format-prefix-foreground = ${colors.foreground-alt}

@@ -5,8 +5,6 @@
 
 
 
-
-
 "===============
 "===============
 "===============
@@ -193,7 +191,7 @@ vnoremap ? I#<Esc><Esc>
 
 
 " run you python code with shortcuts
-"nnoremap rr :! clear ; python3.8 %<CR>
+nnoremap rr :! clear ; python3.8 %<CR>
 
 "noremap <leader>r :call CompileRunGcc()<CR>
 "func! CompileRunGcc()
@@ -251,9 +249,9 @@ nmap <leader>do :VimspectorShowOutput
 "===============
 
 
-map ti :tabe<CR>
-map <C-l> :+tabnext<CR>
-map <C-j> :-tabnext<CR>
+nnoremap ti :tabe<CR>
+nnoremap <C-l> :+tabnext<CR>
+nnoremap<C-j> :-tabnext<CR>
 
 
 
@@ -276,7 +274,7 @@ let g:ale_disable_lsp = 1
 "===============
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -303,7 +301,7 @@ Plug 'instant-markdown/vim-instant-markdown'
 "
 "Plug 'arcticicestudio/nord-vim'
 "Plug 'dracula/vim'
-Plug 'connorholyday/vim-snazzy'
+"Plug 'connorholyday/vim-snazzy'
 "Plug 'morhetz/gruvbox' 
 
 "Plug 'gko/vim-coloresque'
@@ -522,8 +520,6 @@ endfunc
 inoremap <M-n> <c-r>=SkipPair()<CR>
 
 
-
-
 "===============
 "=============== Indentline
 "===============
@@ -560,7 +556,7 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "===============
 
 let g:livepreview_engine = 'pdflatex'
-autocmd Filetype tex setl updatetime=100
+autocmd Filetype tex setl updatetime=200
 "let g:livepreview_cursorhold_recompile=1
 
 "let g:livepreview_previewer = 'zathura'
