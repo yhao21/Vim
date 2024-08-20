@@ -1,0 +1,8 @@
+If dropbox tary icon does not show up in xfce4, try the following in the command line.
+
+		dropbox stop
+		DBUS_SESSION_BUS_ADDRESS=""
+		dropbox start
+
+
+Then it should work.
