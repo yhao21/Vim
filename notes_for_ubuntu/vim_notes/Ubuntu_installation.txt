@@ -49,7 +49,7 @@ or write this in .profile for permenant change:
 
 
 4. Install necessary apps and 
-				sudo apt install git i3 ranger vim neovim terminator feh inkscape neofetch viewnior bluez bluez-tools blueman arandr
+				sudo apt install git i3 ranger vim neovim terminator feh inkscape neofetch viewnior bluez bluez-tools blueman arandr npm
 				sudo apt install rxvt-unicode obs-studio brightnessctl deepin-screenshot unrar rar goldendict
 
 				sudo apt install gdebi-core  # helps you install deb file

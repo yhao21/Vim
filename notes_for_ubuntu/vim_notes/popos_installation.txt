@@ -31,7 +31,8 @@ coc.nvim build/index.js not found:
 		Then close, and open init.vim again.
 
 
-python3.12 -m pip install python-lsp-server pylint
+python3.12 -m pip install python-lsp-server
+# Note, DO NOT install pylint, so you can avoid those annoying warnings.
 
 
 Add more workspace:
