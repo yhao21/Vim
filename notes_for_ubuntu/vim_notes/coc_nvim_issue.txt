@@ -30,3 +30,16 @@
 
 
 
+
+3. Disable on-screen diagnostic hint (the square, and warning message):
+		go to init.vim, comment
+				"Plug 'dense-analysis/ale'
+
+
+
+4: How to config coc-settings
+
+		Install dependency:
+				:CocInstall coc-json
+		Open config file:
+				:CocConfig
