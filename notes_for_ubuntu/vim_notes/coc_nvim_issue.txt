@@ -43,3 +43,6 @@
 				:CocInstall coc-json
 		Open config file:
 				:CocConfig
+
+		More config instruction on:
+				https://github.com/neoclide/coc.nvim/blob/master/doc/coc-config.txt
