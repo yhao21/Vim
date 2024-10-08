@@ -1,0 +1,10 @@
+{
+		"diagnostic.enable": true,
+		"diagnostic.enableSign": false,
+		"diagnostic.messageDelay": 20,
+		"diagnostic.refreshOnInsertMode": true,
+		"diagnostic.virtualText": true,
+		"diagnostic.enableHighlightLineNumber": false,
+		"diagnostic.level":"error",
+		"inlayHint.enable": false
+}

@@ -495,7 +495,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "COC extension manager:
 let g:coc_global_extensions = [
-	\ 'coc-python', 
+	\ 'coc-pyright', 
+	\ 'coc-json', 
 	\ 'coc-pairs',
 	\ 'coc-texlab',
 	\ 'coc-marketplace',
