@@ -73,6 +73,8 @@ snippet art
 \usepackage{subfiles}
 \usepackage{blindtext}
 
+\usepackage{rotating}
+
 \newcommand{\incfig}[1]{%
 \def\svgwidth{\columnwidth}
 \import{./figures/}{#1.pdf_tex}
@@ -115,7 +117,7 @@ snippet paper
 \usepackage{mathrsfs}
 \usepackage{bm}
 \usepackage{indentfirst}
-\setlength{\parindent}{0em}
+\setlength{\parindent}{2em}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{setspace}
@@ -529,8 +531,9 @@ endsnippet
 snippet pic
 
 \begin{figure}[H]
-\center{\includegraphics[scale = $2]  {$3}}
 \caption{$1}
+\center{\includegraphics[scale = $2]  {$3}}
+\caption*{This is a note for figure}
 \label{fig:}
 \end{figure}
 
@@ -1473,6 +1476,10 @@ snippet tr "call the label" i
 Table \ref{table:$1}
 endsnippet
 #======================================
+snippet footnote
+\footnote{}
+endsnippet
+#======================================
 
 
 
@@ -1538,6 +1545,26 @@ $4& $5 & $6
 \end{threeparttable}
 \end{center}
 \end{table}
+endsnippet
+#======================================
+snippet rotatetable
+
+\begin{sidewaystable}[h!]
+\begin{center}
+\begin{threeparttable}
+\caption{}			
+\label{table:}
+
+\begin{tabular}{ccc}
+$1 & $2 & $3\\\\
+\hline \\\\[-1.8ex]
+$4& $5 & $6
+\end{tabular}
+
+
+\end{threeparttable}
+\end{center}
+\end{sidewaystable}
 endsnippet
 #======================================
 snippet note
