@@ -73,6 +73,20 @@ snippet art
 \usepackage{subfiles}
 \usepackage{blindtext}
 
+
+
+% Format definition list
+\newenvironment{mylist}[1]%
+  {\begin{list}{}{\settowidth{\labelwidth}{\textbf{#1}}
+   \setlength{\leftmargin}{\labelwidth}
+   \addtolength{\leftmargin}{\labelsep}
+   \renewcommand{\makelabel}[1]{\textbf{\hfill##1}}}}%
+  {\end{list}}
+
+
+
+
+
 \usepackage{rotating}
 
 \newcommand{\incfig}[1]{%
@@ -136,8 +150,10 @@ snippet paper
 \usepackage{transparent}
 \usepackage{subfiles}
 \usepackage{blindtext}
+\usepackage{adjustbox}
+\usepackage{rotating}
 
-\usepackage{eurosym,geometry,ulem,caption,color,sectsty,comment,footmisc,pdflscape,subfigure,array}
+\usepackage{eurosym,geometry,ulem,subcaption,color,sectsty,comment,footmisc,pdflscape,array}
 \normalem
 \onehalfspacing
 
@@ -158,6 +174,7 @@ snippet paper
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
 
 \geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+
 
 \newcommand{\incfig}[1]{%
 \def\svgwidth{\columnwidth}
@@ -540,6 +557,37 @@ snippet pic
 endsnippet
 
 #====================
+snippet subpic
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{0.49\linewidth}
+		\includegraphics[width=\linewidth]{figures/imputation_age40.png}
+		\caption{Age below 40}
+		\label{fig:}
+	\end{subfigure}
+	\begin{subfigure}{0.49\linewidth}
+		\includegraphics[width=\linewidth]{figures/imputation_age4060.png}
+		\caption{Age between 40 and 60}
+		\label{fig:}
+	\end{subfigure}
+	\vspace{1cm}
+	\begin{subfigure}{0.49\linewidth}
+	  \includegraphics[width=\linewidth]{figures/imputation_PX5_no_empties_age60.png}
+	  \caption{Age above 60}
+	  \label{fig:}
+  \end{subfigure}
+	\begin{subfigure}{0.49\linewidth}
+	  \includegraphics[width=\linewidth]{figures/imputation_all_age.png}
+	  \caption{Full sample}
+	  \label{fig:}
+  \end{subfigure}
+	\caption{Comparison: imputed and raw data}
+	\label{fig:}
+\end{figure}
+
+endsnippet
+#====================
 snippet url "add url" i
 \url{$1}
 endsnippet
@@ -553,6 +601,14 @@ snippet item
 \item $1
 \end{itemize}
 endsnippet
+#====================
+snippet def
+\begin{mylist}{}
+\item[${1: Keys}]  ${2:values}
+\item[${3: Keys}]  ${4:values}
+\end{mylist}
+endsnippet
+
 
 #====================
 snippet MM "theorem"
