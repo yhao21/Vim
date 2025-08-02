@@ -167,5 +167,21 @@ my keymap
 
 
 
+	=====================
+	Other useful commands
+
+	1. Let ranger to open a file (.dta file) using a specific text editor, e.g., nvim:
+				Find rifle.conf, add "|dta" to the following code.
+				!mime ^text, label editor, ext xml|json|csv|tex|py|js|dta = /usr/bin/nvim -- "$@"
+
+  
+
+
+
+
+
+
+
+
 
 
