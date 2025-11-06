@@ -130,7 +130,7 @@ snippet paper
 \usepackage{mathrsfs}
 \usepackage{bm}
 \usepackage{indentfirst}
-\setlength{\parindent}{0em}
+\setlength{\parindent}{2em}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{setspace}
@@ -153,6 +153,7 @@ snippet paper
 \usepackage{glossaries}
 \usepackage{adjustbox}
 \usepackage{rotating}
+\usepackage[bottom]{footmisc}
 
 
 % Format definition list
@@ -245,6 +246,7 @@ snippet paper
 
 
 
+\newpage
 \singlespacing
 \setlength\bibsep{0pt}
 \bibliographystyle{plainnat}
@@ -252,8 +254,15 @@ snippet paper
 
 
 
-\section*{Appendix A. Placeholder} \label{sec:appendixa}
+\newpage
+\doublespacing
+\section*{Appendix}
+\appendix
 \addcontentsline{toc}{section}{Appendix A}
+
+\section{Figures and Tables} \label{sec:fig_table}
+
+
 
 
 
@@ -757,6 +766,11 @@ endsnippet
 
 #====================
 context "math()"
+snippet baokuo "xia kuo hao" wA
+\underbrace{ $1 }_{ $2 }
+endsnippet
+#====================
+context "math()"
 snippet fang "[big bkt]" wA
 \left[ $1 \right] $0
 endsnippet
@@ -1241,6 +1255,7 @@ snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)//' "Fraction" wrA
 \\frac{`!p snip.rv = match.group(1)`}{$1}
 endsnippet
 #======================================
+context "math()"
 priority 1000
 snippet '^.*\)/' "() Fraction" wrA
 `!p
@@ -1604,12 +1619,23 @@ snippet table
 \caption{}			
 \label{table:}
 
-\begin{tabular}{ccc}
-$1 & $2 & $3\\\\
-\hline \\\\[-1.8ex]
-$4& $5 & $6
+\begin{tabular}{lcccccc}
+\hline\hline
+ & (1)& (2)& (3)& (4)& (5)& (6)\\\\
+ \hline \\\\[-1.8ex]
+
+ &  & \\\\
+
+\hline\hline
 \end{tabular}
 
+\begin{tablenotes}
+\small
+\item Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+\item 
+\item 
+				Notes:
+\end{tablenotes}
 
 \end{threeparttable}
 \end{center}
