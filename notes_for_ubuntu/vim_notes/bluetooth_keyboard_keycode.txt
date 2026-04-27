@@ -2,3 +2,33 @@
 When I use bluetooth keyboard, I remap win to alt in /usr/share/X11/xkb/keycodes/evdev
 Currently win = 64, alt = 133
 I need to change it back when I use the keyboard built in my laptop.
+
+
+
+
+
+
+
+
+
+###------Connection------###
+Open terminal and type the following to check running status
+		systemctl status bluetooth
+
+If not running:
+		sudo systemctl start bluetooth
+
+
+Use bluetoothctl to connect, type the following in the terminal:
+		bluetoothctl
+Then type:
+		power on
+		agent on
+		default-agent
+		scan on
+
+
+Find the information of bluetooth keyboard, then type:
+		pair XX:XX:XX:XX:XX
+		connect XX:XX:XX:XX:XX
+		trust XX:XX:XX:XX:XX
