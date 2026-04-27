@@ -98,6 +98,8 @@ noremap A I
 noremap h a
 noremap H A
 
+noremap } ]s
+noremap { [s
 
 noremap = nzz
 noremap - Nzz
@@ -252,7 +254,12 @@ nmap <leader>do :VimspectorShowOutput
 nnoremap ti :tabe<CR>
 nnoremap <C-l> :+tabnext<CR>
 nnoremap<C-j> :-tabnext<CR>
-
+"
+""move current tab to the left
+"nnoremap <C-J> :-tabmove<CR>
+""move current tab to the right
+"nnoremap <C-L> :+tabmove<CR>
+"
 
 
 "map tl :+tabnext<CR>
@@ -495,8 +502,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "COC extension manager:
 let g:coc_global_extensions = [
-	\ 'coc-pyright', 
-	\ 'coc-json', 
+	\ 'coc-python', 
 	\ 'coc-pairs',
 	\ 'coc-texlab',
 	\ 'coc-marketplace',
@@ -545,6 +551,7 @@ let g:indentLine_concealcursor=""
 "===============
 let g:tex_flavor = 'pdflatex'
 let g:vimtex_view_method = 'zathura'
+"let g:vimtex_compiler_method = 'pdflatex'
 
 
 
@@ -557,13 +564,13 @@ nnoremap <leader>t :VimtexTocOpen<CR>
 "===============
 
 let g:livepreview_engine = 'pdflatex'
-autocmd Filetype tex setl updatetime=200
+autocmd Filetype tex setl updatetime=100
 "let g:livepreview_cursorhold_recompile=1
 
-"let g:livepreview_previewer = 'zathura'
-let g:livepreview_previewer = 'evince'
+let g:livepreview_previewer = 'zathura'
+autocmd BufDelete,VimLeave *.tex silent! !rm -f ~/.local/share/zathura/history
+"let g:livepreview_previewer = 'evince'
 "let g:livepreview_previewer = 'okular'
-
 
 
 "===============
