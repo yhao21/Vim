@@ -2,7 +2,8 @@
 set window-height 1080
 set window-width 800
 
-set guioptions none
+# Add statusbar to show current_page/total_pages
+set statusbar-v-padding 0
 
 map <C-i> zoom in
 map <C-o> zoom out
