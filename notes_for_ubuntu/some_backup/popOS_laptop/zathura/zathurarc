@@ -2,8 +2,6 @@
 set window-height 1080
 set window-width 800
 
-# Add statusbar to show current_page/total_pages
-set statusbar-v-padding 0
 
 map <C-i> zoom in
 map <C-o> zoom out
@@ -17,21 +15,42 @@ set recolor-lightcolor "#2E3440"
 
 # Nord text color:
 #set recolor-darkcolor "#D8DEE9"
-set recolor-darkcolor "#A7BAD1"
+# Original
+#set recolor-darkcolor "#A7BAD1"
+#set recolor-darkcolor "#F0F9FC"
+#set recolor-darkcolor "#E6EFF2"
+#set recolor-darkcolor "#DCE5E8"
+set recolor-darkcolor "#E3E5E6"
+
+
+
 
 
 
 # zathurarc-background
 
-set font "inconsolata 18"
+set font "inconsolata 10"
 set default-bg "#2E3440" 
-
 set default-fg "#2E3440"
 
-set statusbar-fg "#B0B0B0"
-set statusbar-bg "#202020"
+#######################
+# Status bar config
+#######################
+# Add statusbar to show current_page/total_pages
+set statusbar-v-padding 0
+set statusbar-fg "#B0B0B0"	# text color
+set statusbar-bg "#202020"	# background color
+# Show file name only instead of the full path.
+set statusbar-basename "true"
 
 
+# Input bar (where you type :commands)
+set inputbar-fg             "#B0B0B0"
+set inputbar-bg             "#202020"
+
+
+# show both statusbar (s) and the vertical scroll bar (v)
+set guioptions "sv"
 set zoom-step 10
 
 
