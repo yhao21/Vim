@@ -63,6 +63,9 @@ step 3: umount disk
 
 
 
+###------Wifi connection------###
+
+		Type "nmtui" in terminal to run the NetworkManager, then use your keyboard to run connection.
 
 
 
