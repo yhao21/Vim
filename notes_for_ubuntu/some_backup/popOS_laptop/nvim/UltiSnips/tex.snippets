@@ -87,6 +87,21 @@ snippet art
   {\end{list}}
 
 
+%%% Format the way to reference subplots
+% 1. Change the subfigure label to include parentheses: (a), (b), etc.
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+% 2. Fix the label under the image so it doesn't show double parentheses like ((a))
+\captionsetup[subfigure]{labelformat=simple}
+
+% 3. Add a space between the Figure number and the subfigure letter in references
+\makeatletter
+\renewcommand\p@subfigure{\thefigure~}
+\makeatother
+
+
+
+
 
 \newcommand{\incfig}[1]{%
 \def\svgwidth{\columnwidth}
@@ -192,8 +207,25 @@ snippet paper
 }
 
 
+% Format definition list
+\newenvironment{mylist}[1]%
+  {\begin{list}{}{\settowidth{\labelwidth}{\textbf{#1}}
+   \setlength{\leftmargin}{\labelwidth}
+   \addtolength{\leftmargin}{\labelsep}
+   \renewcommand{\makelabel}[1]{\textbf{\hfill##1}}}}%
+  {\end{list}}
 
+%%% Format the way to reference subplots
+% 1. Change the subfigure label to include parentheses: (a), (b), etc.
+\renewcommand\thesubfigure{(\alph{subfigure})}
 
+% 2. Fix the label under the image so it doesn't show double parentheses like ((a))
+\captionsetup[subfigure]{labelformat=simple}
+
+% 3. Add a space between the Figure number and the subfigure letter in references
+\makeatletter
+\renewcommand\p@subfigure{\thefigure~}
+\makeatother
 
 
 \begin{document}
@@ -258,9 +290,19 @@ snippet paper
 \doublespacing
 \section*{Appendix}
 \appendix
-\addcontentsline{toc}{section}{Appendix A}
 
-\section{Figures and Tables} \label{sec:fig_table}
+
+% This resets the table and figure counter every time a new \section starts 
+% and prefixes it with the section letter.
+\counterwithin{table}{section} 
+\counterwithin{figure}{section} 
+
+
+
+
+\section{Charts} \label{sec:appendix_charts}
+\section{Tables} \label{sec:appendix_tables}
+
 
 
 
@@ -628,6 +670,15 @@ endsnippet
 
 #====================
 #====================
+snippet yinyong
+
+\begin{quote}
+	\itshape
+	{$0}
+\end{quote}
+endsnippet
+#====================
+
 snippet def
 \begin{mylist}{}
 \item[${1: Keys}] ${2:Values}
@@ -1564,6 +1615,14 @@ snippet tr "call the label" i
 Table \ref{table:$1}
 endsnippet
 #======================================
+snippet sr "call the label" i
+Section \ref{sec:$1}
+endsnippet
+#======================================
+snippet appendixr "call the label" i
+Appendix \ref{sec:$1}
+endsnippet
+#======================================
 
 
 
@@ -1779,4 +1838,10 @@ endsnippet
 
 snippet kong "" iAw
 \_\_\_\_\_\_
+endsnippet
+
+
+
+snippet place "" iw
+[placeholder:]
 endsnippet
